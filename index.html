@@ -1,133 +1,352 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yun-Cheng Tsai - Personal Webpage</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-            color: #212529;
-        }
-        header {
-            background-color: #4e54c8;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-        header p {
-            margin: 0.5rem 0 0;
-            font-size: 1.2rem;
-        }
-        main {
-            max-width: 960px;
-            margin: 2rem auto;
-            padding: 1rem;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        section {
-            margin-bottom: 2rem;
-        }
-        section h2 {
-            color: #4e54c8;
-            border-bottom: 2px solid #8f94fb;
-            padding-bottom: 0.5rem;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        ul li {
-            margin: 0.5rem 0;
-            line-height: 1.6;
-        }
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background: #4e54c8;
-            color: white;
-        }
-        footer p {
-            margin: 0;
-        }
-        .contact {
-            text-align: center;
-            margin-top: 2rem;
-        }
-        .contact a {
-            color: #4e54c8;
-            text-decoration: none;
-            margin: 0 0.5rem;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yun-Cheng Tsai | AI, Teaching, and Applied Learning</title>
+  <meta name="description" content="Official academic website of Yun-Cheng Tsai, Ph.D. Associate Professor at National Taiwan Normal University. AI, machine learning, project-based computing education, educational data analytics, and public-facing learning resources." />
+  <meta name="theme-color" content="#28493f" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header>
-        <h1>Yun-Cheng Tsai</h1>
-        <p>Educator | Researcher | Innovator in AI, Data Science, and Blockchain</p>
-    </header>
-    <main>
-        <section>
-            <h2>Professional Summary</h2>
+  <div class="bg-blur bg-blur-1"></div>
+  <div class="bg-blur bg-blur-2"></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="Go to top">
+        <span class="brand-mark">YC</span>
+        <span class="brand-copy">
+          <strong>Yun-Cheng Tsai</strong>
+          <small>AI • Teaching • Applied Learning</small>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#research">Research</a>
+        <a href="https://www.youtube.com/playlist?list=PLH3VeiMX0ckj37Sx7iYwrOxYpP08f5gPN" target="_blank">Videos</a>
+        <a href="assets/Yun-Cheng_Tsai_CV.pdf" target="_blank">C.V.</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Associate Professor • National Taiwan Normal University</p>
+          <h1>Helping learners turn ideas into real systems.</h1>
+          <p class="lead">
+            I make <strong>artificial intelligence</strong> and <strong>machine learning</strong> rigorous,
+            accessible, and meaningful through project-based teaching, interdisciplinary system building,
+            and real-world implementation.
+          </p>
+
+          <div class="hero-badges">
+            <span>Project-Based Computing Education</span>
+            <span>Educational Data Analytics</span>
+            <span>Explainable & Human-Centered AI</span>
+          </div>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://scholar.google.com/citations?user=a2LHNL8AAAAJ&hl=zh-TW" target="_blank" rel="noreferrer">View Google Scholar</a>
+            <a class="button button-secondary" href="https://github.com/peculab" target="_blank" rel="noreferrer">View GitHub</a>
+            <a class="button button-secondary" href="https://www.youtube.com/playlist?list=PLH3VeiMX0ckj37Sx7iYwrOxYpP08f5gPN">Watch Playlist</a>
+          </div>
+
+          <div class="stats-grid">
+            <article class="stat-card">
+              <span class="stat-value">628</span>
+              <span class="stat-label">Citations</span>
+            </article>
+            <article class="stat-card">
+              <span class="stat-value">13</span>
+              <span class="stat-label">h-index</span>
+            </article>
+            <article class="stat-card">
+              <span class="stat-value">16</span>
+              <span class="stat-label">i10-index</span>
+            </article>
+            <article class="stat-card">
+              <span class="stat-value">37</span>
+              <span class="stat-label">Teaching credits across 3 recent semesters</span>
+            </article>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal delay-1">
+          <div class="portrait-panel card">
+            <img src="assets/portrait.jpg" alt="Portrait of Yun-Cheng Tsai" class="portrait" />
+          </div>
+          <div class="floating-card">
+            <span class="floating-label">Current Focus</span>
+            <strong>AI/ML education, explainable AI, educational innovation, and interdisciplinary applications</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">About</p>
+          <h2>A clear academic story with a builder’s mindset</h2>
+          <p class="section-intro">
+            My work sits at the intersection of teaching, curriculum design, applied AI, and educational scholarship.
+            Across appointments at NTNU, Soochow University, and National Taiwan University, I have consistently designed
+            learning experiences that move students from concept to implementation.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <article class="card reveal">
+            <h3>Academic Profile</h3>
             <p>
-                Accomplished educator, interdisciplinary researcher, and industry innovator with over a decade of experience in AI, data science, and blockchain. Known for designing cutting-edge curricula blending theory with real-world applications, and securing significant funding to drive transformative educational initiatives.
-            </p>
-        </section>
-        <section>
-            <h2>Education</h2>
-            <ul>
-                <li><strong>Ph.D. in Computer Science and Information Engineering</strong>, National Taiwan University, 2016</li>
-                <li><strong>M.S. in Computer Science and Information Engineering</strong>, National Taiwan Ocean University, 2005</li>
-                <li><strong>B.S. in Computer Science and Information Engineering</strong>, National Taiwan Ocean University, 2003</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Professional Experience</h2>
-            <ul>
-                <li><strong>Associate Professor</strong>, National Taiwan Normal University, Aug 2022 – Present</li>
-                <li><strong>Associate Professor</strong>, Soochow University, Aug 2019 – Jul 2022</li>
-                <li><strong>Assistant Professor</strong>, National Taiwan University, Aug 2016 – Jul 2019</li>
-                <li><strong>Predoctoral Fellow</strong>, Max Planck Institute for the History of Science, Feb 2015 – Mar 2016</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Key Skills</h2>
-            <ul>
-                <li>Programming: Python, Java, SQL, TensorFlow, AWS</li>
-                <li>Research: Generative AI, Blockchain, Educational Technology</li>
-                <li>Teaching: Curriculum Design, Active Learning Strategies</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Honors and Awards</h2>
-            <ul>
-                <li>2024 Postal Big Data Competition, Excellence Award (Instructor)</li>
-                <li>Education Data Hackathon 2024, Champion and Third Place (Instructor)</li>
-                <li>2024 GenAI Stars AI Application Selection, Special Excellence Award (Instructor)</li>
-            </ul>
-        </section>
-        <section class="contact">
-            <h2>Contact</h2>
-            <p>
-                Email: <a href="mailto:pecu610@gmail.com">pecu610@gmail.com</a> | Phone: +886-908-959162
+              I teach programming, machine learning, data analytics, intelligent systems, and project-based computing courses.
+              My approach emphasizes authentic datasets, interpretable models, and working prototypes rather than abstract exercises alone.
             </p>
             <p>
-                <a href="https://peculab.github.io">Website</a> | <a href="https://www.linkedin.com/in/pecutsai">LinkedIn</a>
+              In the generative AI era, I believe students must do more than prompt a model. They should learn to direct the technology,
+              critique its limitations, justify their decisions, and build original solutions.
             </p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Yun-Cheng Tsai. All rights reserved.</p>
-    </footer>
+          </article>
+
+          <article class="card tinted reveal delay-1">
+            <h3>Research & Teaching Interests</h3>
+            <ul class="pill-list">
+              <li>Machine Learning</li>
+              <li>Project-Based Computing Education</li>
+              <li>Human-Centered & Explainable AI</li>
+              <li>Educational Technology & Generative AI</li>
+              <li>Interdisciplinary AI Applications</li>
+              <li>Data Science & Applied Analytics</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="timeline-grid reveal delay-2">
+          <article class="mini-card">
+            <span class="mini-label">Current Appointment</span>
+            <h3>National Taiwan Normal University</h3>
+            <p>Associate Professor, Department of Technology Application and Human Resource Development</p>
+            <small>2022–Present</small>
+          </article>
+          <article class="mini-card">
+            <span class="mini-label">Previous</span>
+            <h3>Soochow University</h3>
+            <p>Assistant Professor, School of Big Data Management</p>
+            <small>2019–2022</small>
+          </article>
+          <article class="mini-card">
+            <span class="mini-label">Previous</span>
+            <h3>National Taiwan University</h3>
+            <p>Assistant Professor, Center for General Education</p>
+            <small>2016–2019</small>
+          </article>
+          <article class="mini-card">
+            <span class="mini-label">Earlier Research</span>
+            <h3>Max Planck Institute</h3>
+            <p>Predoctoral Research Fellow, Berlin</p>
+            <small>2015–2016</small>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="teaching" class="section alt-section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Teaching</p>
+          <h2>From concept to implementation</h2>
+          <p class="section-intro">
+            My teaching philosophy is simple: a system is not finished just because the code runs.
+            Students should be able to explain assumptions, justify design choices, and improve what they build.
+          </p>
+        </div>
+
+        <div class="teaching-grid">
+          <article class="card reveal">
+            <h3>Teaching Philosophy</h3>
+            <p>
+              I emphasize a builder’s mindset. In my classroom, students use AI as a tool for inquiry and creation,
+              not as a shortcut around thinking. I want them to direct AI, critique its limits, and turn ideas into functional solutions.
+            </p>
+          </article>
+
+          <article class="card reveal delay-1">
+            <h3>Teaching Effectiveness</h3>
+            <ul class="feature-list">
+              <li><strong>37 total credits</strong> taught across a recent three-semester period</li>
+              <li><strong>12.33 credits</strong> average per semester</li>
+              <li><strong>4.24 / 5.0</strong> average course evaluation</li>
+              <li>All evaluated courses above <strong>3.5</strong></li>
+            </ul>
+          </article>
+
+          <article class="card reveal delay-2">
+            <h3>Representative Course Results</h3>
+            <ul class="feature-list">
+              <li>Data Structures: <strong>4.4</strong></li>
+              <li>Systems Analysis and Design: <strong>4.2</strong></li>
+              <li>Educational Data Mining Project Development: <strong>4.5</strong></li>
+              <li>Educational Big Data Project Development: <strong>4.3</strong></li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="split-panel reveal">
+          <article class="card">
+            <h3>Selected Courses Taught</h3>
+            <div class="columns-3">
+              <div>
+                <h4>NTNU</h4>
+                <ul class="compact-list">
+                  <li>Introduction to the Internet</li>
+                  <li>Programming Languages</li>
+                  <li>Data Structures</li>
+                  <li>Systems Analysis and Design</li>
+                  <li>Learning Analytics Tools</li>
+                  <li>Database Systems</li>
+                  <li>Educational Data Mining Project Development</li>
+                  <li>Educational Big Data Project Development</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Soochow University</h4>
+                <ul class="compact-list">
+                  <li>Machine Learning</li>
+                  <li>Data Analytics</li>
+                  <li>Python Programming</li>
+                  <li>Applied Artificial Intelligence</li>
+                </ul>
+              </div>
+              <div>
+                <h4>National Taiwan University</h4>
+                <ul class="compact-list">
+                  <li>Machine Learning</li>
+                  <li>Predictive Modeling</li>
+                  <li>Large-Scale Data Analysis</li>
+                  <li>Applied AI project mentoring in sequential data analytics</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="teaching-grid mentoring-grid">
+          <article class="card reveal">
+            <h3>Course & Curriculum Design</h3>
+            <p>
+              As co-PI and collaborative designer of NTNU’s Educational Big Data Micro Program, I helped build a structured pathway
+              from foundational learning to advanced analytics and then to practice-oriented implementation.
+            </p>
+            <p>
+              The program explicitly asked students to understand educational big data, conduct analysis, apply appropriate models,
+              and create MVPs or proofs of concept.
+            </p>
+          </article>
+
+          <article class="card reveal delay-1">
+            <h3>Scaffolding & Inclusive Teaching</h3>
+            <p>
+              Inclusive teaching means building structures that help more students meet high standards.
+              My teaching relies on co-learning communities, after-class support, shared repositories, peer learning,
+              and direct mentoring rather than lowering expectations.
+            </p>
+          </article>
+
+          <article class="card reveal delay-2">
+            <h3>Mentoring Outcomes</h3>
+            <ul class="feature-list">
+              <li>1st place, first NTNU Educational Data Hackathon</li>
+              <li>3rd place, first NTNU Educational Data Hackathon</li>
+              <li>Excellence Award, AI Basketball Motion Detection and Analysis capstone team</li>
+              <li>Two top-award teams in NTNU’s Computational Thinking and Programming competition</li>
+              <li>Student-industry collaboration with Zhiling Technology on the “Evaluation Cloud” system</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="research" class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Research</p>
+          <h2>Applied AI, educational innovation, and explainable systems</h2>
+          <p class="section-intro">
+            My scholarship follows the same builder’s mindset as my teaching: AI should be rigorous, interpretable,
+            and useful in real learning and decision environments.
+          </p>
+        </div>
+
+        <div class="research-top reveal">
+          <article class="card large-card featured-publication">
+            <span class="label-chip">Most cited work</span>
+            <h3>Encoding candlesticks as images for pattern classification using convolutional neural networks</h3>
+            <p class="meta">Financial Innovation • 2020 • 154 citations in the uploaded scholar snapshot</p>
+            <p>
+              A representative study connecting visual representation learning, financial analytics, and practical AI modeling.
+              This paper anchors a broader line of work on interpretable financial AI and real-world deployment.
+            </p>
+          </article>
+        </div>
+
+        <div class="publication-grid">
+          <article class="card publication-card reveal">
+            <span class="pub-count">73 citations</span>
+            <h3>Text mining analysis of teaching evaluation questionnaires for the selection of outstanding teaching faculty members</h3>
+            <p class="meta">IEEE Access • 2018</p>
+          </article>
+          <article class="card publication-card reveal delay-1">
+            <span class="pub-count">52 citations</span>
+            <h3>Empowering Learner-Centered Instruction: Integrating ChatGPT Python API and Tinker Learning for Enhanced Creativity and Problem-Solving Skills</h3>
+            <p class="meta">ICITL • 2023</p>
+          </article>
+          <article class="card publication-card reveal delay-2">
+            <span class="pub-count">38 citations</span>
+            <h3>Empowering students through active learning in educational big data analytics</h3>
+            <p class="meta">Smart Learning Environments • 2024</p>
+          </article>
+          <article class="card publication-card reveal">
+            <span class="pub-count">35 citations</span>
+            <h3>Predict forex trend via convolutional neural networks</h3>
+            <p class="meta">Journal of Intelligent Systems • 2019</p>
+          </article>
+          <article class="card publication-card reveal delay-1">
+            <span class="pub-count">16 citations</span>
+            <h3>Learner-Centered Analysis in Educational Metaverse Environments</h3>
+            <p class="meta">Journal of Metaverse • 2023</p>
+          </article>
+          <article class="card publication-card reveal delay-2">
+            <span class="pub-count">10 citations</span>
+            <h3>Enhancing Python Learning through Retrieval-Augmented Generation</h3>
+            <p class="meta">ICITL • 2024</p>
+          </article>
+        </div>        
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="site-footer">
+    <div class="container footer-grid">
+      <div class="reveal footer-contact">
+        <p class="eyebrow">Contact</p>
+        <h2>Let’s connect</h2>
+        <p>Email: <a href="mailto:pecu610@gmail.com">pecu610@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/pecutsai/" target="_blank" rel="noreferrer">linkedin.com/in/pecutsai</a></p>
+      </div>      
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
