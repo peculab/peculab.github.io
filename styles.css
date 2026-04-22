@@ -531,11 +531,11 @@ h4 {
   gap: 20px;
 }
 
-
 .video-actions {
   justify-content: center;
   margin-top: 18px;
 }
+
 .playlist-tip-card {
   background: linear-gradient(180deg, rgba(243,221,209,0.55), rgba(255,255,255,0.88));
 }
