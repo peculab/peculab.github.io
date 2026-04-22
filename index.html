@@ -64,19 +64,19 @@
 
           <div class="stats-grid">
             <article class="stat-card">
-              <span class="stat-value">628</span>
+              <span class="stat-value" id="citations-count">--</span>
               <span class="stat-label">Citations</span>
             </article>
             <article class="stat-card">
-              <span class="stat-value">13</span>
+              <span class="stat-value" id="hindex-count">--</span>
               <span class="stat-label">h-index</span>
             </article>
             <article class="stat-card">
-              <span class="stat-value">16</span>
+              <span class="stat-value" id="i10-count">--</span>
               <span class="stat-label">i10-index</span>
             </article>
             <article class="stat-card">
-              <span class="stat-value">37</span>
+              <span class="stat-value" id="teaching-credits-count">--</span>
               <span class="stat-label">Teaching credits across 3 recent semesters</span>
             </article>
           </div>
@@ -292,7 +292,7 @@
           <article class="card large-card featured-publication">
             <span class="label-chip">Most cited work</span>
             <h3>Encoding candlesticks as images for pattern classification using convolutional neural networks</h3>
-            <p class="meta">Financial Innovation • 2020 • 154 citations in the uploaded scholar snapshot</p>
+            <p class="meta" id="featured-meta">Financial Innovation • 2020 • -- citations</p>
             <p>
               A representative study connecting visual representation learning, financial analytics, and practical AI modeling.
               This paper anchors a broader line of work on interpretable financial AI and real-world deployment.
@@ -300,40 +300,9 @@
           </article>
         </div>
 
-        <div class="publication-grid">
-          <article class="card publication-card reveal">
-            <span class="pub-count">73 citations</span>
-            <h3>Text mining analysis of teaching evaluation questionnaires for the selection of outstanding teaching faculty members</h3>
-            <p class="meta">IEEE Access • 2018</p>
-          </article>
-          <article class="card publication-card reveal delay-1">
-            <span class="pub-count">52 citations</span>
-            <h3>Empowering Learner-Centered Instruction: Integrating ChatGPT Python API and Tinker Learning for Enhanced Creativity and Problem-Solving Skills</h3>
-            <p class="meta">ICITL • 2023</p>
-          </article>
-          <article class="card publication-card reveal delay-2">
-            <span class="pub-count">38 citations</span>
-            <h3>Empowering students through active learning in educational big data analytics</h3>
-            <p class="meta">Smart Learning Environments • 2024</p>
-          </article>
-          <article class="card publication-card reveal">
-            <span class="pub-count">35 citations</span>
-            <h3>Predict forex trend via convolutional neural networks</h3>
-            <p class="meta">Journal of Intelligent Systems • 2019</p>
-          </article>
-          <article class="card publication-card reveal delay-1">
-            <span class="pub-count">16 citations</span>
-            <h3>Learner-Centered Analysis in Educational Metaverse Environments</h3>
-            <p class="meta">Journal of Metaverse • 2023</p>
-          </article>
-          <article class="card publication-card reveal delay-2">
-            <span class="pub-count">10 citations</span>
-            <h3>Enhancing Python Learning through Retrieval-Augmented Generation</h3>
-            <p class="meta">ICITL • 2024</p>
-          </article>
-        </div>        
-      </div>
-    </section>
+            <div class="publication-grid" id="publication-grid"></div>        
+  </div>
+</section>
   </main>
 
   <footer id="contact" class="site-footer">
@@ -348,5 +317,7 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="scholar-data.js"></script>
+  <script src="scholar-render.js"></script>
 </body>
 </html>
