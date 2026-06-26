@@ -1,30 +1,21 @@
 # Yun-Cheng Tsai Personal Website
 
-This package contains a complete static academic website.
+Static personal website for Yun-Cheng Tsai, Ph.D.
 
 ## Files
-- `index.html` — main webpage
-- `styles.css` — full layout, color system, responsive styling
-- `script.js` — mobile navigation + reveal animation
-- `assets/portrait.jpg` — profile photo
-- `assets/Yun-Cheng_Tsai_CV.pdf` — CV download
-- `assets/Yun-Cheng_Tsai_Teaching_Portfolio.pdf` — teaching portfolio download
-- `assets/Yun-Cheng_Tsai_Cover_Letter.pdf` — cover letter download
 
-## How to use
-1. Keep the folder structure unchanged.
-2. Open `index.html` in a browser to preview locally.
-3. Upload the whole folder to GitHub Pages, Netlify, Vercel, or any static hosting service.
+- `index.html` - main webpage
+- `styles.css` - layout, color system, and responsive styling
+- `script.js` - mobile navigation and reveal animation
+- `thanks.html` - FormSubmit confirmation redirect page
+- `assets/portrait.jpg` - profile photo
 
-## Easy edits
-- Change scholar / GitHub / email links in `index.html`
-- Update colors in `styles.css` under `:root`
-- Replace the playlist by updating the YouTube playlist URL in the iframe
-- Add more sections by duplicating an existing `section` block in `index.html`
+## Public Profile Links
 
-## Recommended next upgrades
-- bilingual version (English / 中文)
-- full publications page
-- news / talks page
-- teaching resources page
-- embedded CV preview or downloadable buttons in hero section
+- LinkedIn: https://www.linkedin.com/in/pecutsai/
+- Google Scholar: https://scholar.google.com/citations?user=a2LHNL8AAAAJ&hl=zh-TW
+
+## Notes
+
+- Public profile materials are represented through LinkedIn and Google Scholar only.
+- Publication details and citation data should remain on external profiles rather than being duplicated in this static site.
