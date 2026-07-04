@@ -9,7 +9,7 @@ Static company website for PecuLab LLC, the independent U.S. applied AI educatio
 - `script.js` - mobile navigation and reveal animation
 - `thanks.html` - FormSubmit confirmation redirect page
 - `assets/portrait.jpg` - profile photo
-- `assets/peculab-logo.svg` - PecuLab logo asset used in the header and hero
+- `assets/peculab-logo.png` - original PecuLab logo asset, prepared with background removed for the header and hero
 
 ## Public Profile Links
 
