@@ -1,6 +1,6 @@
-# Yun-Cheng Tsai Personal Website
+# PecuLab LLC Website
 
-Static personal website for Yun-Cheng Tsai, Ph.D.
+Static company website for PecuLab LLC, the independent U.S. applied AI education, automation, advisory, and cross-border execution company led by Yun-Cheng Tsai, Ph.D.
 
 ## Files
 
@@ -9,6 +9,7 @@ Static personal website for Yun-Cheng Tsai, Ph.D.
 - `script.js` - mobile navigation and reveal animation
 - `thanks.html` - FormSubmit confirmation redirect page
 - `assets/portrait.jpg` - profile photo
+- `assets/peculab-logo.svg` - PecuLab logo asset used in the header and hero
 
 ## Public Profile Links
 
@@ -17,5 +18,7 @@ Static personal website for Yun-Cheng Tsai, Ph.D.
 
 ## Notes
 
+- PecuLab LLC should remain the primary site identity and contracting/operating entity.
+- FIH references should be framed as case-by-case collaboration lines, not as the company identity.
 - Public profile materials are represented through LinkedIn and Google Scholar only.
 - Publication details and citation data should remain on external profiles rather than being duplicated in this static site.
