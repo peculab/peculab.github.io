@@ -1,0 +1,136 @@
+---
+layout: null
+title: Field Notes
+permalink: /field-notes/index.html
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Field Notes | PecuLab LLC</title>
+    <meta
+      name="description"
+      content="Field Notes from PecuLab on Seattle K-12 learning, AI education, family learning, youth projects, community spaces, and cross-cultural education practice."
+    >
+    <meta name="theme-color" content="#f6f8f7">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="../styles.css?v=20260704-5">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="../index.html" class="brand" aria-label="Go to PecuLab home">
+          <img class="brand-logo" src="../assets/peculab-mark.png" alt="" aria-hidden="true" onerror="this.remove()">
+          <span class="brand-copy">
+            <strong>PecuLab LLC</strong>
+            <small>Independent applied AI company</small>
+          </span>
+        </a>
+
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="../index.html">Home</a>
+          <a href="index.html">Field Notes</a>
+          <a href="../index.html#services">Services</a>
+          <a href="../index.html#programs">Programs</a>
+          <a href="../index.html#contact">Contact</a>
+        </nav>
+
+        <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="field-hero">
+        <div class="container field-hero-grid">
+          <div class="reveal">
+            <p class="eyebrow">Field Notes / Seattle K-12 / AI education / family learning</p>
+            <h1>Field Notes from the places where children actually learn.</h1>
+            <p class="lead">
+              Short essays and observations from Seattle schools, libraries, homes, community programs, youth projects,
+              and AI learning experiments. The goal is not to rank education systems, but to notice where each system
+              places the real cost of learning: institutions, families, communities, or children themselves.
+            </p>
+          </div>
+          <aside class="field-note-statement reveal delay-1">
+            <span>Working thesis</span>
+            <strong>I left a single institutional role, not education.</strong>
+            <p>
+              PecuLab reconnects research, technology, family life, youth development, community practice, and working
+              systems into education people can see, choose, and sustain.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Latest notes</p>
+            <h2>Each Field Note is published in English and Chinese.</h2>
+          </div>
+
+          <div class="notes-grid jekyll-generated" hidden>
+            {% assign english_notes = site.posts | where: "lang", "en" %}
+            {% for post in english_notes %}
+              {% assign related_posts = site.posts | where: "translation_key", post.translation_key %}
+              {% assign zh_post = related_posts | where: "lang", "zh" | first %}
+              <article class="note-card reveal">
+                <div class="note-card-meta">
+                  <span>{{ post.date | date: "%b %-d, %Y" }}</span>
+                  <span>English + 中文</span>
+                </div>
+                <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                <p>{{ post.excerpt | strip_html | normalize_whitespace | truncate: 180 }}</p>
+                <div class="note-actions">
+                  <a class="text-link" href="{{ post.url }}">English</a>
+                  {% if zh_post %}
+                    <a class="text-link" href="{{ zh_post.url }}">中文</a>
+                  {% endif %}
+                </div>
+              </article>
+            {% endfor %}
+          </div>
+
+          <div class="notes-grid static-fallback" aria-label="Current Field Notes">
+            <article class="note-card reveal">
+              <div class="note-card-meta">
+                <span>Jul 4, 2026</span>
+                <span>English + 中文</span>
+              </div>
+              <h3><a href="local-preview/learning-is-not-a-schedule-en.html">Learning Is Not a Schedule, but a Whole Life</a></h3>
+              <p>
+                Field notes from Seattle homes, schools, libraries, and community spaces on how children gradually find direction in the AI era.
+              </p>
+              <div class="note-actions">
+                <a class="text-link" href="local-preview/learning-is-not-a-schedule-en.html">English</a>
+                <a class="text-link" href="local-preview/learning-is-not-a-schedule.html">中文</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer compact-footer">
+      <div class="container footer-mini">
+        <div>
+          <p class="eyebrow">PecuLab LLC</p>
+          <h2>AI education, family learning, youth projects, and working systems.</h2>
+        </div>
+        <div class="contact-links">
+          <a href="../index.html">Home</a>
+          <a href="mailto:peculab.ai@gmail.com">peculab.ai@gmail.com</a>
+          <a href="https://www.linkedin.com/in/pecutsai/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../script.js?v=20260704-5"></script>
+  </body>
+</html>

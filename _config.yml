@@ -1,0 +1,20 @@
+title: PecuLab LLC
+description: Applied AI education, automation, and cross-border execution.
+url: "https://peculab.github.io"
+baseurl: ""
+timezone: America/Los_Angeles
+
+permalink: /field-notes/:year/:month/:day/:title.html
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      category: field-notes
+      author: Yun-Cheng Tsai
+
+markdown: kramdown
+kramdown:
+  input: GFM

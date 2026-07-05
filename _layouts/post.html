@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="{{ page.lang | default: 'en' }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | PecuLab Field Notes</title>
+    <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 155 }}">
+    <meta name="theme-color" content="#f6f8f7">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="{{ '/styles.css?v=20260704-5' | relative_url }}">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="{{ '/index.html' | relative_url }}" class="brand" aria-label="Go to PecuLab home">
+          <img class="brand-logo" src="{{ '/assets/peculab-mark.png' | relative_url }}" alt="" aria-hidden="true" onerror="this.remove()">
+          <span class="brand-copy">
+            <strong>PecuLab LLC</strong>
+            <small>Independent applied AI company</small>
+          </span>
+        </a>
+
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="{{ '/index.html' | relative_url }}">Home</a>
+          <a href="{{ '/field-notes/index.html' | relative_url }}">Field Notes</a>
+          <a href="{{ '/index.html#services' | relative_url }}">Services</a>
+          <a href="{{ '/index.html#programs' | relative_url }}">Programs</a>
+          <a href="{{ '/index.html#contact' | relative_url }}">Contact</a>
+        </nav>
+
+        <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+      </div>
+    </header>
+
+    <main class="article-main">
+      <article class="container article-shell">
+        <div class="article-meta-row">
+          <a class="text-link back-link" href="{{ '/field-notes/index.html' | relative_url }}">Field Notes</a>
+          <span>{{ page.date | date: "%B %-d, %Y" }}</span>
+          {% if page.lang == "zh" %}
+            <span>中文</span>
+          {% elsif page.lang == "bilingual" %}
+            <span>Bilingual</span>
+          {% else %}
+            <span>English</span>
+          {% endif %}
+        </div>
+
+        <header class="article-header">
+          <p class="eyebrow">{{ page.series | default: "Seattle K-12 Field Notes" }}</p>
+          <h1>{{ page.title }}</h1>
+          {% if page.subtitle %}
+            <p class="lead">{{ page.subtitle }}</p>
+          {% endif %}
+          {% if page.translation_key %}
+            <div class="language-switch" aria-label="Language versions">
+              {% assign related_posts = site.posts | where: "translation_key", page.translation_key | sort: "lang" %}
+              {% for related in related_posts %}
+                <a class="{% if related.url == page.url %}active{% endif %}" href="{{ related.url }}">
+                  {% if related.lang == "zh" %}中文{% elsif related.lang == "bilingual" %}Bilingual{% else %}English{% endif %}
+                </a>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </header>
+
+        <div class="article-content">
+          {{ content }}
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer compact-footer">
+      <div class="container footer-mini">
+        <div>
+          <p class="eyebrow">PecuLab LLC</p>
+          <h2>AI education, family learning, youth projects, and working systems.</h2>
+        </div>
+        <div class="contact-links">
+          <a href="{{ '/field-notes/index.html' | relative_url }}">Field Notes</a>
+          <a href="mailto:peculab.ai@gmail.com">peculab.ai@gmail.com</a>
+          <a href="https://www.linkedin.com/in/pecutsai/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="{{ '/script.js?v=20260704-5' | relative_url }}"></script>
+  </body>
+</html>

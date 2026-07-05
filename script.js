@@ -1,4 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
+  document.body.childNodes.forEach((node) => {
+    if (node.nodeType === Node.TEXT_NODE && node.textContent.trim().startsWith("---")) {
+      node.remove();
+    }
+  });
+
   const menuToggle = document.querySelector(".menu-toggle");
   const nav = document.querySelector(".nav");
 
@@ -50,4 +56,14 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   document.querySelectorAll(".reveal").forEach(registerReveal);
+
+  const languageButtons = document.querySelectorAll("[data-filter]");
+  const generatedNotes = document.querySelector(".jekyll-generated");
+  const fallbackNotes = document.querySelector(".static-fallback");
+
+  if (generatedNotes && !generatedNotes.textContent.includes("{%")) {
+    generatedNotes.hidden = false;
+    generatedNotes.querySelectorAll(".reveal").forEach(showReveal);
+    if (fallbackNotes) fallbackNotes.hidden = true;
+  }
 });
