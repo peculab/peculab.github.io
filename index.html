@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap"
       rel="stylesheet"
     >
-    <link rel="stylesheet" href="styles.css?v=20260704-5">
+    <link rel="stylesheet" href="styles.css?v=20260706-services">
   </head>
   <body>
     <header class="site-header">
@@ -30,7 +30,7 @@
 
         <nav class="nav" aria-label="Primary navigation">
           <a href="#company">Company</a>
-          <a href="#services">Services</a>
+          <a href="services-pricing.html">Services & Pricing</a>
           <a href="#workshops">Workshops</a>
           <a href="field-notes/index.html">Field Notes</a>
           <a href="#boundary">Partnerships</a>
@@ -66,7 +66,7 @@
             </p>
 
             <div class="hero-actions">
-              <a class="button button-primary" href="#services">Explore Services</a>
+              <a class="button button-primary" href="services-pricing.html">View Services & Pricing</a>
               <a class="button button-secondary" href="workshop/20260705/index.html">Workshop Outcomes</a>
               <a class="button button-secondary" href="field-notes/index.html">Read Field Notes</a>
               <a class="button button-secondary" href="#boundary">Partnership Boundary</a>
@@ -135,15 +135,31 @@
       <section id="services" class="section dark-section">
         <div class="container">
           <div class="section-heading reveal">
-            <p class="eyebrow">Core services</p>
-            <h2>One company for the pieces that usually get split across strategy, technology, education, and operations.</h2>
+            <p class="eyebrow">Service pathways</p>
+            <h2>Three clear ways to work with PecuLab.</h2>
             <p class="section-intro">
-              PecuLab LLC can support a project from idea validation to public launch, payment setup, training, and
-              partner reporting.
+              Start with the pathway that fits your goal. The detailed services page explains pricing, format,
+              direct enrollment options, and partnership-based scopes. Online payment buttons are reserved but not
+              active yet while company registration, banking, and Stripe setup are being finalized.
             </p>
           </div>
 
-          <div class="pillar-grid service-grid">
+          <div class="service-entry-grid home-service-entry">
+            <a href="services-pricing.html#families" class="reveal">
+              <span>Build a Future Project</span>
+              <strong>Programs for learners and families.</strong>
+            </a>
+            <a href="services-pricing.html#schools" class="reveal delay-1">
+              <span>Bring AI to Your Community</span>
+              <strong>Workshops and multi-week programs for schools and organizations.</strong>
+            </a>
+            <a href="services-pricing.html#organizations" class="reveal delay-2">
+              <span>Turn AI Ideas into Working Systems</span>
+              <strong>Discovery, implementation, and innovation sprints.</strong>
+            </a>
+          </div>
+
+          <div class="pillar-grid service-grid service-capability-grid">
             <article class="pillar-card reveal">
               <h3>AI education and curriculum</h3>
               <p>Workshops, project studios, course design, educator training, and responsible AI programs.</p>
@@ -183,6 +199,9 @@
               <h3>Cross-border project execution</h3>
               <p>Coordination for U.S.-Taiwan and international projects involving partners, sponsors, vendors, and operating documents.</p>
             </article>
+          </div>
+          <div class="section-action reveal">
+            <a class="button button-primary" href="services-pricing.html">Open Services & Pricing</a>
           </div>
         </div>
       </section>
@@ -501,6 +520,13 @@
             Inquiry focus
             <select name="inquiry_focus" required>
               <option value="">Select one</option>
+              <option>Future Builder Studio</option>
+              <option>Parent-Child AI Project Lab</option>
+              <option>1:1 Project Mentoring</option>
+              <option>AI Future Lab Workshop</option>
+              <option>Youth Innovation Program</option>
+              <option>AI Discovery Sprint</option>
+              <option>AI Implementation Sprint</option>
               <option>Academic or research collaboration</option>
               <option>AI education or curriculum design</option>
               <option>Platform or workflow automation</option>

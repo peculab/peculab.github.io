@@ -9,7 +9,6 @@ import {
 import {
   doc,
   getFirestore,
-  increment,
   onSnapshot,
   runTransaction,
   serverTimestamp,
@@ -145,16 +144,18 @@ document.querySelectorAll("[data-article-engagement]").forEach((root) => {
         const summarySnapshot = await transaction.get(summaryRef);
 
         if (likeSnapshot.exists()) {
+          const nextCount = Math.max(0, Number(summarySnapshot.data()?.count || 0) - 1);
           transaction.delete(userLikeRef);
           transaction.set(
             summaryRef,
             {
-              count: Math.max(0, Number(summarySnapshot.data()?.count || 0) - 1),
+              count: nextCount,
               updatedAt: serverTimestamp(),
             },
             { merge: true }
           );
         } else {
+          const nextCount = Number(summarySnapshot.data()?.count || 0) + 1;
           transaction.set(userLikeRef, {
             uid: currentUser.uid,
             createdAt: serverTimestamp(),
@@ -162,7 +163,7 @@ document.querySelectorAll("[data-article-engagement]").forEach((root) => {
           transaction.set(
             summaryRef,
             {
-              count: increment(1),
+              count: nextCount,
               updatedAt: serverTimestamp(),
             },
             { merge: true }
@@ -172,7 +173,8 @@ document.querySelectorAll("[data-article-engagement]").forEach((root) => {
 
       setStatus(root, likedByUser ? "Like removed." : "Thanks for the verified like.");
     } catch (error) {
-      setStatus(root, "Google sign-in or like update did not complete. Please try again.");
+      const detail = error?.code ? ` (${error.code})` : "";
+      setStatus(root, `Google sign-in or like update did not complete${detail}. Please try again.`);
       console.error(error);
     } finally {
       likeButton.disabled = false;
