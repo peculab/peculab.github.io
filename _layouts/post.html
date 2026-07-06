@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} | PecuLab Field Notes</title>
     <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 155 }}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="PecuLab Field Notes">
+    <meta property="og:title" content="{{ page.title | escape }}">
+    <meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 155 | escape }}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:image" content="{{ '/assets/peculab-mark.png' | absolute_url }}">
+    <meta name="twitter:card" content="summary">
     <meta name="theme-color" content="#f6f8f7">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,6 +80,31 @@
         <div class="article-content">
           {{ content }}
         </div>
+
+        <section
+          class="article-engagement"
+          data-article-engagement
+          data-article-id="{{ page.url | slugify }}"
+          data-article-title="{{ page.title | escape }}"
+          data-article-url="{{ page.url | absolute_url }}"
+          aria-label="Article likes and sharing"
+        >
+          <div>
+            <p class="eyebrow">Reader response</p>
+            <h2>Like or share this Field Note.</h2>
+            <p data-engagement-user>Sign in with Google to leave one verified like.</p>
+            <p class="engagement-status" data-engagement-status aria-live="polite"></p>
+          </div>
+          <div class="engagement-actions">
+            <button class="button button-primary" type="button" data-like-button aria-pressed="false">Like (0)</button>
+            <button class="button button-secondary" type="button" data-native-share>Share</button>
+            <button class="button button-secondary" type="button" data-copy-link>Copy Link</button>
+            <a class="button button-secondary" href="#" target="_blank" rel="noreferrer" data-share-network="x">X</a>
+            <a class="button button-secondary" href="#" target="_blank" rel="noreferrer" data-share-network="facebook">Facebook</a>
+            <a class="button button-secondary" href="#" target="_blank" rel="noreferrer" data-share-network="linkedin">LinkedIn</a>
+            <button class="button button-secondary" type="button" data-sign-out-button>Sign Out</button>
+          </div>
+        </section>
       </article>
     </main>
 
@@ -90,5 +123,6 @@
     </footer>
 
     <script src="{{ '/script.js?v=20260704-5' | relative_url }}"></script>
+    <script type="module" src="{{ '/field-notes-engagement.js?v=20260706-1' | relative_url }}"></script>
   </body>
 </html>

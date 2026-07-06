@@ -851,6 +851,55 @@ li + li {
   margin: 0 0 22px;
 }
 
+.article-engagement {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
+  gap: 24px;
+  margin-top: 46px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  background: #f7fbfa;
+}
+
+.article-engagement h2 {
+  max-width: none;
+  font-size: clamp(1.35rem, 2.2vw, 2rem);
+}
+
+.article-engagement p:not(.eyebrow) {
+  margin: 0 0 10px;
+  color: #40515c;
+}
+
+.engagement-status {
+  min-height: 1.4em;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.engagement-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-content: start;
+}
+
+.engagement-actions .button {
+  min-height: 40px;
+  padding: 9px 12px;
+  font-size: 0.9rem;
+}
+
+.engagement-actions .button.active {
+  background: var(--navy-900);
+  color: #fff;
+}
+
+.engagement-actions button:disabled {
+  cursor: wait;
+  opacity: 0.62;
+}
+
 .compact-footer {
   padding: 48px 0;
 }
@@ -1065,6 +1114,7 @@ li + li {
   .workshop-gallery,
   .teaching-grid,
   .timeline,
+  .article-engagement,
   .columns-3 {
     grid-template-columns: 1fr;
   }
