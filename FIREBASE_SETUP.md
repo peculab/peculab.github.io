@@ -1,33 +1,16 @@
-# Firebase setup for verified Field Notes likes
+# Firebase setup
 
-This site uses Firebase Authentication and Cloud Firestore to let a reader leave one Google-verified like per Field Note.
+Field Notes now uses share-only reader actions.
 
-## Firebase console steps
+The previous Google-verified Like feature has been removed from the article layout and from `field-notes-engagement.js`. Readers can share, copy the article URL, or open social sharing links without signing in.
 
-1. Open Firebase Console and select `peculab-site`.
-2. Go to `Authentication` > `Sign-in method`.
-3. Enable `Google`.
-4. In authorized domains, include:
-   - `peculab.github.io`
-   - `localhost`
-5. Go to `Firestore Database` and create a database in production mode.
-6. Open `Rules`, paste the contents of `firestore.rules`, and publish. Saving this repo file does not update Firebase by itself; the rules must be published in Firebase Console.
+## Current behavior
 
-## Data model
-
-Each article stores a public count and one private per-user marker:
-
-```text
-articleLikes/{articleId}
-articleLikes/{articleId}/users/{uid}
-```
-
-The page reads the public count. A signed-in reader can only create or delete their own user marker, so one Google account can only leave one like per article.
-
-The public count document accepts signed-in updates to the `count` and `updatedAt` fields only. The per-user marker still prevents the normal page UI from counting more than one like per Google account.
-
-## Notes
-
-- The Firebase web config in `field-notes-engagement.js` is intentionally public. Security is enforced by Firestore Rules.
-- Google sign-in should be tested from the deployed `https://peculab.github.io/...` site. Browsers may restrict module scripts or sign-in flows from local `file:///` pages.
+- No Google sign-in is shown on Field Notes pages.
+- No Like count is displayed.
+- No Firebase app, Authentication flow, or Firestore write is loaded by the current engagement script.
 - Social sharing uses the canonical GitHub Pages URL, not the local file path.
+
+## Archived note
+
+`firestore.rules` is kept only as an archived safety file. It should not be needed unless a future version intentionally brings back a database-backed reader response feature.

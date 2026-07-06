@@ -2,42 +2,10 @@ rules_version = '2';
 
 service cloud.firestore {
   match /databases/{database}/documents {
-    function signedIn() {
-      return request.auth != null;
-    }
-
-    function ownLike(uid) {
-      return signedIn() && request.auth.uid == uid;
-    }
-
-    match /articleLikes/{articleId} {
-      allow read: if true;
-
-      allow create: if signedIn()
-        && request.resource.data.keys().hasOnly(['count', 'updatedAt'])
-        && request.resource.data.count is int
-        && request.resource.data.count >= 0;
-
-      allow update: if signedIn()
-        && request.resource.data.keys().hasOnly(['count', 'updatedAt'])
-        && request.resource.data.count is int
-        && request.resource.data.count >= 0;
-
-      allow delete: if false;
-
-      match /users/{uid} {
-        allow read: if ownLike(uid);
-
-        allow create: if ownLike(uid)
-          && !exists(/databases/$(database)/documents/articleLikes/$(articleId)/users/$(uid))
-          && request.resource.data.keys().hasOnly(['uid', 'createdAt'])
-          && request.resource.data.uid == uid;
-
-        allow delete: if ownLike(uid)
-          && exists(/databases/$(database)/documents/articleLikes/$(articleId)/users/$(uid));
-
-        allow update: if false;
-      }
+    // Field Notes currently uses share-only reader actions.
+    // Keep the archived database closed unless a future feature needs it.
+    match /{document=**} {
+      allow read, write: if false;
     }
   }
 }
