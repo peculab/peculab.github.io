@@ -11,7 +11,7 @@ This site uses Firebase Authentication and Cloud Firestore to let a reader leave
    - `peculab.github.io`
    - `localhost`
 5. Go to `Firestore Database` and create a database in production mode.
-6. Open `Rules`, paste the contents of `firestore.rules`, and publish.
+6. Open `Rules`, paste the contents of `firestore.rules`, and publish. Saving this repo file does not update Firebase by itself; the rules must be published in Firebase Console.
 
 ## Data model
 
@@ -23,6 +23,8 @@ articleLikes/{articleId}/users/{uid}
 ```
 
 The page reads the public count. A signed-in reader can only create or delete their own user marker, so one Google account can only leave one like per article.
+
+The public count document accepts signed-in updates to the `count` and `updatedAt` fields only. The per-user marker still prevents the normal page UI from counting more than one like per Google account.
 
 ## Notes
 

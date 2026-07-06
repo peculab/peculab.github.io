@@ -15,27 +15,13 @@ service cloud.firestore {
 
       allow create: if signedIn()
         && request.resource.data.keys().hasOnly(['count', 'updatedAt'])
-        && request.resource.data.count == 1
-        && existsAfter(/databases/$(database)/documents/articleLikes/$(articleId)/users/$(request.auth.uid));
+        && request.resource.data.count is int
+        && request.resource.data.count >= 0;
 
       allow update: if signedIn()
         && request.resource.data.keys().hasOnly(['count', 'updatedAt'])
-        && resource.data.keys().hasOnly(['count', 'updatedAt'])
         && request.resource.data.count is int
-        && request.resource.data.count >= 0
-        && (
-          (
-            request.resource.data.count == resource.data.count + 1
-            && !exists(/databases/$(database)/documents/articleLikes/$(articleId)/users/$(request.auth.uid))
-            && existsAfter(/databases/$(database)/documents/articleLikes/$(articleId)/users/$(request.auth.uid))
-          )
-          ||
-          (
-            request.resource.data.count == resource.data.count - 1
-            && exists(/databases/$(database)/documents/articleLikes/$(articleId)/users/$(request.auth.uid))
-            && !existsAfter(/databases/$(database)/documents/articleLikes/$(articleId)/users/$(request.auth.uid))
-          )
-        );
+        && request.resource.data.count >= 0;
 
       allow delete: if false;
 
