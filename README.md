@@ -1,6 +1,6 @@
 # PecuLab LLC Website
 
-Static company website for PecuLab LLC, the independent U.S. applied AI education, automation, advisory, and cross-border execution company led by Yun-Cheng Tsai, Ph.D.
+Static company website for PecuLab LLC, the independent Seattle-based AI education, automation, advisory, and cross-border execution studio led by Yun-Cheng Tsai, Ph.D.
 
 ## Files
 
@@ -26,8 +26,9 @@ Static company website for PecuLab LLC, the independent U.S. applied AI educatio
 
 ## Notes
 
-- PecuLab LLC should remain the primary site identity and contracting/operating entity.
-- FIH references should be framed as case-by-case collaboration lines, not as the company identity.
+- PecuLab LLC should remain the primary site identity, contracting entity, payment entity, and operating company.
+- FIH/ESGIN references should be framed only as selected external collaboration cases, not as the company identity, employer, governing body, or exclusive operating channel.
+- External collaboration language should preserve clear boundaries around scope, brand use, payment responsibility, governance authority, financial control, legal representation, and employment status.
 - Public profile materials are represented through LinkedIn and Google Scholar only.
 - Publication details and citation data should remain on external profiles rather than being duplicated in this static site.
 - Field Notes should be published as paired English and Chinese Markdown files.
