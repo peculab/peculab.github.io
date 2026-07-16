@@ -37,3 +37,8 @@ Static company website for PecuLab LLC, the independent Seattle-based AI educati
 - The Field Notes index uses Jekyll `site.posts`; after GitHub Pages builds the site, new Markdown files in `_posts/` are listed automatically.
 - Do not open `_posts/*.md` directly in a browser for layout review; those files are Markdown source. Use the GitHub Pages URL after build, or a local preview HTML file under `field-notes/local-preview/`. If a Markdown post changes, update the matching local preview file too.
 - Local preview links should point to explicit `index.html` files instead of directory paths, so `file:///` browsing behaves predictably.
+
+
+## Commercial information architecture (2026-07-13)
+
+The primary public paths are Home, Services, Programs, Case Studies, Resources, and Book a Session. Academic credentials support trust but do not lead the homepage. `_posts/` and its bilingual Field Notes publishing structure remain unchanged. Prices shown publicly are planning ranges; engagements require confirmed scope.
