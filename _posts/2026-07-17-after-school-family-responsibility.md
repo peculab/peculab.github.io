@@ -2,7 +2,7 @@
 title: "當學校放學之後：美國教育的自由，其實是家庭承擔更多責任"
 subtitle: "從美國公立小學的作息重新理解台灣與美國教育：不是哪一種比較好，而是學習責任被放在不同的位置。"
 date: 2026-07-17
-lang: zh-TW
+lang: zh
 category: field-notes
 translation_key: after-school-family-responsibility
 series: Seattle K-12 Field Notes
