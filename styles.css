@@ -1824,3 +1824,23 @@ li + li {
 
 /* Founder layout correction · 2026-07-13 */
 .founder-section .founder-grid{display:block;max-width:1120px}.founder-section .founder-copy{padding:clamp(1.5rem,4vw,3rem);border:1px solid #d5e0dc;border-radius:24px;background:linear-gradient(135deg,#fff 0%,#f3f8f6 100%);box-shadow:0 18px 45px rgba(17,59,51,.08)}.founder-section .founder-copy h2{max-width:860px}.founder-portrait{height:auto!important;align-self:start!important;border-radius:18px!important;overflow:hidden!important}.founder-portrait img{display:block!important;width:100%!important;height:auto!important;aspect-ratio:auto!important;object-fit:contain!important}.founder-hero .founder-grid{grid-template-columns:160px minmax(0,1fr);align-items:center}.founder-hero .founder-portrait{width:160px;max-width:160px}@media(max-width:860px){.founder-hero .founder-grid{grid-template-columns:1fr}.founder-hero .founder-portrait{width:120px;max-width:120px}}
+
+/* Continuing bilingual workshop and event archive. */
+.event-archive-hero .container { max-width: 920px; }
+.event-home-band { border-top: 1px solid rgba(29,40,37,.1); border-bottom: 1px solid rgba(29,40,37,.1); background: #eef5f2; }
+.event-archive-grid { display: grid; gap: 28px; margin-top: 36px; }
+.event-card { display: grid; grid-template-columns: minmax(240px,.72fr) minmax(0,1.28fr); overflow: hidden; border: 1px solid rgba(29,40,37,.12); border-radius: 24px; background: #fff; box-shadow: 0 18px 45px rgba(17,59,51,.08); }
+.event-card-media { min-height: 360px; background: #e8efec; }
+.event-card-media img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.event-card-body { padding: clamp(25px,4vw,48px); }
+.event-card-body h3 { margin: 10px 0 16px; font-family: Newsreader, Georgia, serif; font-size: clamp(1.8rem,3vw,2.6rem); }
+.event-card-body h3 a { color: inherit; text-decoration: none; }
+.event-card-body h3 a:hover { color: var(--moss); }
+.event-meta { color: var(--moss); font-size: .82rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; }
+.event-links { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; margin-top: 25px; }
+.event-links .text-link { margin: 0; }
+.zh-site .event-meta { letter-spacing: .02em; text-transform: none; }
+@media (max-width: 760px) {
+  .event-card { grid-template-columns: 1fr; }
+  .event-card-media { min-height: 0; aspect-ratio: 4/3; }
+}
