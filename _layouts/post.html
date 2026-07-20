@@ -25,30 +25,50 @@
   <body>
     <header class="site-header">
       <div class="container header-inner">
-        <a href="{{ '/index.html' | relative_url }}" class="brand" aria-label="Go to PecuLab home">
-          <img class="brand-logo" src="{{ '/assets/peculab-mark.png' | relative_url }}" alt="" aria-hidden="true" onerror="this.remove()">
+        <a href="{% if page.lang == 'zh' %}{{ '/zh/index.html' | relative_url }}{% else %}{{ '/index.html' | relative_url }}{% endif %}" class="brand" aria-label="{% if page.lang == 'zh' %}前往 PECULAB 首頁{% else %}Go to PECULAB home{% endif %}">
+          <img class="brand-logo" src="{{ '/assets/peculab-mark-clean.png' | relative_url }}" alt="" aria-hidden="true" onerror="this.remove()">
           <span class="brand-copy">
-            <strong>PecuLab LLC</strong>
-            <small>Independent applied AI company</small>
+            <strong>PECULAB</strong>
+            <small>{% if page.lang == "zh" %}教育 · AI · 有目的的實作{% else %}Education · AI · Work with purpose{% endif %}</small>
           </span>
         </a>
 
-        <nav class="nav" aria-label="Primary navigation">
-          <a href="{{ '/index.html' | relative_url }}">Home</a>
-          <a href="{{ '/field-notes/index.html' | relative_url }}">Field Notes</a>
-          <a href="{{ '/index.html#services' | relative_url }}">Services</a>
-          <a href="{{ '/index.html#programs' | relative_url }}">Programs</a>
-          <a href="{{ '/index.html#contact' | relative_url }}">Contact</a>
+        <nav class="nav" aria-label="{% if page.lang == 'zh' %}主要導覽{% else %}Primary navigation{% endif %}">
+          {% if page.lang == "zh" %}
+            <a href="{{ '/zh/programs.html' | relative_url }}">課程與營隊</a>
+            <a href="{{ '/zh/services-pricing.html' | relative_url }}">企業 POC</a>
+            <a href="{{ '/zh/case-studies.html' | relative_url }}">實戰案例</a>
+            <a href="{{ '/field-notes/index.html' | relative_url }}">文章札記</a>
+            <a href="{{ '/zh/about.html' | relative_url }}">關於 Pecu</a>
+            <a href="{{ '/zh/book.html' | relative_url }}">合作詢問</a>
+          {% else %}
+            <a href="{{ '/programs.html' | relative_url }}">Courses &amp; Camps</a>
+            <a href="{{ '/services-pricing.html' | relative_url }}">Enterprise POC</a>
+            <a href="{{ '/case-studies.html' | relative_url }}">Applied Work</a>
+            <a href="{{ '/field-notes/index.html' | relative_url }}">Field Notes</a>
+            <a href="{{ '/about.html' | relative_url }}">About Pecu</a>
+            <a href="{{ '/book.html' | relative_url }}">Inquire</a>
+          {% endif %}
+          {% if page.translation_key %}
+            {% assign nav_related_posts = site.posts | where: "translation_key", page.translation_key %}
+            {% if page.lang == "zh" %}
+              {% assign nav_translation = nav_related_posts | where: "lang", "en" | first %}
+              {% if nav_translation %}<a class="language-switch" href="{{ nav_translation.url | relative_url }}" lang="en">EN</a>{% endif %}
+            {% else %}
+              {% assign nav_translation = nav_related_posts | where: "lang", "zh" | first %}
+              {% if nav_translation %}<a class="language-switch" href="{{ nav_translation.url | relative_url }}" lang="zh-Hant">中文</a>{% endif %}
+            {% endif %}
+          {% endif %}
         </nav>
 
-        <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+        <button class="menu-toggle" aria-label="{% if page.lang == 'zh' %}開啟導覽{% else %}Toggle navigation{% endif %}" aria-expanded="false">{% if page.lang == "zh" %}選單{% else %}Menu{% endif %}</button>
       </div>
     </header>
 
     <main class="article-main">
       <article class="container article-shell">
         <div class="article-meta-row">
-          <a class="text-link back-link" href="{{ '/field-notes/index.html' | relative_url }}">Field Notes</a>
+          <a class="text-link back-link" href="{{ '/field-notes/index.html' | relative_url }}">{% if page.lang == "zh" %}文章札記{% else %}Field Notes{% endif %}</a>
           <span>{{ page.date | date: "%B %-d, %Y" }}</span>
           {% if page.lang == "zh" %}
             <span>中文</span>
