@@ -1831,7 +1831,7 @@ li + li {
 .event-archive-grid { display: grid; gap: 28px; margin-top: 36px; }
 .event-card { display: grid; grid-template-columns: minmax(240px,.72fr) minmax(0,1.28fr); overflow: hidden; border: 1px solid rgba(29,40,37,.12); border-radius: 24px; background: #fff; box-shadow: 0 18px 45px rgba(17,59,51,.08); }
 .event-card-media { min-height: 360px; background: #e8efec; }
-.event-card-media img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.event-card-media img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .event-card-body { padding: clamp(25px,4vw,48px); }
 .event-card-body h3 { margin: 10px 0 16px; font-family: Newsreader, Georgia, serif; font-size: clamp(1.8rem,3vw,2.6rem); }
 .event-card-body h3 a { color: inherit; text-decoration: none; }
@@ -1840,6 +1840,53 @@ li + li {
 .event-links { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; margin-top: 25px; }
 .event-links .text-link { margin: 0; }
 .zh-site .event-meta { letter-spacing: .02em; text-transform: none; }
+/* Landscape photography in the Junior NATEA outcome should remain landscape. */
+.camp-outcome .workshop-hero-grid .workshop-poster,
+.camp-outcome .camp-closing .workshop-poster { width: 100%; }
+.camp-outcome .workshop-poster img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+.camp-outcome .camp-closing .profile-copy { max-width: 900px; }
+.event-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+.event-photo-grid figure {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 14px 34px rgba(6, 17, 29, 0.08);
+}
+.event-photo-grid img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+.event-photo-grid figcaption { padding: 15px 18px 18px; color: var(--muted); font-size: .92rem; font-weight: 700; }
+.photo-theme { margin-top: 44px; }
+.photo-theme:first-of-type { margin-top: 0; }
+.photo-theme-heading { margin-bottom: 18px; }
+.photo-theme-heading h3 { margin-bottom: 6px; font-size: clamp(1.45rem, 2.5vw, 2rem); }
+.photo-theme-heading p { max-width: 840px; margin: 0; color: var(--muted); }
+.event-video-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.video-subsection { margin: 42px 0 20px; }
+.video-subsection:first-of-type { margin-top: 0; }
+.video-subsection h3 { margin-bottom: 8px; font-size: clamp(1.45rem, 2.5vw, 2rem); }
+.video-subsection p { max-width: 850px; margin: 0; color: var(--muted); }
+.video-card { overflow: hidden; border: 1px solid var(--line); border-radius: 20px; background: #fff; box-shadow: 0 14px 34px rgba(6, 17, 29, 0.08); }
+.video-card > div:last-child { padding: 22px; }
+.video-card h3 { margin: 12px 0 8px; font-size: 1.25rem; }
+.video-card p { margin: 0; color: var(--muted); }
+.video-card p + p { margin-top: 14px; }
+.video-embed { position: relative; aspect-ratio: 16 / 9; background: #16201f; }
+.video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+@media (max-width: 760px) {
+  .event-photo-grid,
+  .event-video-grid { grid-template-columns: 1fr; }
+}
 @media (max-width: 760px) {
   .event-card { grid-template-columns: 1fr; }
   .event-card-media { min-height: 0; aspect-ratio: 4/3; }
