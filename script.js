@@ -66,4 +66,17 @@ document.addEventListener("DOMContentLoaded", () => {
     generatedNotes.querySelectorAll(".reveal").forEach(showReveal);
     if (fallbackNotes) fallbackNotes.hidden = true;
   }
+
+  if (document.documentElement.lang === "zh-Hant" && /\/zh\/about\.html$/.test(location.pathname)) {
+    const linkedIn = document.querySelector('a[href="https://www.linkedin.com/in/pecutsai/"]');
+    if (linkedIn && !document.querySelector('a[href="https://www.facebook.com/pecu.tsai"]')) {
+      const facebook = document.createElement("a");
+      facebook.className = "button button-secondary";
+      facebook.href = "https://www.facebook.com/pecu.tsai";
+      facebook.target = "_blank";
+      facebook.rel = "noreferrer";
+      facebook.textContent = "Facebook";
+      linkedIn.after(facebook);
+    }
+  }
 });
