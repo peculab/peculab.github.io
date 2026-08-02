@@ -1941,6 +1941,7 @@ li + li {
 }
 
 .proof-story-links h3 { color: #fff; margin-top: 1rem; }
+.proof-story-links .label-chip { background: #dff2e8; color: #173f37; }
 .proof-story-links p:not(.label-chip) { color: rgba(255, 255, 255, .78); }
 .proof-story-links .button { margin: .75rem 0 1.25rem; }
 .proof-story-links .text-link { display: block; color: #fff; }
