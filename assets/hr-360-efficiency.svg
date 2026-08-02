@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Simplified 360-degree performance appraisal efficiency evidence</title>
+  <desc id="desc">Comparison showing the manual multi-source process at 50 total working days and 30 HR processing days, reduced with digital tools to 30 total working days and 8 HR processing days.</desc>
+  <rect width="1600" height="900" rx="34" fill="#f4f7f2"/>
+  <text x="100" y="120" fill="#173f37" font-family="Arial, sans-serif" font-size="38" font-weight="700">Simplified 360° appraisal</text>
+  <text x="100" y="170" fill="#60706a" font-family="Arial, sans-serif" font-size="24">Published implementation evidence: manual process vs. digital tools</text>
+  <rect x="100" y="245" width="620" height="480" rx="28" fill="#fff" stroke="#d4ddd8" stroke-width="3"/>
+  <text x="150" y="315" fill="#60706a" font-family="Arial, sans-serif" font-size="24" font-weight="700">NEW SYSTEM · MANUAL</text>
+  <text x="150" y="445" fill="#173f37" font-family="Georgia, serif" font-size="116" font-weight="700">50</text>
+  <text x="340" y="425" fill="#173f37" font-family="Arial, sans-serif" font-size="30" font-weight="700">working days</text>
+  <text x="340" y="468" fill="#60706a" font-family="Arial, sans-serif" font-size="24">total evaluation cycle</text>
+  <line x1="150" y1="520" x2="670" y2="520" stroke="#d4ddd8" stroke-width="3"/>
+  <text x="150" y="620" fill="#e5644b" font-family="Georgia, serif" font-size="76" font-weight="700">30</text>
+  <text x="285" y="600" fill="#173f37" font-family="Arial, sans-serif" font-size="28" font-weight="700">working days</text>
+  <text x="285" y="642" fill="#60706a" font-family="Arial, sans-serif" font-size="23">HR processing</text>
+  <path d="M760 485h80" stroke="#e5644b" stroke-width="12" stroke-linecap="round"/>
+  <path d="m825 455 35 30-35 30" fill="none" stroke="#e5644b" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="880" y="245" width="620" height="480" rx="28" fill="#173f37"/>
+  <text x="930" y="315" fill="#9ad6bf" font-family="Arial, sans-serif" font-size="24" font-weight="700">NEW SYSTEM · DIGITAL TOOLS</text>
+  <text x="930" y="445" fill="#fff" font-family="Georgia, serif" font-size="116" font-weight="700">30</text>
+  <text x="1120" y="425" fill="#fff" font-family="Arial, sans-serif" font-size="30" font-weight="700">working days</text>
+  <text x="1120" y="468" fill="#c9d7d2" font-family="Arial, sans-serif" font-size="24">total evaluation cycle</text>
+  <line x1="930" y1="520" x2="1450" y2="520" stroke="#47665c" stroke-width="3"/>
+  <text x="930" y="620" fill="#ffd369" font-family="Georgia, serif" font-size="76" font-weight="700">8</text>
+  <text x="1010" y="600" fill="#fff" font-family="Arial, sans-serif" font-size="28" font-weight="700">working days</text>
+  <text x="1010" y="642" fill="#c9d7d2" font-family="Arial, sans-serif" font-size="23">HR processing · 73% reduction</text>
+  <text x="100" y="810" fill="#60706a" font-family="Arial, sans-serif" font-size="21">Source: Implementing a Simplified 360-Degree Performance Appraisal in a Startup: The Case of Jubo, Table 1.</text>
+</svg>
