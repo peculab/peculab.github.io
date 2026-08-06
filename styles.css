@@ -1722,6 +1722,32 @@ li + li {
 .applied-case .lead { max-width: 780px; }
 .applied-case .text-link { display: inline; }
 
+/* University of Washington talk: preserve the wide classroom photograph. */
+.uw-talk-visual {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 920px;
+  margin: 2rem 0 2.25rem;
+}
+
+.uw-talk-visual .solution-visual { border-radius: 20px; }
+
+.uw-talk-visual .solution-visual img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+
+.uw-talk-case .hero-actions {
+  margin: 1.5rem 0 1.75rem;
+  align-items: stretch;
+}
+
+.uw-talk-case .hero-actions .button {
+  justify-content: center;
+  text-align: center;
+}
+
 .case-evidence-figure {
   margin: 1.8rem 0 2rem;
   overflow: hidden;
@@ -1871,6 +1897,8 @@ li + li {
 .event-card { display: grid; grid-template-columns: minmax(240px,.72fr) minmax(0,1.28fr); overflow: hidden; border: 1px solid rgba(29,40,37,.12); border-radius: 24px; background: #fff; box-shadow: 0 18px 45px rgba(17,59,51,.08); }
 .event-card-media { min-height: 360px; background: #e8efec; }
 .event-card-media img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.event-card-media-photo { display: flex; align-items: center; justify-content: center; padding: 18px; }
+.event-card-media-photo img { width: 100%; height: auto; max-height: 100%; object-fit: contain; border-radius: 14px; }
 .event-card-body { padding: clamp(25px,4vw,48px); }
 .event-card-body h3 { margin: 10px 0 16px; font-family: Newsreader, Georgia, serif; font-size: clamp(1.8rem,3vw,2.6rem); }
 .event-card-body h3 a { color: inherit; text-decoration: none; }
@@ -1930,3 +1958,28 @@ li + li {
   .event-card { grid-template-columns: 1fr; }
   .event-card-media { min-height: 0; aspect-ratio: 4/3; }
 }
+
+/* University of Washington Agentic AI talk and interactive lab. */
+.uw-event-hero .container { max-width: 980px; }
+.uw-event-hero h1 { max-width: 920px; }
+.uw-stage-photo { margin: 0; overflow: hidden; border-radius: 26px; background: #173f37; box-shadow: 0 24px 55px rgba(17,59,51,.14); }
+.uw-stage-photo img { display: block; width: 100%; height: auto; }
+.uw-talk-frames { position: relative; aspect-ratio: 16/9; overflow: hidden; background: #101615; }
+.uw-talk-frames img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transform: scale(1.015); transition: opacity 1s ease, transform 5.5s ease; }
+.uw-talk-frames img.is-active { z-index: 1; opacity: 1; transform: scale(1); }
+.uw-stage-photo figcaption { display: flex; justify-content: space-between; gap: 28px; padding: 18px 24px 21px; color: #fff; }
+.uw-stage-photo figcaption span { color: #b9d9ce; font-size: .78rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.uw-stage-photo figcaption strong { max-width: 680px; text-align: right; }
+.uw-pipeline-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 16px; margin-top: 34px; }
+.uw-pipeline-grid article { min-height: 240px; padding: 25px; border: 1px solid rgba(29,40,37,.12); border-radius: 18px; background: #fff; }
+.uw-pipeline-grid article > span { color: var(--coral); font-family: Newsreader,Georgia,serif; font-size: 1.5rem; }
+.uw-pipeline-grid h3 { margin: 38px 0 10px; font-family: Newsreader,Georgia,serif; font-size: 1.5rem; }
+.uw-pipeline-grid p { margin: 0; color: var(--muted); }
+.uw-results-section { background: #f5f8f6; }
+.uw-result-card { display: grid; grid-template-columns: minmax(0,1fr); gap: 20px; margin-top: 32px; padding: 24px; border: 1px solid rgba(29,40,37,.12); border-radius: 22px; background: #fff; box-shadow: 0 16px 40px rgba(17,59,51,.07); }
+.uw-result-card > div { max-width: 880px; padding: 8px 8px 0; }
+.uw-result-card h3 { font-family: Newsreader,Georgia,serif; font-size: 1.65rem; }
+.uw-result-card iframe { display: block; width: 100%; height: 820px; overflow: hidden; border: 1px solid rgba(29,40,37,.12); border-radius: 14px; background: #fff; }
+@media (max-width: 900px) { .uw-pipeline-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media (max-width: 600px) { .uw-pipeline-grid { grid-template-columns: 1fr; } .uw-pipeline-grid article { min-height: 0; } .uw-stage-photo figcaption { display: block; } .uw-stage-photo figcaption strong { display: block; margin-top: 8px; text-align: left; } .uw-result-card iframe { height: 820px; } }
+@media (prefers-reduced-motion: reduce) { .uw-talk-frames img { transition: none; transform: none; } }

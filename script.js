@@ -164,4 +164,31 @@ document.addEventListener("DOMContentLoaded", () => {
       if (lead) lead.after(figure);
     });
   }
+
+  // Keep the UW result charts in the page's single scrolling context.
+  document.querySelectorAll(".uw-result-card iframe").forEach((frame) => {
+    frame.setAttribute("scrolling", "no");
+    frame.addEventListener("load", () => {
+      try {
+        const chartHeight = frame.contentDocument.documentElement.scrollHeight;
+        if (chartHeight) frame.style.height = `${Math.max(820, chartHeight + 8)}px`;
+      } catch (_) {
+        // The fixed CSS height remains as a safe fallback for local file previews.
+      }
+    });
+  });
+
+  document.querySelectorAll(".uw-talk-rotator").forEach((rotator) => {
+    const frames = [...rotator.querySelectorAll(".uw-talk-frames img")];
+    if (frames.length < 2 || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    let activeIndex = 0;
+    const showRandomFrame = () => {
+      let nextIndex;
+      do nextIndex = Math.floor(Math.random() * frames.length); while (nextIndex === activeIndex);
+      frames[activeIndex].classList.remove("is-active");
+      frames[nextIndex].classList.add("is-active");
+      activeIndex = nextIndex;
+    };
+    window.setInterval(showRandomFrame, 4500);
+  });
 });
