@@ -1,7 +1,7 @@
 ---
 title: "創業的第一步：你最早期的產品，是可信度"
 subtitle: "不要急著做平台、找投資人或累積人脈。先找到一個具體的人，替他解決一個值得付費的問題，完成一次，再完成一次。"
-date: 2026-08-18
+date: 2026-08-17
 lang: zh
 category: field-notes
 translation_key: your-first-product-is-credibility

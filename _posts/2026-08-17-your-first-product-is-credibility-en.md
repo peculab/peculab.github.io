@@ -1,7 +1,7 @@
 ---
 title: "The First Step in Entrepreneurship: Your Earliest Product Is Credibility"
 subtitle: "Do not rush to build a platform, find investors, or collect connections. First solve a problem worth paying for, for one specific person. Do it once, then do it again."
-date: 2026-08-18
+date: 2026-08-17
 lang: en
 category: field-notes
 translation_key: your-first-product-is-credibility
