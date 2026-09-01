@@ -20,7 +20,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap"
       rel="stylesheet"
     >
-    <link rel="stylesheet" href="{{ '/styles.css?v=20260704-5' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/styles.css?v=20260831-nav-unified' | relative_url }}">
   </head>
   <body>
     <header class="site-header">
@@ -41,6 +41,7 @@
             <a href="{{ '/zh/workshop/' | relative_url }}">活動紀錄</a>
             <a href="{{ '/field-notes/index.html' | relative_url }}">文章札記</a>
             <a href="{{ '/zh/about.html' | relative_url }}">關於 Pecu</a>
+            <a href="{{ '/zh/media.html' | relative_url }}">媒體報導</a>
             <a href="{{ '/zh/book.html' | relative_url }}">合作詢問</a>
           {% else %}
             <a href="{{ '/programs.html' | relative_url }}">Courses &amp; Camps</a>
@@ -49,6 +50,7 @@
             <a href="{{ '/workshop/' | relative_url }}">Events</a>
             <a href="{{ '/field-notes/index.html' | relative_url }}">Field Notes</a>
             <a href="{{ '/about.html' | relative_url }}">About Pecu</a>
+            <a href="{{ '/media.html' | relative_url }}">Media</a>
             <a href="{{ '/book.html' | relative_url }}">Inquire</a>
           {% endif %}
           {% if page.translation_key %}
@@ -136,7 +138,7 @@
         </div>
         <div class="contact-links">
           <a href="{{ '/field-notes/index.html' | relative_url }}">Field Notes</a>
-          <a href="mailto:peculab.ai@gmail.com">peculab.ai@gmail.com</a>
+          {% if page.lang == "zh" %}<a href="{{ '/zh/book.html' | relative_url }}">合作詢問</a>{% else %}<a href="{{ '/book.html' | relative_url }}">Inquire</a>{% endif %}
           <a href="https://www.linkedin.com/in/pecutsai/" target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
       </div>

@@ -4,11 +4,11 @@ title: Field Notes
 permalink: /field-notes/index.html
 ---
 <!doctype html>
-<html lang="en">
+<html lang="zh-Hant">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Field Notes | PecuLab LLC</title>
+    <title>文章札記｜PecuLab LLC</title>
     <meta
       name="description"
       content="Field Notes from PecuLab on Seattle K-12 learning, AI education, family learning, youth projects, community spaces, and cross-cultural education practice."
@@ -20,22 +20,22 @@ permalink: /field-notes/index.html
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap"
       rel="stylesheet"
     >
-    <link rel="stylesheet" href="../styles.css?v=20260831-nav-unified">
+    <link rel="stylesheet" href="../../styles.css?v=20260831-nav-unified">
   </head>
   <body>
     <header class="site-header">
       <div class="container header-inner">
-        <a href="../index.html" class="brand" aria-label="Go to PECULAB home">
-          <img class="brand-logo" src="../assets/peculab-mark-clean.png" alt="" aria-hidden="true" onerror="this.remove()">
+        <a href="../index.html" class="brand" aria-label="前往 PECULAB 首頁">
+          <img class="brand-logo" src="../../assets/peculab-mark-clean.png" alt="" aria-hidden="true" onerror="this.remove()">
           <span class="brand-copy">
             <strong>PECULAB</strong>
-            <small>Education · AI · Work with purpose</small>
+            <small>教育 · AI · 有目的的實作</small>
           </span>
         </a>
 
-        <nav class="nav" aria-label="Primary navigation"><a href="../programs.html">Courses &amp; Camps</a><a href="../services-pricing.html">Enterprise POC</a><a href="../case-studies.html">Applied Work</a><a href="../workshop/index.html">Events</a><a href="index.html">Field Notes</a><a href="../about.html">About Pecu</a><a href="../media.html">Media</a><a href="../book.html">Inquire</a><a class="language-switch" href="../zh/field-notes/index.html" lang="zh-Hant">中文</a></nav>
+        <nav class="nav" aria-label="主要導覽"><a href="../programs.html">課程與營隊</a><a href="../services-pricing.html">企業 POC</a><a href="../case-studies.html">實戰案例</a><a href="../workshop/index.html">活動紀錄</a><a href="index.html">文章札記</a><a href="../about.html">關於 Pecu</a><a href="../media.html">媒體報導</a><a href="../book.html">合作詢問</a><a class="language-switch" href="../../field-notes/index.html" lang="en">EN</a></nav>
 
-        <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+        <button class="menu-toggle" aria-label="開啟導覽" aria-expanded="false">選單</button>
       </div>
     </header>
 
@@ -43,8 +43,8 @@ permalink: /field-notes/index.html
       <section class="field-hero">
         <div class="container field-hero-grid">
           <div class="reveal">
-            <p class="eyebrow">Field Notes / Seattle K-12 / AI education / family learning</p>
-            <h1>Field Notes from the places where children actually learn.</h1>
+            <p class="eyebrow">文章札記 / 西雅圖 K–12 / AI 教育 / 家庭學習</p>
+            <h1>來自孩子真實學習現場的文章札記。</h1>
             <p class="lead">
               Short essays and observations from Seattle schools, libraries, homes, community programs, youth projects,
               and AI learning experiments. The goal is not to rank education systems, but to notice where each system
@@ -52,8 +52,8 @@ permalink: /field-notes/index.html
             </p>
           </div>
           <aside class="field-note-statement reveal delay-1">
-            <span>Working thesis</span>
-            <strong>I left a single institutional role, not education.</strong>
+            <span>持續發展的觀點</span>
+            <strong>我離開的是單一機構角色，而不是教育。</strong>
             <p>
               PecuLab reconnects research, technology, family life, youth development, community practice, and working
               systems into education people can see, choose, and sustain.
@@ -65,12 +65,12 @@ permalink: /field-notes/index.html
       <section class="section">
         <div class="container">
           <div class="section-heading reveal">
-            <p class="eyebrow">Latest notes</p>
-            <h2>Each Field Note is published in English and Chinese.</h2>
+            <p class="eyebrow">最新札記</p>
+            <h2>每篇文章札記均提供英文與中文版本。</h2>
           </div>
 
           <div class="notes-grid jekyll-generated" hidden>
-            {% assign english_notes = site.posts | where: "lang", "en" %}
+            {% assign english_notes = site.posts | where: "lang", "zh" %}
             {% for post in english_notes %}
               {% assign related_posts = site.posts | where: "translation_key", post.translation_key %}
               {% assign zh_post = related_posts | where: "lang", "zh" | first %}
@@ -97,13 +97,13 @@ permalink: /field-notes/index.html
                 <span>Jul 4, 2026</span>
                 <span>English + 中文</span>
               </div>
-              <h3><a href="local-preview/learning-is-not-a-schedule-en.html">Learning Is Not a Schedule, but a Whole Life</a></h3>
+              <h3><a href="../../field-notes/local-preview/learning-is-not-a-schedule-en.html">學習不是一張課表，而是一整個生活</a></h3>
               <p>
-                Field notes from Seattle homes, schools, libraries, and community spaces on how children gradually find direction in the AI era.
+                從西雅圖家庭、學校、圖書館與社區空間出發，觀察孩子如何在 AI 時代逐步找到方向。
               </p>
               <div class="note-actions">
-                <a class="text-link" href="local-preview/learning-is-not-a-schedule-en.html">English</a>
-                <a class="text-link" href="local-preview/learning-is-not-a-schedule.html">中文</a>
+                <a class="text-link" href="../../field-notes/local-preview/learning-is-not-a-schedule-en.html">English</a>
+                <a class="text-link" href="../../field-notes/local-preview/learning-is-not-a-schedule.html">中文</a>
               </div>
             </article>
           </div>
@@ -115,16 +115,16 @@ permalink: /field-notes/index.html
       <div class="container footer-mini">
         <div>
           <p class="eyebrow">PecuLab LLC</p>
-          <h2>AI education, family learning, youth projects, and working systems.</h2>
+          <h2>AI 教育、家庭共學、青年專題與可運作的系統。</h2>
         </div>
         <div class="contact-links">
-          <a href="../index.html">Home</a>
-          <a href="../book.html">Inquire</a>
+          <a href="../index.html">首頁</a>
+          <a href="../book.html">合作詢問</a>
           <a href="https://www.linkedin.com/in/pecutsai/" target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
       </div>
     </footer>
 
-    <script src="../script.js?v=20260704-5"></script>
+    <script src="../../script.js?v=20260704-5"></script>
   </body>
 </html>

@@ -1,6 +1,6 @@
 # PecuLab LLC Website
 
-Static company website for PecuLab LLC, the independent Seattle-based AI education, automation, advisory, and cross-border execution studio led by Yun-Cheng Tsai, Ph.D.
+Static company website for PecuLab LLC, the independent Seattle-based AI education, automation, advisory, and cross-border execution studio led by Yun-Cheng (Pecu) Tsai, Ph.D.
 
 ## Files
 

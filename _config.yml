@@ -13,7 +13,7 @@ defaults:
     values:
       layout: post
       category: field-notes
-      author: Yun-Cheng Tsai
+      author: Yun-Cheng (Pecu) Tsai
 
 markdown: kramdown
 kramdown:
