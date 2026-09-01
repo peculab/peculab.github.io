@@ -1983,3 +1983,115 @@ li + li {
 @media (max-width: 900px) { .uw-pipeline-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
 @media (max-width: 600px) { .uw-pipeline-grid { grid-template-columns: 1fr; } .uw-pipeline-grid article { min-height: 0; } .uw-stage-photo figcaption { display: block; } .uw-stage-photo figcaption strong { display: block; margin-top: 8px; text-align: left; } .uw-result-card iframe { height: 820px; } }
 @media (prefers-reduced-motion: reduce) { .uw-talk-frames img { transition: none; transform: none; } }
+.wfif-event-feature {
+  background: linear-gradient(145deg, #071629, #083e70 58%, #0796aa);
+  color: #fff;
+}
+
+.wfif-event-feature .section-heading h2,
+.wfif-event-feature .section-heading .lead {
+  color: #fff;
+}
+
+.wfif-event-feature .eyebrow {
+  color: #ffd454;
+}
+
+.wfif-event-card {
+  display: grid;
+  grid-template-columns: minmax(280px, .72fr) minmax(0, 1.28fr);
+  gap: clamp(28px, 5vw, 64px);
+  align-items: start;
+  margin-top: 34px;
+}
+
+.wfif-event-poster {
+  display: block;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, .22);
+  background: #087eac;
+  box-shadow: 0 28px 70px rgba(0, 0, 0, .28);
+}
+
+.wfif-event-poster img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.wfif-event-copy h3 {
+  margin: 12px 0 16px;
+  color: #fff;
+  font-size: clamp(2rem, 4vw, 3.7rem);
+  line-height: 1.02;
+}
+
+.wfif-event-copy h4 {
+  margin: 28px 0 12px;
+  color: #ffd454;
+  font-size: 1.05rem;
+}
+
+.wfif-event-copy p,
+.wfif-event-copy .event-meta {
+  color: rgba(255, 255, 255, .82);
+}
+
+.wfif-event-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 24px 0;
+}
+
+.wfif-event-stats div {
+  min-height: 112px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, .18);
+  background: rgba(255, 255, 255, .08);
+}
+
+.wfif-event-stats strong,
+.wfif-event-stats span {
+  display: block;
+}
+
+.wfif-event-stats strong {
+  color: #ffd454;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.wfif-event-stats span {
+  margin-top: 9px;
+  color: rgba(255, 255, 255, .8);
+  font-size: .84rem;
+}
+
+.wfif-theme-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 24px;
+  margin: 0 0 26px;
+  padding-left: 20px;
+  color: rgba(255, 255, 255, .86);
+}
+
+.wfif-roles-note {
+  color: rgba(255, 255, 255, .72);
+  font-size: .86rem;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .wfif-event-card,
+  .wfif-event-stats,
+  .wfif-theme-list {
+    grid-template-columns: 1fr;
+  }
+
+  .wfif-event-poster {
+    width: min(100%, 520px);
+    margin-inline: auto;
+  }
+}
