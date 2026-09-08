@@ -9,8 +9,6 @@ series: Seattle K-12 Field Notes
 excerpt: "A full marble jar, a classroom vote, and a cheetah mascot from kindergarten prompted me to consider how parents can offer support while giving children room to grow."
 ---
 
-# What a Marble Jar Reveals About a Child’s Growing Environment
-
 In the second week of school, Stanley came home with news he was excited to share: his class had filled its marble jar.
 
 His teacher also emailed families. She said this might be the fastest one of her classes had ever filled a jar. To celebrate, the children had voted for a movie and a stuffed animal party.
