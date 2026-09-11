@@ -9,7 +9,7 @@ series: Taiwan–Seattle Education Field Notes
 excerpt: "兩年、約兩千人次、近兩百所高中職，一門不以強制作業為唯一目的的 AI 選修課，讓我看見參與、升學焦慮、家庭選擇與課程設計之間複雜而真實的回聲。"
 ---
 
-這篇文章寫在我把「Python AI實作入門課程：從生活議題到實戰應用」交給下一位學弟妹繼續之後。
+這篇文章寫在我把「Python AI實作入門課程：從生活議題到實戰應用」交給下一位學弟繼續經營之後。
 
 我原本以為，課程結束就是整理教材、統計繳交、完成結案報告。但當資料一張張攤開來，我開始想念的不是哪一個單元，而是那些在課程裡短暫出現、又各自回到生活的學生。他們在自由選修課裡，究竟把什麼帶走了？
 
@@ -123,7 +123,6 @@ excerpt: "兩年、約兩千人次、近兩百所高中職，一門不以強制�
 - [課程範例與實作（examples）](https://github.com/peculab/PythonAI4Beginners/tree/main/examples)
 - [114-1 期末學習心得與小專題實作分享（Issue #111）](https://github.com/peculab/PythonAI4Beginners/issues/111)
 - [114-2 期末學習心得與小專題實作分享（Issue #112）](https://github.com/peculab/PythonAI4Beginners/issues/112)
-- [114-2 繳交總表與詳細回答](https://docs.google.com/spreadsheets/d/153JUE7Satz_0odxNOIfzfKdDc2Z-p51yO1txr7yIQjA/edit)
-- [跨校遠距 AI 多元選修課程報導](https://www.tcnews.com.tw/education/item/27072.html)
+- [跨校遠距 AI 多元選修課程報導](https://news.ltn.com.tw/news/life/breakingnews/5171637)
 
 本文中的數字採課程團隊整理之 114-1、114-2 紀錄。114-1 的批改筆數不換算為學生人數；114-2 的繳交與自評紀錄也不等同校方最終成績。約兩千人次與近兩百所高中職為兩年累計的課程團隊估計，用來描述推廣規模，不用來宣稱每位學生都完成相同的學習內容。

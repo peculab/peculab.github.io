@@ -1232,6 +1232,37 @@ li + li {
   margin: 0 0 22px;
 }
 
+.article-content table {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 26px 0;
+  overflow-x: auto;
+  border-collapse: collapse;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.article-content th,
+.article-content td {
+  min-width: 12rem;
+  padding: 14px 16px;
+  border: 1px solid #aab7b2;
+  text-align: left;
+  vertical-align: top;
+}
+
+.article-content th {
+  background: #edf2ef;
+  font-weight: 700;
+}
+
+.article-content th:first-child,
+.article-content td:first-child {
+  min-width: 5rem;
+  white-space: nowrap;
+}
+
 .article-engagement {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);

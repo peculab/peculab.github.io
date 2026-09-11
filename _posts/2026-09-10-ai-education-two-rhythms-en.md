@@ -123,7 +123,6 @@ The rest is waiting for it to sprout in its own season.
 - [Course examples and practical notebooks (examples)](https://github.com/peculab/PythonAI4Beginners/tree/main/examples)
 - [114-1 Final Learning Reflections and Small Projects (Issue #111)](https://github.com/peculab/PythonAI4Beginners/issues/111)
 - [114-2 Final Learning Reflections and Small Projects (Issue #112)](https://github.com/peculab/PythonAI4Beginners/issues/112)
-- [114-2 Submission Sheet and Detailed Responses](https://docs.google.com/spreadsheets/d/153JUE7Satz_0odxNOIfzfKdDc2Z-p51yO1txr7yIQjA/edit)
-- [Report on Cross-School Distance AI Electives](https://www.tcnews.com.tw/education/item/27072.html)
+- [Report on Cross-School Distance AI Electives](https://news.ltn.com.tw/news/life/breakingnews/5171637)
 
 The figures in this article come from the course team’s 114-1 and 114-2 records. The 114-1 grading records are not converted into a student count; 114-2 submission and self-assessment records are not the schools’ final grades. The estimates of roughly two thousand participations and nearly two hundred senior high and vocational schools describe the two-year reach of the course team. They are not a claim that every student completed the same learning experience.
