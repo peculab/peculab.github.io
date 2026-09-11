@@ -1,7 +1,7 @@
 ---
 title: "The Same Course, Different Echoes: What I Saw About AI Education Between Taiwanese High Schools and a U.S. Summer Camp"
 subtitle: "What one elective course, two years of records, and student projects revealed about different rhythms of AI learning in Taiwan and the United States."
-date: 2026-09-11
+date: 2026-09-10
 lang: en
 category: field-notes
 translation_key: ai-education-two-rhythms

@@ -1,7 +1,7 @@
 ---
 title: "同一套課程，不同的回聲：我在台灣高中職與美國夏令營之間看見的 AI 教育"
 subtitle: "從一門自由選修課、兩年課程數據與學生作品，看見台灣與美國不同的 AI 學習節奏。"
-date: 2026-09-11
+date: 2026-09-10
 lang: zh
 category: field-notes
 translation_key: ai-education-two-rhythms
