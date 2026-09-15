@@ -28,14 +28,8 @@ https://peculab.github.io/zh/taiwan-seattle-bridge.html
 
 發布前，請自行確認兩組 I-Corps 錄取消息、學生與徐士傑教授的姓名／經歷是否已取得公開同意，以及是否要在貼文中點名其他老師。
 
-## 官網意願統計維護
+## 官網意願收件
 
-官網照舊用 FormSubmit 把表單寄到 `peculab.ai@gmail.com`。官網人數只讀 GitHub 上的 `interest-counts.json`；這個 COUNT 檔只含四個分類總數、更新日期與上次處理的時間，不含姓名、Email 或留言。
+表單目前仍沿用 FormSubmit 寄信；`interest-counts.json` 的 2、1、6、3 是網站尚未切換到 Google Sheet 時的起點快照。已建立私有 Google Sheet「PECULAB｜台美學生共創意願登記」，分為 `意願登記` 與 `人數總覽`。Apps Script Web App 部署後，官網表單會在 Submit 時直接寫入 `意願登記`，同時更新 `人數總覽`，並由 Script 發送管理通知信；官網只讀分類總數。
 
-COUNT 檔以 12 作推估起點，四類分別從老師 2、單位 1、學生 6、支持者 3 起算；後續正式登記直接加在這些數字上。估算參考公開可見的約 1,100 位 LinkedIn 追蹤者，取約 1% 可能對此提案產生初步興趣。Facebook 追蹤數未能核實，因此沒有納入計算。頁面須一直標示「推估起點＋新登記」，不能把累計數字描述成已填表人數；新增正式登記另以「累計總數減去 12」呈現。
-
-已加入 GitHub Actions 的 `Update interest COUNT file`：每天兩次讀取 FormSubmit 封存中的本提案提交，略過 `TEST`／`測試`，在可讀到的封存範圍內依 Email 避免重複，並只 commit `interest-counts.json`。它不是 Submit 當下立即跳號；需要排程或手動執行工作、以及 GitHub Pages 完成部署。FormSubmit 的封存目前保留 30 天，超過封存範圍的重複提交可能無法辨識，因此這是「有效登記數」的近似值。
-
-啟用只需一個私密設定：依 [FormSubmit API 說明](https://formsubmit.co/api-documentation) 申請 `peculab.ai@gmail.com` 的 API key；收到信後，在 GitHub 專案的 **Settings → Secrets and variables → Actions → New repository secret** 建立 `FORMSUBMIT_API_KEY`，填入金鑰。不要把金鑰貼到 COUNT 檔或公開程式。接著到 GitHub **Actions → Update interest COUNT file → Run workflow** 手動執行第一次同步；之後會自動排程。Actions 日誌若顯示 `FORMSUBMIT_API_KEY secret is missing`，就是金鑰尚未設定。截圖中的 `TEST` 不會使起點 12 增加。
-
-需要立刻更正人數時，也可以人工修改 `interest-counts.json` 的對應分類與 `updated` 日期後 PUSH。不要把任何逐筆個資加入公開儲存庫。
+此方案不需 FormSubmit API key。Sheet 的 URL、Code.gs、部署與測試步驟都在 `google-sheet-bridge/README.md`。`sheets-config.js` 的 Web App URL 仍留空，直到綁定式 Apps Script 已部署並經測試；留空時原有 FormSubmit 表單照常運作。

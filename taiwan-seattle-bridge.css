@@ -21,3 +21,4 @@
 .bridge-local-notice a{display:inline-block;margin-top:10px;color:#064e42;text-decoration:underline}
 .bridge-form button:disabled{opacity:.45;cursor:not-allowed}
 .bridge-count-status{display:block;margin-top:20px;font-size:.82rem;color:#d7e6e2}
+.bridge-honey{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0!important}
