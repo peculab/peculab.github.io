@@ -4,5 +4,12 @@
   "faculty": 0,
   "institutions": 0,
   "students": 0,
-  "supporters": 0
+  "supporters": 0,
+  "starting_estimate": {
+    "faculty": 2,
+    "institutions": 1,
+    "students": 6,
+    "supporters": 3
+  },
+  "estimate_basis": "Illustrative scenario: about 1% of roughly 1,100 publicly visible LinkedIn followers; Facebook follower count has not been verified."
 }
