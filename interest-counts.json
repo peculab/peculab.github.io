@@ -1,10 +1,10 @@
 {
   "updated": "2026-09-15",
   "last_processed_at": "",
-  "faculty": 0,
-  "institutions": 0,
-  "students": 0,
-  "supporters": 0,
+  "faculty": 2,
+  "institutions": 1,
+  "students": 6,
+  "supporters": 3,
   "starting_estimate": {
     "faculty": 2,
     "institutions": 1,
