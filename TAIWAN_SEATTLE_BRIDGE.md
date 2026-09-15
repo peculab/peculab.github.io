@@ -35,3 +35,5 @@ https://peculab.github.io/zh/taiwan-seattle-bridge.html
 收到一筆正式意願後，先確認不是 `TEST`／`測試`、垃圾資料或同一人重複提交。然後開啟 `interest-counts.json`，依 `role` 更新一個分類：`faculty` 對應 `faculty`、`institution` 對應 `institutions`、`student` 對應 `students`、`supporter` 對應 `supporters`。例如原本 `faculty` 為 0，收到一位真正有意願的老師，就改成 1；同時把 `updated` 改成當天日期（`YYYY-MM-DD`），再 commit 與 PUSH。官網通常會在 GitHub Pages 部署完成後顯示新數字。測試信不計入。
 
 如果需要提交後自動累積，必須有一個非公開的收件與去重後端；目前這個靜態網站沒有該服務，因此頁面呈現的是定期人工核對的公開快照。
+
+已在 `backend/bridge-worker/` 準備「表單 → 私有 JSON 紀錄檔 → 公開分類總數」的收件端。部署前 `bridge-config.js` 保持空白，現有 FormSubmit 表單仍可寄信，數字依照上述方式人工更新。Cloudflare R2、Turnstile 和 Worker 啟用後，填入該設定檔的公開網址與 site key，才會切換為送出後自動記錄與讀取人數；部署步驟見 `backend/bridge-worker/README.md`。
