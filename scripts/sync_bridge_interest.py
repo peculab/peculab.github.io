@@ -29,6 +29,8 @@ for submission in payload["submissions"]:
     category = roles.get(data.get("role"))
     if not category or data.get("contact_consent") != "yes":
         continue
+    if str(data.get("interest", "")).strip().casefold() in {"test", "測試"}:
+        continue
     stamp = (submission.get("submitted_at") or {}).get("date", "")
     email = str(data.get("email", "")).strip().casefold()
     if not stamp or not email:

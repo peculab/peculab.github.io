@@ -40,3 +40,5 @@ https://peculab.github.io/zh/taiwan-seattle-bridge.html
 2. 依 [FormSubmit API 文件](https://formsubmit.co/api-documentation) 取得 API key，於 GitHub 專案的 Actions secrets 設定 `FORMSUBMIT_API_KEY`；另外設定一組隨機長字串作為 `BRIDGE_HASH_KEY`。不要把兩個值寫進公開檔案。
 
 統計只處理有同意聯繫、屬於本提案的資料，並以帶密鑰的雜湊避免重複計數。FormSubmit 的封存目前只保留 30 天，啟用後請盡快手動執行一次同步，才有機會找回先前的測試提交。信件仍由 FormSubmit 寄送，統計同步不能修復尚未啟用或被服務阻擋的收件問題。
+
+內容欄明確填 `TEST` 或 `測試` 的提交會被同步程式略過，不加入公開人數。正式意願才計入；若收到了垃圾資料或不適合公開統計的紀錄，仍需由管理者檢查並修正公開統計。
