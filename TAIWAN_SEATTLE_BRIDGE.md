@@ -30,10 +30,10 @@ https://peculab.github.io/zh/taiwan-seattle-bridge.html
 
 ## 官網意願統計維護
 
-表單沿用官網既有的 FormSubmit，將提交寄至 `peculab.ai@gmail.com`。信件與公開人數是兩條路徑：收到信不會自動修改 GitHub Pages 上的檔案。公開統計只保存四個分類總數，不保存姓名、Email 或留言。
+官網照舊用 FormSubmit 把表單寄到 `peculab.ai@gmail.com`。官網人數只讀 GitHub 上的 `interest-counts.json`；這個 COUNT 檔只含四個分類總數、更新日期與上次處理的時間，不含姓名、Email 或留言。
 
-收到一筆正式意願後，先確認不是 `TEST`／`測試`、垃圾資料或同一人重複提交。然後開啟 `interest-counts.json`，依 `role` 更新一個分類：`faculty` 對應 `faculty`、`institution` 對應 `institutions`、`student` 對應 `students`、`supporter` 對應 `supporters`。例如原本 `faculty` 為 0，收到一位真正有意願的老師，就改成 1；同時把 `updated` 改成當天日期（`YYYY-MM-DD`），再 commit 與 PUSH。官網通常會在 GitHub Pages 部署完成後顯示新數字。測試信不計入。
+已加入 GitHub Actions 的 `Update interest COUNT file`：每天兩次讀取 FormSubmit 封存中的本提案提交，略過 `TEST`／`測試`，在可讀到的封存範圍內依 Email 避免重複，並只 commit `interest-counts.json`。它不是 Submit 當下立即跳號；需要排程或手動執行工作、以及 GitHub Pages 完成部署。FormSubmit 的封存目前保留 30 天，超過封存範圍的重複提交可能無法辨識，因此這是「有效登記數」的近似值。
 
-如果需要提交後自動累積，必須有一個非公開的收件與去重後端；目前這個靜態網站沒有該服務，因此頁面呈現的是定期人工核對的公開快照。
+啟用只需一個私密設定：依 [FormSubmit API 說明](https://formsubmit.co/api-documentation) 申請 `peculab.ai@gmail.com` 的 API key；收到信後，在 GitHub 專案的 **Settings → Secrets and variables → Actions → New repository secret** 建立 `FORMSUBMIT_API_KEY`，填入金鑰。不要把金鑰貼到 COUNT 檔或公開程式。接著到 GitHub **Actions → Update interest COUNT file → Run workflow** 手動執行第一次同步；之後會自動排程。Actions 日誌若顯示 `FORMSUBMIT_API_KEY secret is missing`，就是金鑰尚未設定。公開檔案原本四個數字為 0，截圖中的 `TEST` 不會使它增加。
 
-已在 `backend/bridge-worker/` 準備「表單 → 私有 JSON 紀錄檔 → 公開分類總數」的收件端。部署前 `bridge-config.js` 保持空白，現有 FormSubmit 表單仍可寄信，數字依照上述方式人工更新。Cloudflare R2、Turnstile 和 Worker 啟用後，填入該設定檔的公開網址與 site key，才會切換為送出後自動記錄與讀取人數；部署步驟見 `backend/bridge-worker/README.md`。
+需要立刻更正人數時，也可以人工修改 `interest-counts.json` 的對應分類與 `updated` 日期後 PUSH。不要把任何逐筆個資加入公開儲存庫。

@@ -1,8 +1,0 @@
-{
-  "name": "peculab-bridge-interest",
-  "main": "src/index.js",
-  "compatibility_date": "2026-09-15",
-  "r2_buckets": [
-    { "binding": "INTEREST_FILES", "bucket_name": "peculab-bridge-interest" }
-  ]
-}
