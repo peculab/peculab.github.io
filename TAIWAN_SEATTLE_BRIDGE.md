@@ -30,15 +30,8 @@ https://peculab.github.io/zh/taiwan-seattle-bridge.html
 
 ## 官網意願統計維護
 
-表單沿用官網既有的 FormSubmit 收件信箱 `peculab.ai@gmail.com`。收到信件並去除重複、確認角色後，修改 `interest-counts.json` 的四個分類數字與 `updated` 日期，再部署網站。這是人工核對的公開快照；表單送出不會即時增加數字。請勿把姓名、Email 或原始留言放進公開 JSON。第一次使用此 FormSubmit 信箱若尚未啟用，需在收到的驗證信中完成啟用，與現有詢問表單相同。
+表單沿用官網既有的 FormSubmit，將提交寄至 `peculab.ai@gmail.com`。信件與公開人數是兩條路徑：收到信不會自動修改 GitHub Pages 上的檔案。公開統計只保存四個分類總數，不保存姓名、Email 或留言。
 
-### 自動統計啟用
+收到一筆正式意願後，先確認不是 `TEST`／`測試`、垃圾資料或同一人重複提交。然後開啟 `interest-counts.json`，依 `role` 更新一個分類：`faculty` 對應 `faculty`、`institution` 對應 `institutions`、`student` 對應 `students`、`supporter` 對應 `supporters`。例如原本 `faculty` 為 0，收到一位真正有意願的老師，就改成 1；同時把 `updated` 改成當天日期（`YYYY-MM-DD`），再 commit 與 PUSH。官網通常會在 GitHub Pages 部署完成後顯示新數字。測試信不計入。
 
-`sync-bridge-interest.yml` 可每天從 FormSubmit 的提交封存讀取新意願，依角色更新公開統計；也可從 GitHub Actions 手動執行。它不會讓表單送出後立刻增加數字。啟用前要完成兩件事：
-
-1. 到 `peculab.ai@gmail.com` 找 FormSubmit 首次提交的啟用信並確認信箱。如果沒有收到，檢查垃圾郵件與 FormSubmit 的提交結果畫面。
-2. 依 [FormSubmit API 文件](https://formsubmit.co/api-documentation) 取得 API key，於 GitHub 專案的 Actions secrets 設定 `FORMSUBMIT_API_KEY`；另外設定一組隨機長字串作為 `BRIDGE_HASH_KEY`。不要把兩個值寫進公開檔案。
-
-統計只處理有同意聯繫、屬於本提案的資料，並以帶密鑰的雜湊避免重複計數。FormSubmit 的封存目前只保留 30 天，啟用後請盡快手動執行一次同步，才有機會找回先前的測試提交。信件仍由 FormSubmit 寄送，統計同步不能修復尚未啟用或被服務阻擋的收件問題。
-
-內容欄明確填 `TEST` 或 `測試` 的提交會被同步程式略過，不加入公開人數。正式意願才計入；若收到了垃圾資料或不適合公開統計的紀錄，仍需由管理者檢查並修正公開統計。
+如果需要提交後自動累積，必須有一個非公開的收件與去重後端；目前這個靜態網站沒有該服務，因此頁面呈現的是定期人工核對的公開快照。
