@@ -22,7 +22,6 @@ fetch(language === "zh" ? "../interest-counts.json" : "interest-counts.json", { 
   .then((response) => { if (!response.ok) throw new Error("Count unavailable"); return response.json(); })
   .then((data) => {
     const keys = ["faculty", "institutions", "students", "supporters"];
-    const estimate = data.starting_estimate || {};
     const counts = keys.map((key) => Number.isInteger(data[key]) && data[key] >= 0 ? data[key] : 0);
     const total = counts.reduce((sum, value) => sum + value, 0);
     document.querySelector("[data-total]").textContent = total.toLocaleString();
@@ -34,12 +33,6 @@ fetch(language === "zh" ? "../interest-counts.json" : "interest-counts.json", { 
     });
     const date = document.querySelector("[data-updated]");
     if (date) date.textContent = data.updated || "";
-    const baseline = keys.reduce((sum, key) => sum + (Number.isInteger(estimate[key]) && estimate[key] >= 0 ? estimate[key] : 0), 0);
-    const registered = Math.max(0, total - baseline);
-    const actual = document.querySelector("[data-actual-registrations]");
-    if (actual) actual.textContent = registered
-      ? (language === "zh" ? `${registered.toLocaleString()} 筆` : registered.toLocaleString())
-      : (language === "zh" ? "尚在累積" : "Starting to accumulate");
   })
   .catch(() => { document.querySelector("[data-count-status]").textContent = labels.error; });
 

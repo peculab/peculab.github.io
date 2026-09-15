@@ -20,6 +20,4 @@
 .bridge-local-notice{padding:20px;border:2px solid #ad5b32;border-radius:14px;background:#fff2df;font-weight:700}
 .bridge-local-notice a{display:inline-block;margin-top:10px;color:#064e42;text-decoration:underline}
 .bridge-form button:disabled{opacity:.45;cursor:not-allowed}
-.bridge-actual{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:26px;padding:16px 20px;border:1px solid #ffffff55;border-radius:14px;background:#ffffff16}
-.bridge-actual span{font-size:.9rem;color:#d7e6e2}.bridge-actual strong{font-size:1.15rem;color:#fff}
-.bridge-note a{color:#b8ead4;text-decoration:underline}
+.bridge-count-status{display:block;margin-top:20px;font-size:.82rem;color:#d7e6e2}
