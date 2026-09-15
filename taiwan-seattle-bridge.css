@@ -17,3 +17,6 @@
 .bridge-nsf-callout h3{margin:8px 0 10px;font-family:Newsreader,Georgia,serif;font-size:clamp(1.5rem,3vw,2.2rem)}
 .bridge-nsf-callout p{max-width:690px;margin:0}.bridge-nsf-callout .eyebrow{margin-bottom:5px}.bridge-nsf-callout .button{flex:none;text-align:center}
 @media(max-width:760px){.bridge-nsf-callout{align-items:stretch;flex-direction:column}.bridge-nsf-callout .button{width:100%}}
+.bridge-local-notice{padding:20px;border:2px solid #ad5b32;border-radius:14px;background:#fff2df;font-weight:700}
+.bridge-local-notice a{display:inline-block;margin-top:10px;color:#064e42;text-decoration:underline}
+.bridge-form button:disabled{opacity:.45;cursor:not-allowed}

@@ -3,6 +3,21 @@ const labels = language === "zh"
   ? { error: "目前無法讀取已確認意願數，請稍後再試。", copied: "連結已複製，可分享給老師、學校與同學。" }
   : { error: "Verified interest count is unavailable right now.", copied: "Link copied. Share it with faculty, schools, and students." };
 
+if (window.location.protocol === "file:") {
+  const form = document.querySelector(".bridge-form form");
+  if (form) {
+    const notice = document.createElement("p");
+    notice.className = "bridge-local-notice";
+    const link = document.createElement("a");
+    link.href = `https://peculab.github.io/${language === "zh" ? "zh/" : ""}taiwan-seattle-bridge.html#join`;
+    link.textContent = language === "zh" ? "前往官網填寫合作意願 ↗" : "Open the live website to submit interest ↗";
+    notice.append(language === "zh" ? "這是本機 HTML 預覽。FormSubmit 不接受從檔案直接送出的表單。" : "This is a local HTML preview. FormSubmit does not accept submissions from files.", document.createElement("br"), link);
+    form.before(notice);
+    form.querySelector('button[type="submit"]').disabled = true;
+    form.querySelector('button[type="submit"]').title = language === "zh" ? "請前往官網填寫" : "Please use the live website";
+  }
+}
+
 fetch(language === "zh" ? "../interest-counts.json" : "interest-counts.json", { cache: "no-store" })
   .then((response) => { if (!response.ok) throw new Error("Count unavailable"); return response.json(); })
   .then((data) => {

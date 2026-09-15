@@ -1,0 +1,33 @@
+name: Sync verified bridge interest
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 11 * * *'
+permissions:
+  contents: write
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Sync submissions
+        env:
+          FORMSUBMIT_API_KEY: ${{ secrets.FORMSUBMIT_API_KEY }}
+          BRIDGE_HASH_KEY: ${{ secrets.BRIDGE_HASH_KEY }}
+        run: |
+          if [ -z "$FORMSUBMIT_API_KEY" ] || [ -z "$BRIDGE_HASH_KEY" ]; then
+            echo 'Set FORMSUBMIT_API_KEY and BRIDGE_HASH_KEY repository secrets to enable sync.'
+            exit 0
+          fi
+          python scripts/sync_bridge_interest.py
+      - name: Commit public totals
+        run: |
+          if git diff --quiet -- interest-counts.json interest-ledger.json; then exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add interest-counts.json interest-ledger.json
+          git commit -m 'Update verified bridge interest totals'
+          git push
