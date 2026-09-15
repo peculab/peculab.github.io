@@ -30,6 +30,6 @@ https://peculab.github.io/zh/taiwan-seattle-bridge.html
 
 ## 官網意願收件
 
-表單目前仍沿用 FormSubmit 寄信；`interest-counts.json` 的 2、1、6、3 是網站尚未切換到 Google Sheet 時的起點快照。已建立私有 Google Sheet「PECULAB｜台美學生共創意願登記」，分為 `意願登記` 與 `人數總覽`。Apps Script Web App 部署後，官網表單會在 Submit 時直接寫入 `意願登記`，同時更新 `人數總覽`，並由 Script 發送管理通知信；官網只讀分類總數。
+表單目前仍沿用 FormSubmit 寄信；`interest-counts.json` 的 2、1、6、3 是網站尚未切換到 Google Sheet 時的起點快照。先前由連接器建立的 Sheet 無法在使用者瀏覽器開啟，因此需要由使用者自行建立空白 Sheet；`setupBridge` 會建立 `意願登記` 與 `人數總覽`。Apps Script Web App 部署後，官網表單會在 Submit 時直接寫入 `意願登記`，同時更新 `人數總覽`，並由 Script 發送管理通知信；官網只讀分類總數。
 
 此方案不需 FormSubmit API key。Sheet 的 URL、Code.gs、部署與測試步驟都在 `google-sheet-bridge/README.md`。`sheets-config.js` 的 Web App URL 仍留空，直到綁定式 Apps Script 已部署並經測試；留空時原有 FormSubmit 表單照常運作。

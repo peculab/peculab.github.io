@@ -16,12 +16,13 @@ function doPost(e) {
   }
 
   const book = SpreadsheetApp.getActiveSpreadsheet();
-  const entries = book.getSheetByName(REGISTRATIONS_TAB);
-  const counts = book.getSheetByName(COUNTS_TAB);
   const lock = LockService.getScriptLock();
   lock.waitLock(30000);
   let counted = false;
   try {
+    const tabs = ensureBridge_(book);
+    const entries = tabs.entries;
+    const counts = tabs.counts;
     const last = entries.getLastRow();
     const prior = last > 1 ? entries.getRange(2, 4, last - 1, 7).getValues() : [];
     const alreadyCounted = prior.some(row => String(row[0]).trim().toLowerCase() === email && row[6] === 'yes');
@@ -52,7 +53,7 @@ function doPost(e) {
 
 function doGet(e) {
   if ((e.parameter || {}).view !== 'counts') return ContentService.createTextOutput('Not found');
-  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(COUNTS_TAB);
+  const sheet = ensureBridge_(SpreadsheetApp.getActiveSpreadsheet()).counts;
   const values = sheet.getRange(2, 1, 4, 5).getValues();
   const totals = { faculty: 0, institutions: 0, students: 0, supporters: 0 };
   const mapping = { faculty: 'faculty', institution: 'institutions', student: 'students', supporter: 'supporters' };
@@ -61,6 +62,33 @@ function doGet(e) {
   // Only these aggregate numbers are public. Never return individual Sheet rows.
   return ContentService.createTextOutput('window.bridgeCount(' + JSON.stringify(totals) + ');')
     .setMimeType(ContentService.MimeType.JAVASCRIPT);
+}
+
+function setupBridge() {
+  ensureBridge_(SpreadsheetApp.getActiveSpreadsheet());
+}
+
+function ensureBridge_(book) {
+  let entries = book.getSheetByName(REGISTRATIONS_TAB);
+  if (!entries) {
+    entries = book.insertSheet(REGISTRATIONS_TAB);
+    entries.getRange(1, 1, 1, 10).setValues([['送出時間', '角色', '姓名', 'Email', '學校／機構與所在地',
+      '參與意願', '時間與資源', '聯繫同意', '測試／正式', '計入累計']]);
+    entries.setFrozenRows(1);
+  }
+  let counts = book.getSheetByName(COUNTS_TAB);
+  if (!counts) {
+    counts = book.insertSheet(COUNTS_TAB);
+    counts.getRange(1, 1, 5, 5).setValues([
+      ['role', '分類', '推估起點', '新增正式登記', '累計'],
+      ['faculty', '開課老師', 2, 0, '=C2+D2'],
+      ['institution', '支持單位', 1, 0, '=C3+D3'],
+      ['student', '學生', 6, 0, '=C4+D4'],
+      ['supporter', '擴散支持者', 3, 0, '=C5+D5']
+    ]);
+    counts.setFrozenRows(1);
+  }
+  return { entries: entries, counts: counts };
 }
 
 function responsePage_(success, language) {

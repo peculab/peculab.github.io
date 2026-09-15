@@ -1,12 +1,13 @@
 # Google Sheet 即時登記
 
-私有登記表已建立：[PECULAB｜台美學生共創意願登記](https://docs.google.com/spreadsheets/d/1YmxclrZO1zCZH2TyIhbqFHmnOqGDSD-1ZE6dos43TyQ/edit)。`意願登記` 保存逐筆提交；`人數總覽` 的推估起點為 2、1、6、3，新的正式登記會加在上面。官網只讀四個總數，不公開逐筆資料。
+先前由連接器建立的 Sheet 在使用者瀏覽器顯示「unable to open the file」，不能當作可部署的表格。請在你自己的瀏覽器以要管理登記的 Google 帳號建立一份**空白 Google Sheet**。程式會自行建立 `意願登記` 與 `人數總覽`，並從 2、1、6、3 的起點開始累計。逐筆資料只留在私人表格；網站只讀四個加總。
 
 這個 Sheet 本身不能接收公開網站 POST；需要它的 Google Apps Script Web App。**不需 FormSubmit API key。**
 
-1. 在 Sheet 裡選 **擴充功能 → Apps Script**，將 `Code.gs` 的內容貼進編輯器並儲存。這必須是從此 Sheet 開啟的「綁定式」腳本，程式才能用 `getActiveSpreadsheet()` 讀到此表。
-2. 選 **部署 → 新增部署 → 網頁應用程式**，設為「以我身分執行」與「任何人都可以存取」。第一次部署要由表格擁有者授權 Sheets 與寄信權限。複製部署完成的 `/exec` 網址。
-3. 將網址填進網站根目錄的 `sheets-config.js`，commit、PUSH。網址留空時，官網維持既有 FormSubmit 寄信與 COUNT 檔讀取，不會把表單寫到 Google Sheet。
-4. 從正式 `https://` 官網送出 `TEST`。Sheet 的 `意願登記` 應出現一行，管理信箱應收到 Apps Script 通知，而 `人數總覽` 的累計仍為 12。接著用另一個 Email 送出正式意願，累計應增為 13，官網重新整理後讀到 13。
+1. 打開你新建的空白 Sheet，選 **擴充功能 → Apps Script**，將 `Code.gs` 的全部內容貼進編輯器並儲存。必須從此 Sheet 開啟綁定式腳本。
+2. 在編輯器上方選 `setupBridge` 並按 **執行**，依畫面授權。回到 Sheet，確認出現 `意願登記` 與 `人數總覽` 兩個分頁，後者的總數為 12。
+3. 選 **部署 → 新增部署 → 網頁應用程式**，設為「以我身分執行」與「任何人都可以存取」。複製部署產生的 `/exec` 網址。
+4. 將 `/exec` 網址填進網站根目錄的 `sheets-config.js`，commit、PUSH。網址留空時，網站仍沿用 FormSubmit 寄信與 `interest-counts.json`。
+5. 從正式 `https://` 官網用 `TEST` 送出一次。Sheet 應增加一筆測試資料、管理信箱收到通知，但總數維持 12。再用另一個 Email 送出正式意願，總數應增加為 13，官網重新整理後讀到 13。
 
 來源：[Google Apps Script Web Apps](https://developers.google.com/apps-script/guides/web)、[Content Service](https://developers.google.com/apps-script/guides/content)、[Lock Service](https://developers.google.com/apps-script/reference/lock)。
