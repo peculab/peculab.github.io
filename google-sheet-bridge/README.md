@@ -1,13 +1,18 @@
-# Google Sheet 即時登記
+# Google Sheet 即時登記與授權恢復
 
-先前由連接器建立的 Sheet 在使用者瀏覽器顯示「unable to open the file」，不能當作可部署的表格。請在你自己的瀏覽器以要管理登記的 Google 帳號建立一份**空白 Google Sheet**。程式會自行建立 `意願登記` 與 `人數總覽`，並從 2、1、6、3 的起點開始累計。逐筆資料只留在私人表格；網站只讀四個加總。
+網站統計唯一來源是既有 Google Sheet 的 `人數總覽!A2:E5`，由 Apps Script 每次讀取 E 欄累計，只回傳四類加總。網站每分鐘更新；失敗顯示「—」與錯誤訊息，不讀取 interest-counts.json，也不顯示預填數字。私人登記資料不需公開。
 
-這個 Sheet 本身不能接收公開網站 POST；需要它的 Google Apps Script Web App。**不需 FormSubmit API key。**
+- Sheet：https://docs.google.com/spreadsheets/d/1YmxclrZO1zCZH2TyIhbqFHmnOqGDSD-1ZE6dos43TyQ/edit
+- Apps Script：https://script.google.com/u/0/home/projects/14MWDihJKaGtEaPcDVkcO5z7Ap-GIavr-VO74vJgCB5NPbAa47DT_A1TN/edit
 
-1. 打開你新建的空白 Sheet，選 **擴充功能 → Apps Script**，將 `Code.gs` 的全部內容貼進編輯器並儲存。必須從此 Sheet 開啟綁定式腳本。
-2. 在編輯器上方選 `setupBridge` 並按 **執行**，依畫面授權。回到 Sheet，確認出現 `意願登記` 與 `人數總覽` 兩個分頁，後者的總數為 12。
-3. 選 **部署 → 新增部署 → 網頁應用程式**，設為「以我身分執行」與「任何人都可以存取」。複製部署產生的 `/exec` 網址。
-4. 將 `/exec` 網址填進網站根目錄的 `sheets-config.js`，commit、PUSH。網址留空時，網站仍沿用 FormSubmit 寄信與 `interest-counts.json`。
-5. 從正式 `https://` 官網用 `TEST` 送出一次。Sheet 應增加一筆測試資料、管理信箱收到通知，但總數維持 12。再用另一個 Email 送出正式意願，總數應增加為 13，官網重新整理後讀到 13。
+## 恢復既有專案
 
-來源：[Google Apps Script Web Apps](https://developers.google.com/apps-script/guides/web)、[Content Service](https://developers.google.com/apps-script/guides/content)、[Lock Service](https://developers.google.com/apps-script/reference/lock)。
+1. 使用原部署者的 Google 帳號開啟上述 Apps Script，把本目錄 `Code.gs` 貼入並儲存。程式已明確指定上述 Sheet ID。
+2. 選取 `setupBridge` → 執行，依 Google 畫面重新授權。這個函式保留既有分頁與數據，只在分頁不存在時建立。Google Drive 連接器授權與 Apps Script 授權是兩件不同的事。
+3. 選「部署 → 管理部署」，編輯既有網頁應用程式，版本選「新版本」，設定「以我身分執行」和「任何人」，再部署。更新既有部署可以沿用 sheets-config.js 的 /exec 網址；若建立新部署，必須同步更新該設定檔。
+4. 在無痕視窗開啟部署 /exec 網址並加上 `?view=counts`，應看到 `window.bridgeCount({...});`，且四類數值與 Sheet E2:E5 一致。若顯示登入、授權或錯誤頁，需先修復 Google 端部署與授權。
+5. 將網站變更發布到 GitHub Pages，確認中英文頁面都顯示 Sheet 的現有總數。Sheet 更新後，頁面最遲於下一次成功輪詢更新（每分鐘）。讀取失敗時不使用本機備援。
+
+不必新建 Sheet、不必把含個資的登記表公開，也不必重設統計。`Code.gs` 的初始值只用於建立不存在的「人數總覽」。
+
+參考：[Web Apps](https://developers.google.com/apps-script/guides/web)、[授權](https://developers.google.com/apps-script/guides/services/authorization)。

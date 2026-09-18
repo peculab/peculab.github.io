@@ -1,3 +1,4 @@
+const SPREADSHEET_ID = '1YmxclrZO1zCZH2TyIhbqFHmnOqGDSD-1ZE6dos43TyQ';
 const REGISTRATIONS_TAB = '意願登記';
 const COUNTS_TAB = '人數總覽';
 const NOTIFY_EMAIL = 'peculab.ai@gmail.com';
@@ -15,7 +16,7 @@ function doPost(e) {
     return responsePage_(false, language);
   }
 
-  const book = SpreadsheetApp.getActiveSpreadsheet();
+  const book = SpreadsheetApp.openById(SPREADSHEET_ID);
   const lock = LockService.getScriptLock();
   lock.waitLock(30000);
   let counted = false;
@@ -53,7 +54,8 @@ function doPost(e) {
 
 function doGet(e) {
   if ((e.parameter || {}).view !== 'counts') return ContentService.createTextOutput('Not found');
-  const sheet = ensureBridge_(SpreadsheetApp.getActiveSpreadsheet()).counts;
+  const sheet = SpreadsheetApp.openById(SPREADSHEET_ID).getSheetByName(COUNTS_TAB);
+  if (!sheet) throw new Error('Missing counts sheet; run setupBridge first.');
   const values = sheet.getRange(2, 1, 4, 5).getValues();
   const totals = { faculty: 0, institutions: 0, students: 0, supporters: 0 };
   const mapping = { faculty: 'faculty', institution: 'institutions', student: 'students', supporter: 'supporters' };
@@ -65,7 +67,7 @@ function doGet(e) {
 }
 
 function setupBridge() {
-  ensureBridge_(SpreadsheetApp.getActiveSpreadsheet());
+  ensureBridge_(SpreadsheetApp.openById(SPREADSHEET_ID));
 }
 
 function ensureBridge_(book) {
