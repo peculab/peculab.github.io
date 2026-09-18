@@ -76,7 +76,7 @@ function loadSheetCounts() {
     script.remove();
     try {
       renderCounts(data);
-      status.textContent = language === "zh" ? "已從 Google Sheet 更新" : "Updated from Google Sheet";
+      status.textContent = "";
     } catch { showCountError(); }
     setTimeout(loadSheetCounts, 60000);
   };
