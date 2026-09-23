@@ -19,6 +19,14 @@ Static company website for PecuLab LLC, the independent Seattle-based AI educati
 - `assets/peculab-logo.png` - cropped white-background stacked PecuLab logo derived from the source file
 - `assets/peculab-mark.png` - cropped white-background symbol mark derived from the stacked logo for the header
 
+## Interactive connection atlas
+
+- `network.html` and `zh/network.html` provide the English and Traditional Chinese network pages, linked from both homepages and About pages.
+- `assets/network-data.js` contains only aggregate GraphML attributes and counts, never individual contact records. `assets/network.js` implements a deterministic SVG layout, zoom/pan, search, filters, node details, and an accessible table without external chart dependencies. Both pages also work when opened locally.
+- Regenerate aggregates with `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build-network-data.ps1 -SourceDirectory <private-input-folder>`. Inputs are `LinkedIn_Affiliation_Network.graphml` and `LinkedIn_Connections_Enriched.csv`; keep private input files outside this repository. If replacing the snapshot, update its date and both pages' narrative counts together.
+- The snapshot is dated September 22, 2026: 1,072 records, 28 nodes, 56 edges, and 189 reliable organization-country inferences. Organization labels are preserved; inferred locations do not describe personal residence. This is an attribute affiliation graph, not a contact-to-contact social graph.
+- `scripts/network-browser-check.js` can be injected after the page scripts in a temporary local preview to check graph counts, selection, filters, empty states, table synchronization, zoom/reset, keyboard selection, and viewport overflow. It is not loaded by public pages.
+
 ## Public Profile Links
 
 - LinkedIn: https://www.linkedin.com/in/pecutsai/
