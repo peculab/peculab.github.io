@@ -49,3 +49,5 @@
 .person-photo{width:68px;height:68px;border-radius:50%;object-fit:cover;margin-bottom:16px;flex:none;background:#dfe7e2}
 .person-logo-chip{display:inline-flex;align-items:center;background:#0a1b2c;border-radius:10px;padding:7px 12px;margin-top:16px;align-self:flex-start}
 .person-logo-chip .person-logo{height:20px;max-width:120px;margin-top:0}
+.site-footer .copyright{margin:18px 0 4px;font-size:.8rem;color:#8a9a93;text-align:center}
+
