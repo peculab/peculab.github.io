@@ -1,0 +1,217 @@
+/* Analysis visual system adapted from the user-supplied PecuLab reference. */
+.founder-site .bridge-analysis {
+ --paper:#f4f1e8;--paper-2:#e9e4d8;--ink:#101616;--muted:#4b5552;--line:#a7aaa2;--panel:#fffdf7;--blue:#173fdb;--blue-ink:#f7f8ff;--orange:#cf3b1c;--lime:#d5ef3f;
+ background:var(--paper-2);color:var(--ink);scroll-margin-top:100px;
+}
+.founder-site .bridge-analysis * {box-sizing:border-box;min-width:0}
+.founder-site .bridge-analysis h2,.founder-site .bridge-analysis h3 {color:var(--ink);font-family:Arial,"Noto Sans TC",sans-serif;line-height:1.15}
+.founder-site .bridge-analysis p {color:var(--muted)}
+.founder-site .bridge-analysis .section-kicker {color:var(--blue);font:600 .78rem ui-monospace,monospace;letter-spacing:.08em}
+.founder-site .bridge-analysis .section-title {font-size:clamp(2rem,4.5vw,4rem);margin:0;letter-spacing:-.045em}
+.founder-site .bridge-analysis .section-intro {font-size:1.05rem;line-height:1.7}
+.founder-site .bridge-analysis .analysis-provenance {font-size:.85rem;border-left:3px solid var(--blue);padding:12px 18px;background:var(--panel);margin:28px 0 0}
+.founder-site .bridge-analysis .analysis-nav {display:flex;gap:12px 24px;flex-wrap:wrap;margin-bottom:40px;font-size:.86rem;font-weight:700}
+.founder-site .bridge-analysis a {color:inherit;text-underline-offset:4px}
+.founder-site .bridge-analysis a:focus-visible,.founder-site .bridge-analysis button:focus-visible {outline:3px solid var(--blue);outline-offset:4px}
+.founder-site .bridge-analysis [id] {scroll-margin-top:110px}
+.founder-site .bridge-analysis .network { background: var(--paper-2); }
+.founder-site .bridge-analysis .network-head { display: grid; grid-template-columns: 1.18fr .82fr; gap: 64px; align-items: end; }
+.founder-site .bridge-analysis .network-head .section-intro { margin: 0; }
+.founder-site .bridge-analysis .market-signals { display: grid; grid-template-columns: repeat(5, 1fr); margin-top: 52px; border: 1px solid var(--line); background: var(--panel); }
+.founder-site .bridge-analysis .market-signal { min-height: 184px; padding: 24px; border-right: 1px solid var(--line); }
+.founder-site .bridge-analysis .market-signal:last-child { border-right: 0; }
+.founder-site .bridge-analysis .market-signal .value { display: block; color: var(--blue); font-size: clamp(1.85rem, 3.5vw, 3.25rem); font-weight: 800; line-height: 1; letter-spacing: -.055em; }
+.founder-site .bridge-analysis .market-signal .label { display: block; margin-top: 12px; font-weight: 700; line-height: 1.25; }
+.founder-site .bridge-analysis .market-signal p { margin: 10px 0 0; color: var(--muted); font-size: .78rem; }
+.founder-site .bridge-analysis .market-signal a { text-underline-offset: 4px; }
+.founder-site .bridge-analysis .source-chip { display: inline-block; margin-bottom: 13px; color: var(--muted); font: 500 .66rem ui-monospace, Consolas, monospace; }
+.founder-site .bridge-analysis .source-chip.modeled { color: var(--orange); }
+.founder-site .bridge-analysis .market-analysis { margin-top: 28px; display: grid; grid-template-columns: .78fr 1.22fr; gap: 1px; background: var(--line); border: 1px solid var(--line); }
+.founder-site .bridge-analysis .analysis-panel { background: var(--panel); padding: 30px; }
+.founder-site .bridge-analysis .analysis-panel h3,
+.founder-site .bridge-analysis .sector-analysis h3,
+.founder-site .bridge-analysis .campus-analysis h3,
+.founder-site .bridge-analysis .scorecard h3 { margin: 0; font-size: clamp(1.35rem, 2.4vw, 2rem); letter-spacing: -.035em; }
+.founder-site .bridge-analysis .analysis-panel > p,
+.founder-site .bridge-analysis .sector-analysis > p,
+.founder-site .bridge-analysis .campus-analysis > p,
+.founder-site .bridge-analysis .scorecard > p { margin: 8px 0 0; color: var(--muted); font-size: .88rem; }
+.founder-site .bridge-analysis .composition-visual { display: grid; grid-template-columns: 156px 1fr; gap: 26px; align-items: center; margin-top: 28px; }
+.founder-site .bridge-analysis .donut { width: 156px; aspect-ratio: 1; border-radius: 50%; background: conic-gradient(var(--orange) 0 77.1%, var(--blue) 77.1% 100%); position: relative; display: grid; place-items: center; }
+.founder-site .bridge-analysis .donut::after { content: ""; position: absolute; inset: 27px; border-radius: 50%; background: var(--panel); }
+.founder-site .bridge-analysis .donut strong { position: relative; z-index: 1; font-size: 2rem; letter-spacing: -.05em; }
+.founder-site .bridge-analysis .composition-key { margin: 0; padding: 0; list-style: none; }
+.founder-site .bridge-analysis .composition-key li { padding: 10px 0; border-bottom: 1px solid var(--line); }
+.founder-site .bridge-analysis .composition-key li:last-child { border-bottom: 0; }
+.founder-site .bridge-analysis .composition-key b { display: block; font-size: 1.15rem; }
+.founder-site .bridge-analysis .composition-key span { color: var(--muted); font-size: .78rem; }
+.founder-site .bridge-analysis .swatch { display: inline-block; width: 9px; height: 9px; margin-right: 7px; background: var(--orange); }
+.founder-site .bridge-analysis .swatch.employer { background: var(--blue); }
+.founder-site .bridge-analysis .composition-warning { margin-top: 18px; padding-top: 16px; border-top: 3px solid var(--orange); font-size: .82rem; font-weight: 650; }
+.founder-site .bridge-analysis .tam-stack { margin-top: 24px; display: grid; gap: 12px; }
+.founder-site .bridge-analysis .tam-row { display: grid; grid-template-columns: 128px 1fr auto; align-items: center; gap: 14px; padding: 17px 0; border-top: 1px solid var(--line); }
+.founder-site .bridge-analysis .tam-row:last-child { border-bottom: 1px solid var(--line); }
+.founder-site .bridge-analysis .tam-label { font: 500 .7rem ui-monospace, Consolas, monospace; color: var(--muted); }
+.founder-site .bridge-analysis .tam-equation { font-weight: 650; font-size: .86rem; }
+.founder-site .bridge-analysis .tam-value { color: var(--blue); font-size: clamp(1.65rem, 3vw, 2.6rem); line-height: 1; font-weight: 800; letter-spacing: -.05em; text-align: right; }
+.founder-site .bridge-analysis .tam-row.conservative .tam-value { color: var(--orange); }
+.founder-site .bridge-analysis .tam-note { margin-top: 14px !important; font-size: .8rem !important; }
+.founder-site .bridge-analysis .demand-strip { margin-top: 28px; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 3px solid var(--ink); border-bottom: 1px solid var(--line); }
+.founder-site .bridge-analysis .demand-item { padding: 18px 22px 18px 0; border-right: 1px solid var(--line); }
+.founder-site .bridge-analysis .demand-item:not(:first-child) { padding-left: 22px; }
+.founder-site .bridge-analysis .demand-item:last-child { border-right: 0; }
+.founder-site .bridge-analysis .demand-item strong { color: var(--orange); font-size: 2rem; line-height: 1; }
+.founder-site .bridge-analysis .demand-item span { display: block; margin-top: 8px; font-weight: 700; }
+.founder-site .bridge-analysis .demand-item small { display: block; margin-top: 5px; color: var(--muted); line-height: 1.45; }
+.founder-site .bridge-analysis .sector-analysis,
+.founder-site .bridge-analysis .campus-analysis,
+.founder-site .bridge-analysis .scorecard { margin-top: 54px; padding-top: 24px; border-top: 3px solid var(--ink); }
+.founder-site .bridge-analysis .sector-chart { margin-top: 26px; display: grid; gap: 15px; }
+.founder-site .bridge-analysis .sector-row { display: grid; grid-template-columns: minmax(220px, .78fr) minmax(320px, 1.22fr) 94px; gap: 18px; align-items: center; }
+.founder-site .bridge-analysis .sector-name { font-weight: 700; font-size: .9rem; }
+.founder-site .bridge-analysis .sector-bar { height: 24px; background: color-mix(in srgb, var(--line) 38%, transparent); position: relative; overflow: hidden; }
+.founder-site .bridge-analysis .sector-total,
+.founder-site .bridge-analysis .sector-employer { position: absolute; inset: 0 auto 0 0; }
+.founder-site .bridge-analysis .sector-total { width: var(--total); background: var(--blue); opacity: .72; }
+.founder-site .bridge-analysis .sector-employer { width: var(--employer); background: var(--orange); }
+.founder-site .bridge-analysis .sector-value { text-align: right; font: 500 .72rem ui-monospace, Consolas, monospace; }
+.founder-site .bridge-analysis .chart-legend { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 18px; color: var(--muted); font-size: .74rem; }
+.founder-site .bridge-analysis .chart-legend span::before { content: ""; display: inline-block; width: 18px; height: 8px; margin-right: 7px; background: var(--blue); opacity: .72; }
+.founder-site .bridge-analysis .chart-legend .legend-employer::before { background: var(--orange); opacity: 1; }
+.founder-site .bridge-analysis details.sector-details { margin-top: 22px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.founder-site .bridge-analysis details.sector-details summary { cursor: pointer; padding: 15px 0; font: 500 .76rem ui-monospace, Consolas, monospace; }
+.founder-site .bridge-analysis .sector-table { width: 100%; border-collapse: collapse; font-size: .8rem; margin-bottom: 14px; }
+.founder-site .bridge-analysis .sector-table th,
+.founder-site .bridge-analysis .sector-table td { text-align: right; padding: 9px 8px; border-top: 1px solid var(--line); }
+.founder-site .bridge-analysis .sector-table th:first-child,
+.founder-site .bridge-analysis .sector-table td:first-child { text-align: left; padding-left: 0; }
+.founder-site .bridge-analysis .campus-columns { margin-top: 24px; display: grid; grid-template-columns: 1.7fr .7fr .8fr; gap: 1px; background: var(--line); border: 1px solid var(--line); }
+.founder-site .bridge-analysis .campus-column { background: var(--panel); padding: 22px; }
+.founder-site .bridge-analysis .campus-column > strong { display: block; color: var(--blue); font-size: 1.35rem; }
+.founder-site .bridge-analysis .campus-column > span { color: var(--muted); font: 500 .7rem ui-monospace, Consolas, monospace; }
+.founder-site .bridge-analysis .campus-column ul { margin: 16px 0 0; padding: 0; list-style: none; }
+.founder-site .bridge-analysis .campus-column li { padding: 8px 0; border-top: 1px solid var(--line); font-size: .8rem; }
+.founder-site .bridge-analysis .campus-extra { margin-top: 12px; padding: 18px 22px; background: var(--blue); color: var(--blue-ink); display: flex; justify-content: space-between; gap: 18px; }
+.founder-site .bridge-analysis .campus-extra span { color: color-mix(in srgb, var(--blue-ink) 75%, transparent); font-size: .8rem; }
+.founder-site .bridge-analysis .scorecard-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 34px; margin-top: 24px; counter-reset: score; }
+.founder-site .bridge-analysis .score-item { counter-increment: score; display: grid; grid-template-columns: 34px 1fr auto; gap: 12px; padding: 13px 0; border-top: 1px solid var(--line); align-items: start; }
+.founder-site .bridge-analysis .score-item::before { content: counter(score, decimal-leading-zero); color: var(--blue); font: 500 .72rem ui-monospace, Consolas, monospace; }
+.founder-site .bridge-analysis .score-item strong { font-size: .86rem; }
+.founder-site .bridge-analysis .score-item span { color: var(--muted); font: 500 .68rem ui-monospace, Consolas, monospace; }
+.founder-site .bridge-analysis .score-rule { margin-top: 20px; display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: center; padding: 18px 20px; background: var(--lime); color: #10150b; }
+.founder-site .bridge-analysis .score-rule b { font-size: 2rem; line-height: 1; letter-spacing: -.04em; }
+.founder-site .bridge-analysis .score-rule span { font-size: .84rem; font-weight: 700; }
+.founder-site .bridge-analysis .network-toolbar { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 42px; }
+.founder-site .bridge-analysis .network-toolbar > span { margin-right: 8px; color: var(--muted); font: 500 .73rem ui-monospace, Consolas, monospace; }
+.founder-site .bridge-analysis .lens-button { min-height: 38px; padding: 0 13px; border: 1px solid var(--line); background: transparent; color: var(--ink); font: 500 .72rem ui-monospace, Consolas, monospace; cursor: pointer; }
+.founder-site .bridge-analysis .lens-button:hover,
+.founder-site .bridge-analysis .lens-button.active { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+.founder-site .bridge-analysis .network-board { margin-top: 18px; border: 1px solid var(--line); background: var(--panel); padding: 24px; }
+.founder-site .bridge-analysis .network-board svg { display: block; width: 100%; height: auto; aspect-ratio: 1100 / 650; }
+.founder-site .bridge-analysis .network-edge { fill: none; stroke: var(--line); stroke-width: 2; vector-effect: non-scaling-stroke; transition: opacity .18s ease; }
+.founder-site .bridge-analysis .network-edge.flow { stroke: var(--blue); stroke-width: 3; }
+.founder-site .bridge-analysis .network-node { transition: opacity .18s ease; }
+.founder-site .bridge-analysis .network-node rect { fill: var(--paper); stroke: var(--line); stroke-width: 1.5; vector-effect: non-scaling-stroke; }
+.founder-site .bridge-analysis .network-node .node-kind { fill: var(--muted); font: 500 12px ui-monospace, Consolas, monospace; letter-spacing: .04em; }
+.founder-site .bridge-analysis .network-node .node-title { fill: var(--ink); font: 700 18px Arial, "Noto Sans TC", sans-serif; }
+.founder-site .bridge-analysis .network-node .node-small { fill: var(--muted); font: 500 13px Arial, "Noto Sans TC", sans-serif; }
+.founder-site .bridge-analysis .network-node.company rect { fill: var(--orange); stroke: var(--orange); }
+.founder-site .bridge-analysis .network-node.company .node-kind,
+.founder-site .bridge-analysis .network-node.company .node-title,
+.founder-site .bridge-analysis .network-node.company .node-small { fill: #160c08; }
+.founder-site .bridge-analysis .network-node.platform rect { fill: var(--blue); stroke: var(--blue); }
+.founder-site .bridge-analysis .network-node.platform .node-kind,
+.founder-site .bridge-analysis .network-node.platform .node-title,
+.founder-site .bridge-analysis .network-node.platform .node-small { fill: var(--blue-ink); }
+.founder-site .bridge-analysis .network-node.student rect { fill: var(--lime); stroke: #9fb52c; }
+.founder-site .bridge-analysis .network-node.student .node-kind,
+.founder-site .bridge-analysis .network-node.student .node-title,
+.founder-site .bridge-analysis .network-node.student .node-small { fill: #10150b; }
+.founder-site .bridge-analysis .network-board[data-lens="business"] [data-lens]:not([data-lens~="business"]),
+.founder-site .bridge-analysis .network-board[data-lens="student"] [data-lens]:not([data-lens~="student"]),
+.founder-site .bridge-analysis .network-board[data-lens="institution"] [data-lens]:not([data-lens~="institution"]) { opacity: .16; }
+.founder-site .bridge-analysis .network-caption { display: flex; justify-content: space-between; gap: 24px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: .78rem; }
+.founder-site .bridge-analysis .network-caption strong { color: var(--ink); }
+.founder-site .bridge-analysis .mobile-network { display: none; }
+.founder-site .bridge-analysis .bridge-panel { margin-top: 34px; padding-top: 24px; border-top: 3px solid var(--ink); }
+.founder-site .bridge-analysis .bridge-panel h3 { margin: 0; font-size: 1.3rem; letter-spacing: -.025em; }
+.founder-site .bridge-analysis .bridge-panel > p { margin: 7px 0 0; color: var(--muted); font-size: .88rem; }
+.founder-site .bridge-analysis .observed-metrics { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 22px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.founder-site .bridge-analysis .observed-metric { padding: 18px 18px 18px 0; border-right: 1px solid var(--line); }
+.founder-site .bridge-analysis .observed-metric:not(:first-child) { padding-left: 18px; }
+.founder-site .bridge-analysis .observed-metric:last-child { border-right: 0; }
+.founder-site .bridge-analysis .observed-metric strong { display: block; color: var(--orange); font-size: 2rem; line-height: 1; }
+.founder-site .bridge-analysis .observed-metric span { display: block; margin-top: 7px; color: var(--muted); font: 500 .72rem ui-monospace, Consolas, monospace; }
+.founder-site .bridge-analysis .bridge-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 28px; margin: 20px 0 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+.founder-site .bridge-analysis .bridge-list li { padding: 15px 0; border-bottom: 1px solid var(--line); }
+.founder-site .bridge-analysis .bridge-list a { display: block; font-weight: 700; text-underline-offset: 4px; }
+.founder-site .bridge-analysis .bridge-list span { display: block; margin-top: 4px; color: var(--muted); font-size: .8rem; }
+.founder-site .bridge-analysis .measurement-grid { display: grid; grid-template-columns: .72fr 1.28fr; gap: 58px; margin-top: 56px; }
+.founder-site .bridge-analysis .measurement-grid h3 { margin: 0; font-size: clamp(1.6rem, 3vw, 2.4rem); line-height: 1.08; letter-spacing: -.035em; }
+.founder-site .bridge-analysis .measurement-list { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+.founder-site .bridge-analysis .measurement-list li { display: grid; grid-template-columns: 150px 1fr; gap: 20px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.founder-site .bridge-analysis .measurement-list span { color: var(--blue); font: 500 .74rem ui-monospace, Consolas, monospace; }
+.founder-site .bridge-analysis .measurement-list strong { font-size: .94rem; }
+.founder-site .bridge-analysis .source-note { margin: 22px 0 0; color: var(--muted); font-size: .76rem; }
+.founder-site .bridge-analysis .source-note a { text-underline-offset: 4px; }
+
+
+/* Keep the supplied visual hierarchy within the existing site's layout. */
+.founder-site .bridge-analysis .network-board {margin:18px 0 0}
+.founder-site .bridge-analysis .market-signal .value {font-variant-numeric:tabular-nums;font-size:clamp(1.55rem,2.65vw,2.8rem)}
+.founder-site .bridge-analysis .tam-row {grid-template-columns:1fr auto;gap:10px}
+.founder-site .bridge-analysis .tam-label {grid-column:1 / -1}
+.founder-site .bridge-analysis .tam-equation {font-size:.8rem}
+.founder-site .bridge-analysis .tam-value {font-size:clamp(1.4rem,2.6vw,2.4rem)}
+.founder-site .bridge-analysis .network-node .node-title {font-size:16px}
+.founder-site .bridge-analysis .sector-row {grid-template-columns:minmax(180px,.78fr) minmax(180px,1.22fr) 130px}
+.founder-site .bridge-analysis .mobile-network [data-lens] {transition:opacity .18s ease}
+.founder-site .bridge-analysis .score-item {grid-template-columns:28px 1fr auto}
+@media(max-width:1050px) {
+ .founder-site .bridge-analysis .network-head,.founder-site .bridge-analysis .measurement-grid {grid-template-columns:1fr;gap:26px}
+ .founder-site .bridge-analysis .market-signals {grid-template-columns:repeat(2,minmax(0,1fr))}
+ .founder-site .bridge-analysis .market-signal {border-bottom:1px solid var(--line)}
+ .founder-site .bridge-analysis .market-signal:nth-child(even) {border-right:0}
+ .founder-site .bridge-analysis .market-signal:last-child {grid-column:1 / -1;border-bottom:0}
+ .founder-site .bridge-analysis .market-analysis {grid-template-columns:1fr}
+ .founder-site .bridge-analysis .bridge-list {grid-template-columns:repeat(2,minmax(0,1fr))}
+ .founder-site .bridge-analysis .campus-columns {grid-template-columns:1fr 1fr}
+ .founder-site .bridge-analysis .campus-column:first-child {grid-column:1 / -1}
+}
+@media(max-width:700px) {
+ .founder-site .bridge-analysis .market-signals,.founder-site .bridge-analysis .demand-strip,.founder-site .bridge-analysis .campus-columns,.founder-site .bridge-analysis .scorecard-grid,.founder-site .bridge-analysis .observed-metrics,.founder-site .bridge-analysis .bridge-list {grid-template-columns:1fr}
+ .founder-site .bridge-analysis .market-signal {min-height:0;border-right:0}
+ .founder-site .bridge-analysis .market-signal .value {font-size:2.4rem}
+ .founder-site .bridge-analysis .analysis-panel {padding:22px}
+ .founder-site .bridge-analysis .composition-visual {grid-template-columns:110px 1fr;gap:16px}
+ .founder-site .bridge-analysis .donut {width:110px}
+ .founder-site .bridge-analysis .donut::after {inset:20px}
+ .founder-site .bridge-analysis .tam-row {grid-template-columns:1fr}
+ .founder-site .bridge-analysis .tam-value {text-align:left}
+ .founder-site .bridge-analysis .demand-item,.founder-site .bridge-analysis .demand-item:not(:first-child),.founder-site .bridge-analysis .observed-metric,.founder-site .bridge-analysis .observed-metric:not(:first-child) {padding:18px 0;border-right:0;border-bottom:1px solid var(--line)}
+ .founder-site .bridge-analysis .sector-row {grid-template-columns:1fr;gap:8px}
+ .founder-site .bridge-analysis .sector-value {text-align:left}
+ .founder-site .bridge-analysis .sector-table {font-size:.73rem;table-layout:fixed}
+ .founder-site .bridge-analysis .sector-table th,.founder-site .bridge-analysis .sector-table td {padding:10px 4px;overflow-wrap:anywhere}
+ .founder-site .bridge-analysis .sector-table th:first-child {width:48%}
+ .founder-site .bridge-analysis .campus-extra {flex-direction:column}
+ .founder-site .bridge-analysis .network-toolbar > span {width:100%}
+ .founder-site .bridge-analysis .network-board {padding:18px}
+ .founder-site .bridge-analysis .network-board svg {display:none}
+ .founder-site .bridge-analysis .mobile-network {display:grid;gap:12px}
+ .founder-site .bridge-analysis .mobile-network-group {border-top:1px solid var(--line);padding-top:12px}
+ .founder-site .bridge-analysis .mobile-network-group > span {display:block;color:var(--blue);font:600 .72rem ui-monospace,monospace}
+ .founder-site .bridge-analysis .mobile-network-group strong {display:block;margin-top:5px;font-size:1.1rem}
+ .founder-site .bridge-analysis .mobile-network-group p {margin:4px 0 0;font-size:.9rem}
+ .founder-site .bridge-analysis .mobile-network-arrow {color:var(--orange);font:600 .76rem ui-monospace,monospace}
+ .founder-site .bridge-analysis .network-caption {display:block;margin-top:18px}
+ .founder-site .bridge-analysis .network-caption span {display:block;margin-top:8px}
+ .founder-site .bridge-analysis .measurement-list li {grid-template-columns:1fr;gap:6px}
+ .founder-site .bridge-analysis .score-rule {grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce) {
+ .founder-site .bridge-analysis .network-edge,.founder-site .bridge-analysis .network-node,.founder-site .bridge-analysis .mobile-network [data-lens] {transition:none}
+}
+
+.founder-site .bridge-analysis .network-node:last-child .node-title {font-size:14px}
+.founder-site .bridge-analysis .section-title {text-wrap:balance}

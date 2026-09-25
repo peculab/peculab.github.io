@@ -44,6 +44,30 @@ function showCountError() {
 
 const sheetApp = window.BRIDGE_SHEETS_WEB_APP_URL || "";
 const form = document.querySelector(".bridge-form form");
+// Preserve the deployed Sheet's four role keys. Store the more specific
+// participation role in the existing interest column, without changing the form.
+form?.addEventListener("formdata", (event) => {
+  const selected = form.elements.role.selectedOptions[0];
+  if (!selected?.value) return;
+  const detail = selected.textContent.trim();
+  const interest = String(event.formData.get("interest") || "");
+  // Keep the backend's existing test-submission detection working.
+  if (["test", "測試"].includes(interest.trim().toLowerCase())) return;
+  event.formData.set("interest", `[${selected.dataset.participationRole || selected.value}: ${detail}]\n${interest}`);
+});
+
+document.querySelectorAll("[data-join-role]").forEach((link) => {
+  link.addEventListener("click", () => {
+    if (!form) return;
+    const select = form.elements.role;
+    const option = [...select.options].find((item) => item.dataset.participationRole === link.dataset.joinRole);
+    if (option) {
+      select.selectedIndex = option.index;
+      select.focus({ preventScroll: true });
+    }
+  });
+});
+
 if (sheetApp && window.location.protocol !== "file:") {
   if (form) {
     form.action = sheetApp;

@@ -22,3 +22,30 @@
 .bridge-form button:disabled{opacity:.45;cursor:not-allowed}
 .bridge-count-status{display:block;margin-top:20px;font-size:.82rem;color:#d7e6e2}
 .bridge-honey{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0!important}
+.bridge-workflow{list-style:none;padding:0}
+.bridge-model{background:#f5f8f6}
+.bridge-deliverables{margin:28px 0;padding:26px;border-left:4px solid #467d70;background:#eaf3ef;border-radius:0 18px 18px 0}
+.bridge-deliverables h3{margin:0 0 10px}.bridge-deliverables p{margin:0}
+.bridge-role{display:flex;flex-direction:column}.bridge-role .text-link{margin-top:auto;padding-top:20px;display:inline-block}
+#model,#plan,#roles,#join{scroll-margin-top:100px}
+
+.bridge-people{background:#f5f8f6}
+.people-subhead{margin:38px 0 4px;font-size:1.15rem;letter-spacing:.01em}
+.people-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:20px}
+.people-grid.ambassadors{grid-template-columns:repeat(2,1fr);max-width:840px}
+.person-card{background:#fff;border:1px solid #142b3220;border-radius:20px;padding:26px 24px;display:flex;flex-direction:column}
+.person-avatar{width:68px;height:68px;border-radius:50%;background:linear-gradient(135deg,#467d70,#0a1b2c);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.35rem;letter-spacing:.04em;margin-bottom:16px;flex:none}
+.person-card h3{margin:0 0 6px;font-size:1.12rem}
+.person-title{margin:0;font-size:.9rem;font-weight:600}
+.person-sub{margin:3px 0 0;font-size:.85rem;color:#508174}
+.person-bio{margin:10px 0 0;font-size:.88rem;color:#33424a}
+.person-note{margin:10px 0 0;font-size:.84rem;color:#8a6d3b;font-style:italic}
+.person-logo{height:30px;max-width:150px;object-fit:contain;object-position:left center;margin-top:16px}
+.person-card .text-link{margin-top:12px}
+#people{scroll-margin-top:100px}
+@media(max-width:900px){.people-grid{grid-template-columns:repeat(2,1fr)}.people-grid.ambassadors{grid-template-columns:1fr;max-width:none}}
+@media(max-width:540px){.people-grid{grid-template-columns:1fr}}
+
+.person-photo{width:68px;height:68px;border-radius:50%;object-fit:cover;margin-bottom:16px;flex:none;background:#dfe7e2}
+.person-logo-chip{display:inline-flex;align-items:center;background:#0a1b2c;border-radius:10px;padding:7px 12px;margin-top:16px;align-self:flex-start}
+.person-logo-chip .person-logo{height:20px;max-width:120px;margin-top:0}
