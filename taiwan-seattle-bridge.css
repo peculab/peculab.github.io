@@ -57,3 +57,6 @@
 .olons-logo-lockup span{color:#e8e8ec;font-family:Arial,sans-serif;font-size:18px;font-weight:700;letter-spacing:4px;line-height:1}
 
 .person-logo.person-logo-uw{width:100%;max-width:320px;height:auto;align-self:flex-start}
+
+/* Crop the source image's vertical padding so the Meta mark matches other logos. */
+.person-logo.person-logo-meta{width:140px;max-width:100%;height:32px;object-fit:cover;object-position:center;align-self:flex-start}
