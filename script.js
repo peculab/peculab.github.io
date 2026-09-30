@@ -5,25 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  const menuToggle = document.querySelector(".menu-toggle");
-  const nav = document.querySelector(".nav");
-
-  if (menuToggle && nav) {
-    menuToggle.addEventListener("click", () => {
-      const isOpen = nav.classList.toggle("open");
-      menuToggle.setAttribute("aria-expanded", String(isOpen));
-      document.body.classList.toggle("nav-open", isOpen);
-    });
-
-    nav.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        nav.classList.remove("open");
-        menuToggle.setAttribute("aria-expanded", "false");
-        document.body.classList.remove("nav-open");
-      });
-    });
-  }
-
   let revealObserver = null;
 
   const showReveal = (el) => {
@@ -121,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
         file: "clinical-wound-f1-curve.png",
         alt: isChinese ? "公開傷口分割論文中的 F1 分數與模型信心門檻曲線" : "F1 score versus confidence threshold from the public wound-segmentation paper",
         label: isChinese ? "不揭露病患影像的模型證據" : "Model evidence without patient imagery",
-        caption: isChinese ? "以公開論文的 F1—信心曲線呈現模型評估；網站不使用傷口原始照片。" : "The public paper's F1–confidence curve communicates model evaluation without publishing wound photographs on the site."
+        caption: isChinese ? "以公開論文的 F1, 信心曲線呈現模型評估；網站不使用傷口原始照片。" : "The public paper's F1-confidence curve communicates model evaluation without publishing wound photographs on the site."
       },
       {
         match: isChinese ? "教人指揮 AI" : "Teaching people to direct AI",

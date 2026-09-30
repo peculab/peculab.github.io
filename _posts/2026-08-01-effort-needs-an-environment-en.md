@@ -1,6 +1,6 @@
 ---
 title: "Effort Needs an Environment: In the AI Era, Education’s Scarcest Resource Is a High-Trust Community"
-subtitle: "The difference in education is not only how children are taught, but where they are taken afterward—and whether their work can be seen, tested, trusted, and connected to a next opportunity."
+subtitle: "The difference in education is not only how children are taught, but where they are taken afterward and whether their work can be seen, tested, trusted, and connected to a next opportunity."
 date: 2026-08-01
 lang: en
 category: field-notes
@@ -27,7 +27,7 @@ In other words, the difference in education is not only **how children are taugh
 
 Educational innovation often remains at the level of form: replacing a textbook, adopting a platform, designing a new activity, or applying a new instructional model. These changes may make a classroom more engaging and efficient, and they may sound more contemporary.
 
-But if they do not bring children into communities with a greater density of resources—if they do not expose them to real problems, real projects, real mentors, and real standards of evaluation—then they may still be only low-leverage improvements.
+But these changes may have limited impact unless they bring children into communities with more resources and expose them to real problems, projects, mentors, and standards of evaluation.
 
 High-leverage education is not simply about teaching a better class. It places a child's effort within an environment capable of amplifying it.
 
@@ -53,7 +53,7 @@ The difference is that the same food has entered a different market, trust syste
 
 Education works in a similar way.
 
-Many children are not lacking in effort, and many teachers are not lacking in dedication. In some places, students and teachers work extraordinarily hard—sometimes to the point of exhausting competition.
+Many children are not lacking in effort, and many teachers are not lacking in dedication. In some places, students and teachers work extraordinarily hard, sometimes to the point of exhausting competition.
 
 We often assume that enough effort, projects, competitions, and certificates will naturally accumulate into competitiveness. Families, students, and educators therefore invest tremendous energy in visible forms of effort: more classes, more contests, more portfolio pieces, and more activities.
 

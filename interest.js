@@ -10,8 +10,8 @@ if (window.location.protocol === "file:") {
     notice.className = "bridge-local-notice";
     const link = document.createElement("a");
     link.href = `https://peculab.github.io/${language === "zh" ? "zh/" : ""}taiwan-seattle-bridge.html#join`;
-    link.textContent = language === "zh" ? "前往官網填寫合作意願 ↗" : "Open the live website to submit interest ↗";
-    notice.append(language === "zh" ? "這是本機 HTML 預覽。FormSubmit 不接受從檔案直接送出的表單。" : "This is a local HTML preview. FormSubmit does not accept submissions from files.", document.createElement("br"), link);
+    link.textContent = language === "zh" ? "開啟線上表單 ↗" : "Open the online form ↗";
+    notice.append(language === "zh" ? "若要從此預覽登記意願，請開啟線上表單。" : "To submit your interest from this preview, open the online form.", document.createElement("br"), link);
     form.before(notice);
     form.querySelector('button[type="submit"]').disabled = true;
     form.querySelector('button[type="submit"]').title = language === "zh" ? "請前往官網填寫" : "Please use the live website";
@@ -35,7 +35,7 @@ function renderCounts(data) {
 }
 
 function showCountError() {
-  document.querySelectorAll("[data-total], [data-count]").forEach((cell) => { cell.textContent = "—"; });
+  document.querySelectorAll("[data-total], [data-count]").forEach((cell) => { cell.textContent = "…"; });
   document.querySelectorAll("[data-bar]").forEach((bar) => { bar.style.width = "0%"; });
   document.querySelector("[data-count-status]").textContent = language === "zh"
     ? "暫時無法讀取 Google Sheet 人數，請稍後重新整理。"

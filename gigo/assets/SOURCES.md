@@ -1,6 +1,6 @@
 # Product photographs
 
-Source: [Thames & Kosmos — Kids First Coding & Robotics, Classroom Bundle 10-Pack](https://thamesandkosmos.com/products/kids-first-coding-robotics-classroom-bundle-10-pack).
+Source: [Thames & Kosmos, Kids First Coding & Robotics, Classroom Bundle 10-Pack](https://thamesandkosmos.com/products/kids-first-coding-robotics-classroom-bundle-10-pack).
 
 Retrieved 2026-09-22 from the product's official Shopify image list. Images are manufacturer product photographs, not photos of a PecuLab class. Copyright remains with the respective rights holder. Source attribution is displayed on the course page.
 

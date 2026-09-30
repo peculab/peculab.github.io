@@ -1,4 +1,4 @@
-# PecuLab K–2 文化邏輯探索課
+# PecuLab K-2 文化邏輯探索課
 
 本地完成的課程提案，尚未發布、報名或確認 NKCC 合作。
 
@@ -49,7 +49,7 @@ NKCC 公開多功能室居民價 $125/小時，平日至少 2 小時。若自行
 
 ## 研究依據
 
-- [2026 秋／2027 冬 Youth Guide](https://www.kirklandwa.gov/files/sharedassets/public/v/1/parks-amp-comm-services/recreation/rec-guide/2026-fall-2027-winter-recreation-guide_youth.pdf)：印刷頁 22 的 Little Coders，5–7 歲，9/21–11/9 共 8 次，每次 60 分鐘，居民 $234／非居民 $281。頁 23 的 Wilderness Medicine：10 次 60 分鐘，$380／$456。頁 25 的 Elementary Tumbling 1（24971）：6 次 45 分鐘，$72／$86。課次由日期區間與停課標示計算。
+- [2026 秋／2027 冬 Youth Guide](https://www.kirklandwa.gov/files/sharedassets/public/v/1/parks-amp-comm-services/recreation/rec-guide/2026-fall-2027-winter-recreation-guide_youth.pdf)：印刷頁 22 的 Little Coders，5-7 歲，9/21-11/9 共 8 次，每次 60 分鐘，居民 $234／非居民 $281。頁 23 的 Wilderness Medicine：10 次 60 分鐘，$380／$456。頁 25 的 Elementary Tumbling 1（24971）：6 次 45 分鐘，$72／$86。課次由日期區間與停課標示計算。
 - [2026-05-26 Facility Rental Guide](https://www.kirklandwa.gov/files/sharedassets/public/v/1/parks-amp-comm-services/pdfs/finalized-rental-guide-5.26.26.pdf)：第 4 頁 NKCC 費率與 2 小時最低租期；第 6 頁 $300 可退押金。未將押金當作費用，但應列為額外現金需求。
 - [官方教材 10 套組](https://thamesandkosmos.com/products/kids-first-coding-robotics-classroom-bundle-10-pack)：$999.95，查詢時顯示 backordered；採購時另確認稅運費。
 - 使用者提供的 `ref/Facebook.pdf` 決定課程定位：故事、文化任務、不插電邏輯、修正與表達。

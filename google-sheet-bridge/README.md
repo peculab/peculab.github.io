@@ -1,6 +1,6 @@
 # Google Sheet 即時登記與授權恢復
 
-網站統計唯一來源是既有 Google Sheet 的 `人數總覽!A2:E5`，由 Apps Script 每次讀取 E 欄累計，只回傳四類加總。網站每分鐘更新；失敗顯示「—」與錯誤訊息，不讀取 interest-counts.json，也不顯示預填數字。私人登記資料不需公開。
+網站統計唯一來源是既有 Google Sheet 的 `人數總覽!A2:E5`，由 Apps Script 每次讀取 E 欄累計，只回傳四類加總。網站每分鐘更新；失敗顯示「, 」與錯誤訊息，不讀取 interest-counts.json，也不顯示預填數字。私人登記資料不需公開。
 
 - Sheet：https://docs.google.com/spreadsheets/d/1YmxclrZO1zCZH2TyIhbqFHmnOqGDSD-1ZE6dos43TyQ/edit
 - Apps Script：https://script.google.com/u/0/home/projects/14MWDihJKaGtEaPcDVkcO5z7Ap-GIavr-VO74vJgCB5NPbAa47DT_A1TN/edit

@@ -21,7 +21,7 @@
       rel="stylesheet"
     >
     <link rel="stylesheet" href="{{ '/styles.css?v=20260910-article-tables' | relative_url }}">
-  </head>
+  <link rel="stylesheet" href="{{ '/site-navigation.css?v=20260929' | relative_url }}"></head>
   <body>
     <header class="site-header">
       <div class="container header-inner">
@@ -33,27 +33,7 @@
           </span>
         </a>
 
-        <nav class="nav" aria-label="{% if page.lang == 'zh' %}主要導覽{% else %}Primary navigation{% endif %}">
-          {% if page.lang == "zh" %}
-            <a href="{{ '/zh/programs.html' | relative_url }}">課程與營隊</a>
-            <a href="{{ '/zh/services-pricing.html' | relative_url }}">企業 POC</a>
-            <a href="{{ '/zh/case-studies.html' | relative_url }}">實戰案例</a>
-            <a href="{{ '/zh/workshop/' | relative_url }}">活動紀錄</a>
-            <a href="{{ '/field-notes/index.html' | relative_url }}">文章札記</a>
-            <a href="{{ '/zh/about.html' | relative_url }}">關於 Pecu</a>
-            <a href="{{ '/zh/media.html' | relative_url }}">媒體報導</a>
-            <a href="{{ '/zh/book.html' | relative_url }}">合作詢問</a>
-          {% else %}
-            <a href="{{ '/programs.html' | relative_url }}">Courses &amp; Camps</a>
-            <a href="{{ '/services-pricing.html' | relative_url }}">Enterprise POC</a>
-            <a href="{{ '/case-studies.html' | relative_url }}">Applied Work</a>
-            <a href="{{ '/workshop/' | relative_url }}">Events</a>
-            <a href="{{ '/field-notes/index.html' | relative_url }}">Field Notes</a>
-            <a href="{{ '/about.html' | relative_url }}">About Pecu</a>
-            <a href="{{ '/media.html' | relative_url }}">Media</a>
-            <a href="{{ '/book.html' | relative_url }}">Inquire</a>
-          {% endif %}
-          {% if page.translation_key %}
+        <details class="site-navigation"><summary><span class="site-menu-icon" aria-hidden="true"><i></i><i></i><i></i></span><span class="site-menu-label">{% if page.lang == "zh" or page.lang == "zh-Hant" %}開啟或關閉選單{% else %}Toggle navigation{% endif %}</span></summary><nav class="site-nav-links" aria-label="Primary navigation">{% if page.lang == "zh" or page.lang == "zh-Hant" %}<a href="{{ '/zh/index.html' | relative_url }}">首頁</a><a href="{{ '/zh/programs.html' | relative_url }}">課程與營隊</a><a href="{{ '/zh/taiwan-seattle-bridge.html' | relative_url }}">台美學生共創</a><a href="{{ '/zh/services-pricing.html' | relative_url }}">企業 POC</a><a href="{{ '/zh/case-studies.html' | relative_url }}">實戰案例</a><a href="{{ '/zh/workshop/index.html' | relative_url }}">活動紀錄</a><a href="{{ '/zh/field-notes/index.html' | relative_url }}">文章札記</a><a href="{{ '/zh/about.html' | relative_url }}">關於 Pecu</a><a href="{{ '/zh/media.html' | relative_url }}">媒體報導</a><a href="{{ '/zh/resources.html' | relative_url }}">資源</a><a href="{{ '/zh/network.html' | relative_url }}">關係網絡</a><a href="{{ '/zh/book.html' | relative_url }}">合作詢問</a>{% else %}<a href="{{ '/index.html' | relative_url }}">Home</a><a href="{{ '/programs.html' | relative_url }}">Courses &amp; Camps</a><a href="{{ '/taiwan-seattle-bridge.html' | relative_url }}">Student Bridge</a><a href="{{ '/services-pricing.html' | relative_url }}">Enterprise POC</a><a href="{{ '/case-studies.html' | relative_url }}">Applied Work</a><a href="{{ '/workshop/index.html' | relative_url }}">Events</a><a href="{{ '/field-notes/index.html' | relative_url }}">Field Notes</a><a href="{{ '/about.html' | relative_url }}">About Pecu</a><a href="{{ '/media.html' | relative_url }}">Media</a><a href="{{ '/resources.html' | relative_url }}">Resources</a><a href="{{ '/network.html' | relative_url }}">Network</a><a href="{{ '/book.html' | relative_url }}">Inquire</a>{% endif %}{% if page.translation_key %}
             {% assign nav_related_posts = site.posts | where: "translation_key", page.translation_key %}
             {% if page.lang == "zh" %}
               {% assign nav_translation = nav_related_posts | where: "lang", "en" | first %}
@@ -63,9 +43,7 @@
               {% if nav_translation %}<a class="language-switch" href="{{ nav_translation.url | relative_url }}" lang="zh-Hant">中文</a>{% endif %}
             {% endif %}
           {% endif %}
-        </nav>
-
-        <button class="menu-toggle" aria-label="{% if page.lang == 'zh' %}開啟導覽{% else %}Toggle navigation{% endif %}" aria-expanded="false">{% if page.lang == "zh" %}選單{% else %}Menu{% endif %}</button>
+        </nav></details>
       </div>
     </header>
 
@@ -146,5 +124,5 @@
 
     <script src="{{ '/script.js?v=20260704-5' | relative_url }}"></script>
     <script type="module" src="{{ '/field-notes-engagement.js?v=20260706-share-only' | relative_url }}"></script>
-  </body>
+  <script src="{{ '/site-navigation.js?v=20260929' | relative_url }}"></script></body>
 </html>

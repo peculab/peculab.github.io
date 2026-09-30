@@ -6,7 +6,7 @@ lang: en
 category: field-notes
 translation_key: two-bags-full-of-curiosity
 series: Seattle K-12 Field Notes
-excerpt: "Every Wednesday, Stanley visits the library with his cousin next door and chooses around thirty books himself. From axolotls to places around the world, those two bags help me see how everyday curiosity becomes reading—and how parents can make room for it."
+excerpt: "Every Wednesday, Stanley visits the library with his cousin next door and chooses around thirty books himself. From axolotls to places around the world, those two bags help me see how everyday curiosity becomes reading and how parents can make room for it."
 ---
 
 Every Wednesday, elementary school lets out at 1:30 p.m. After picking up Stanley, we go home for a snack, then meet my nephew, who lives next door, at three to return books and borrow new ones at the library.

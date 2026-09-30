@@ -5,7 +5,7 @@ date: 2026-09-10
 lang: en
 category: field-notes
 translation_key: ai-education-two-rhythms
-series: Taiwan–Seattle Education Field Notes
+series: Taiwan-Seattle Education Field Notes
 excerpt: "Across roughly two thousand student participations and nearly two hundred senior high and vocational schools, a non-mandatory AI elective showed me the complicated relationship between participation, exam pressure, family choice, and course design."
 ---
 
@@ -34,7 +34,7 @@ I do not want to compress both semesters into one polished annual percentage. Th
 | 114-1 | The cooperating-teacher file listed 25 schools. The grade file contained 4,429 grading records, including repeat submissions, so it cannot be treated as a student count. The final sharing area had 27 posts, 23 of which included both a Colab link and a video. | This was a learning process built from assignments, feedback, and final expression, but there was no formal roster that could support a total-enrollment calculation. |
 | 114-2 | The submission sheet listed 29 school names and 554 students. 509 students submitted at least one unit (91.9%); the average was 6.01 unit records and the median was 6. 201 students had records for at least eight units (36.3%), and 99 had records for all ten (17.9%). | Most students on the roster encountered the course, but only a minority sustained participation throughout. That is exactly what makes a free elective worth understanding. |
 
-Across the ten 114-2 units, there were 3,332 recorded student–unit submissions, about 60.1% of the 554 students multiplied by ten units. From March through April, unit submissions ranged from 384 to 460. In May, they fell to between 183 and 231. I cannot directly interpret that decline as lost interest, nor can I attribute it to teaching. Exams, school activities, whole-class absences, roster differences, make-up schedules, and unit difficulty may all have shaped the result.
+Across the ten 114-2 units, there were 3,332 recorded student-unit submissions, about 60.1% of the 554 students multiplied by ten units. From March through April, unit submissions ranged from 384 to 460. In May, they fell to between 183 and 231. I cannot directly interpret that decline as lost interest, nor can I attribute it to teaching. Exams, school activities, whole-class absences, roster differences, make-up schedules, and unit difficulty may all have shaped the result.
 
 The final sharing areas show a similar difference. Issue #111 in 114-1 contained 27 student posts, and 23 included both code and an explanatory video. Issue #112 in 114-2 contained 58 student posts after one teaching-assistant example was excluded, and 54 included both a Colab link and a video. At the threshold of “willing to organize and publish a project,” the two-semester share of posts with both links rose from 85.2% to 93.1%. But post counts are not unique-student counts or full-project completion rates. Some posts documented unit outcomes, some were collaborative projects, and some linked back to the original course materials.
 

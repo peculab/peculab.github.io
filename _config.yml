@@ -18,3 +18,7 @@ defaults:
 markdown: kramdown
 kramdown:
   input: GFM
+
+exclude:
+  - field-notes/local-preview
+  - scripts

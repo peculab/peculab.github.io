@@ -17,7 +17,7 @@ When children want something new, the conversation can quickly become a negotiat
 
 “But I really want it.”
 
-The parent tries to protect the budget while the child tries to win approval. After enough conversations like this, a child may learn to accept no—or simply become better at persuading their parents.
+The parent tries to protect the budget while the child tries to win approval. After enough conversations like this, a child may learn to accept no, or simply become better at persuading their parents.
 
 But does this process actually help children understand money?
 

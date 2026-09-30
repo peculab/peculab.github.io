@@ -5,7 +5,7 @@ date: 2026-09-10
 lang: zh
 category: field-notes
 translation_key: ai-education-two-rhythms
-series: Taiwan–Seattle Education Field Notes
+series: Taiwan-Seattle Education Field Notes
 excerpt: "兩年、約兩千人次、近兩百所高中職，一門不以強制作業為唯一目的的 AI 選修課，讓我看見參與、升學焦慮、家庭選擇與課程設計之間複雜而真實的回聲。"
 ---
 

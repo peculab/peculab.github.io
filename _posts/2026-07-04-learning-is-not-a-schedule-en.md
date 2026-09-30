@@ -1,12 +1,12 @@
 ---
 title: "Learning Is Not a Schedule. It Is a Whole Life."
-subtitle: "Field notes from families, schools, libraries, and community spaces in Seattle—where children slowly grow into their own direction in the age of AI."
+subtitle: "Field notes from families, schools, libraries, and community spaces in Seattle, where children slowly grow into their own direction in the age of AI."
 date: 2026-07-04
 lang: en
 category: field-notes
 translation_key: learning-is-not-a-schedule
 series: Seattle K-12 Field Notes
-excerpt: "Field notes from families, schools, libraries, and community spaces in Seattle—where children slowly grow into their own direction in the age of AI."
+excerpt: "Field notes from families, schools, libraries, and community spaces in Seattle, where children slowly grow into their own direction in the age of AI."
 ---
 
 Learning is not a schedule.
@@ -25,7 +25,7 @@ Field Notes will be a starting point for those observations.
 
 Last winter, our family began settling into life in Seattle.
 
-Our child entered a local public school with almost no English background. As I moved between cities and roles, I also began to notice learning differently—as a parent, educator, and researcher.
+Our child entered a local public school with almost no English background. As I moved between cities and roles, I also began to notice learning differently, as a parent, educator, and researcher.
 
 It does not happen only in classrooms.
 
@@ -43,7 +43,7 @@ But they are often where children begin to trust themselves and become willing t
 
 These notes are not meant to offer conclusions about “American education.”
 
-The United States is large, and differences across states, cities, schools, families, and communities are significant. What I have encountered so far is only a limited set of ordinary learning environments around Seattle—places I am still learning to understand.
+The United States is large, and differences across states, cities, schools, families, and communities are significant. What I have encountered so far is only a limited set of ordinary learning environments around Seattle, places I am still learning to understand.
 
 They cannot represent the entire country, nor should they become a model that any other place simply copies.
 
@@ -89,10 +89,10 @@ That is why I want to write Field Notes.
 
 I will record small learning moments I encounter in Seattle: children, families, schools, libraries, community activities, and the things that may not appear in a curriculum but still shape a person’s growth.
 
-These notes come from a limited, local perspective—one that is still learning.
+These notes come from a limited, local perspective, one that is still learning.
 
 I will not treat a child’s life as content, and I will not treat any school or education system as the answer.
 
 I simply want to preserve learning moments that are easy to overlook.
 
-Perhaps through these fragments, we can imagine together what kinds of environments might help children do more than learn more—environments that help them gradually grow into people who trust themselves, understand the world, and move toward their own direction.
+Perhaps through these fragments, we can imagine together what kinds of environments might help children do more than learn more, environments that help them gradually grow into people who trust themselves, understand the world, and move toward their own direction.

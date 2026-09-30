@@ -1,12 +1,12 @@
 ---
 title: "Building a Bigger Boat: Intergenerational Leadership Development in the Taiwanese American Community"
-subtitle: "True legacy is not only about helping the next generation step onto the stage. It is about helping them understand how the stage was built—and preparing them to build one for others."
+subtitle: "True legacy is not only about helping the next generation step onto the stage. It is about helping them understand how the stage was built and preparing them to build one for others."
 date: 2026-07-30
 lang: en
 category: field-notes
 translation_key: growing-the-boat-intergenerational-leadership
 series: Seattle K-12 Field Notes
-excerpt: "The Junior NATEA x UW Robotics, CS & AI Summer Program was more than a technology camp. It became a deliberately designed learning environment in which first-generation Taiwanese Americans turned their accumulated trust, networks, and resources into a real-world leadership laboratory for the next generation. The deeper goal was not only to help young people succeed, but to help them understand how they were supported—and eventually become the people who create opportunities for others."
+excerpt: "The Junior NATEA x UW Robotics, CS & AI Summer Program was more than a technology camp. It became a deliberately designed learning environment in which first-generation Taiwanese Americans turned their accumulated trust, networks, and resources into a real-world leadership laboratory for the next generation. The deeper goal was not only to help young people succeed, but to help them understand how they were supported and eventually become the people who create opportunities for others."
 ---
 
 Over the past few days, I have kept returning to one question.
@@ -37,7 +37,7 @@ But to see it only as a technology camp would be to miss the more important desi
 
 What we wanted to cultivate was not simply whether the high school students could teach a lesson.
 
-We wanted to see whether they could practice a deeper set of abilities—abilities much closer to the foundations of entrepreneurship and leadership:
+We wanted to see whether they could practice a deeper set of abilities much closer to the foundations of entrepreneurship and leadership:
 
 How do we understand what participants actually need?
 
@@ -183,7 +183,7 @@ And someone ensures that, when problems emerge, the team still has room to revis
 
 When young people begin to see this full system, they move beyond being excellent executors.
 
-They begin to become integrators—people who can design systems, mobilize resources, care for relationships, and create the conditions for others to succeed.
+They begin to become integrators who can design systems, mobilize resources, care for relationships, and create the conditions for others to succeed.
 
 That is also a central part of entrepreneurship.
 
@@ -217,7 +217,7 @@ This kind of environment cannot guarantee that every child will become an entrep
 
 Nor can it manufacture the next unicorn.
 
-But many of the foundational abilities associated with strong founders—problem awareness, user insight, rapid iteration, cross-cultural communication, resource integration, and the willingness to carry uncertainty—can indeed be cultivated earlier.
+But many of the foundational abilities associated with strong founders can indeed be cultivated earlier. These include problem awareness, user insight, rapid iteration, cross-cultural communication, resource integration, and the willingness to carry uncertainty.
 
 Education cannot guarantee a unicorn.
 
@@ -319,7 +319,7 @@ Then it brings the next group on board.
 
 We cannot guarantee which child will one day build a unicorn company.
 
-But we can build a larger boat together—one that allows more promising young people to come aboard, learn to steer, and eventually turn back to help others.
+But we can build a larger boat together, one that allows more promising young people to come aboard, learn to steer, and eventually turn back to help others.
 
 The most valuable achievement of a community is not simply producing one successful person.
 
