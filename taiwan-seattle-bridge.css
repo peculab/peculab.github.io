@@ -48,7 +48,7 @@
 .person-photo{width:68px;height:68px;border-radius:50%;object-fit:cover;margin-bottom:16px;flex:none;background:#dfe7e2}
 .site-footer .copyright{margin:18px 0 4px;font-size:.8rem;color:#8a9a93;text-align:center}
 
-.olons-logo-lockup{gap:12px;background:#101113;padding:8px 10px;border-radius:0}
+.olons-logo-lockup{gap:12px;background:#101113;padding:8px 10px;border-radius:10px}
 .olons-logo-lockup img{width:36px;height:36px;object-fit:contain}
 .olons-logo-lockup span{color:#e8e8ec;font-family:Arial,sans-serif;font-size:18px;font-weight:700;letter-spacing:4px;line-height:1}
 
@@ -59,7 +59,7 @@
 .person-brand-slot .person-logo{display:block;width:150px;max-width:100%;height:auto;max-height:150px;object-fit:contain;object-position:left center;margin:0;flex-shrink:0}
 .person-brand-slot .person-logo-chip{display:flex;align-items:center;justify-content:center;width:150px;max-width:100%;padding:10px;background:#0a1b2c;border-radius:10px;margin:0;box-sizing:border-box}
 .person-brand-slot .person-logo-chip .person-logo{width:130px;max-height:130px}
-.person-brand-slot .olons-logo-lockup{gap:8px;background:#101113;border-radius:0;padding:8px}
+.person-brand-slot .olons-logo-lockup{gap:8px;background:#101113;border-radius:10px;padding:8px}
 .person-brand-slot .olons-logo-lockup img{width:32px;height:32px;object-fit:contain;flex-shrink:0}
 .person-brand-slot .olons-logo-lockup span{font-size:16px;letter-spacing:3px}
 .person-card .person-bio{flex-grow:1}
