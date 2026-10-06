@@ -40,31 +40,26 @@
 .person-sub{margin:3px 0 0;font-size:.85rem;color:#508174}
 .person-bio{margin:10px 0 0;font-size:.88rem;color:#33424a}
 .person-note{margin:10px 0 0;font-size:.84rem;color:#8a6d3b;font-style:italic}
-.person-logo{height:30px;max-width:150px;object-fit:contain;object-position:left center;margin-top:16px}
 .person-card .text-link{margin-top:12px}
 #people{scroll-margin-top:100px}
 @media(max-width:900px){.people-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:540px){.people-grid{grid-template-columns:1fr}}
 
 .person-photo{width:68px;height:68px;border-radius:50%;object-fit:cover;margin-bottom:16px;flex:none;background:#dfe7e2}
-.person-logo-chip{display:inline-flex;align-items:center;background:#0a1b2c;border-radius:10px;padding:7px 12px;margin-top:16px;align-self:flex-start}
-.person-logo-chip .person-logo{height:20px;max-width:120px;margin-top:0}
 .site-footer .copyright{margin:18px 0 4px;font-size:.8rem;color:#8a9a93;text-align:center}
-
 
 .olons-logo-lockup{gap:12px;background:#101113;padding:8px 10px;border-radius:0}
 .olons-logo-lockup img{width:36px;height:36px;object-fit:contain}
 .olons-logo-lockup span{color:#e8e8ec;font-family:Arial,sans-serif;font-size:18px;font-weight:700;letter-spacing:4px;line-height:1}
 
-.person-logo.person-logo-uw{width:100%;max-width:320px;height:auto;align-self:flex-start}
-
-/* Crop the source image's vertical padding so the Meta mark matches other logos. */
-.person-logo.person-logo-meta{width:140px;max-width:100%;height:32px;object-fit:cover;object-position:center;align-self:flex-start}
-
-.person-logo.person-logo-saint-martins{width:100%;max-width:280px;height:auto;align-self:flex-start}
-
 .person-photo.person-photo-chung-lee{object-position:center top}
 
-.person-logo.person-logo-uoft{width:150px;max-width:100%;height:auto;align-self:flex-start}
-
-.person-logo.person-logo-aluva,.person-logo.person-logo-quantumready{width:150px;max-width:100%;height:auto;object-fit:contain;align-self:flex-start}
+/* Shared logo area keeps every affiliation at the same scale without cropping. */
+.person-brand-slot{width:150px;max-width:100%;height:150px;display:flex;align-items:center;justify-content:flex-start;margin-top:20px;flex-shrink:0}
+.person-brand-slot .person-logo{display:block;width:150px;max-width:100%;height:auto;max-height:150px;object-fit:contain;object-position:left center;margin:0;flex-shrink:0}
+.person-brand-slot .person-logo-chip{display:flex;align-items:center;justify-content:center;width:150px;max-width:100%;padding:10px;background:#0a1b2c;border-radius:10px;margin:0;box-sizing:border-box}
+.person-brand-slot .person-logo-chip .person-logo{width:130px;max-height:130px}
+.person-brand-slot .olons-logo-lockup{gap:8px;background:#101113;border-radius:0;padding:8px}
+.person-brand-slot .olons-logo-lockup img{width:32px;height:32px;object-fit:contain;flex-shrink:0}
+.person-brand-slot .olons-logo-lockup span{font-size:16px;letter-spacing:3px}
+.person-card .person-bio{flex-grow:1}
