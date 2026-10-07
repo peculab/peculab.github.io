@@ -51,34 +51,8 @@ try:
             page.set_viewport_size({'width':390,'height':844})
             page.screenshot(path=str(Path(gettempdir())/f'gigo-{filename}-mobile.png'), full_page=True)
         page.goto(f'{base}/planning.html?lang=en', wait_until='networkidle')
-        assert page.locator('#profit').inner_text() == '$40.00'
-        assert page.locator('#termProfit').inner_text() == '$240.00'
-        assert page.locator('#cash').inner_text() == '-$640.00'
-        assert page.locator('#breakEven').inner_text() == '8 students'
-        assert not page.locator('#rent').is_visible()
-        page.locator('#students').fill('8')
-        assert page.locator('#profit').inner_text() == '$4.00'
-        page.locator('#fee').fill('168')
-        assert page.locator('#profit').inner_text() == '-$7.20'
-        page.locator('button[type=reset]').click()
-        page.wait_for_timeout(50)
-        page.locator('#mode').select_option('rental')
-        assert page.locator('#profit').inner_text() == '-$129.00'
-        assert page.locator('#breakEven').inner_text() == '15 students'
-        assert not page.locator('#share').is_visible()
-        page.locator('#rent').fill('150')
-        assert page.locator('#profit').inner_text() == '-$179.00'
-        page.locator('#hours').fill('0')
-        assert page.locator('#invalid-input').is_visible()
-        page.locator('#mode').select_option('city')
-        assert page.locator('#result-content').is_visible()
-        page.locator('#share').fill('100')
-        assert page.locator('#breakEven').inner_text() == 'Not possible'
-        page.locator('#weeks').fill('0')
-        assert page.locator('#invalid-input').is_visible()
-        page.locator('button[type=reset]').click()
-        page.wait_for_timeout(50)
-        assert page.locator('#profit').inner_text() == '$40.00'
+        assert page.locator('#cost-form').count() == 0
+        assert 'Pricing is negotiated for the engagement.' in page.locator('main').inner_text()
         page.locator('[data-language="zh-Hant"]').click()
         page.goto(f'{base}/index.html', wait_until='networkidle')
         assert page.locator('html').get_attribute('lang') == 'zh-Hant'
@@ -87,5 +61,5 @@ try:
 finally:
     server.shutdown()
     server.server_close()
-print('PASS: 36 lessons; bilingual toggle; desktop/mobile/320px layouts; calculator modes, break-even, cash, invalid input and reset; no JS errors.')
+print('PASS: 36 lessons; bilingual toggle; desktop/mobile/320px layouts; partnership planning and agreed pricing; no JS errors.')
 print(f'Screenshots: {gettempdir()}\\gigo-*.png')
