@@ -54,12 +54,17 @@
 
 .person-photo.person-photo-chung-lee{object-position:center top}
 
-/* Shared logo area keeps every affiliation at the same scale without cropping. */
-.person-brand-slot{width:150px;max-width:100%;height:150px;display:flex;align-items:center;justify-content:flex-start;margin-top:20px;flex-shrink:0}
-.person-brand-slot .person-logo{display:block;width:150px;max-width:100%;height:auto;max-height:150px;object-fit:contain;object-position:left center;margin:0;flex-shrink:0}
-.person-brand-slot .person-logo-chip{display:flex;align-items:center;justify-content:center;width:150px;max-width:100%;padding:10px;background:#0a1b2c;border-radius:10px;margin:0;box-sizing:border-box}
-.person-brand-slot .person-logo-chip .person-logo{width:130px;max-height:130px}
-.person-brand-slot .olons-logo-lockup{gap:8px;background:#101113;border-radius:10px;padding:8px}
-.person-brand-slot .olons-logo-lockup img{width:32px;height:32px;object-fit:contain;flex-shrink:0}
-.person-brand-slot .olons-logo-lockup span{font-size:16px;letter-spacing:3px}
+/* Compact affiliation marks keep the focus on people and their expertise. */
+.person-brand-slot{width:100px;max-width:100%;height:40px;display:flex;align-items:center;justify-content:flex-start;margin-top:16px;flex-shrink:0}
+.person-brand-slot .person-logo{display:block;width:auto;max-width:100%;height:auto;max-height:40px;object-fit:contain;object-position:left center;margin:0;flex-shrink:0}
+.person-brand-slot:has(.person-logo-aluva){height:72px}
+.person-brand-slot .person-logo-aluva{width:72px;height:72px;max-height:72px}
+/* University wordmarks need more room for readable school names. */
+.person-brand-slot:has(.person-logo-university){width:180px;height:80px}
+.person-brand-slot .person-logo-university{width:180px;height:auto;max-height:80px}
+.person-brand-slot .person-logo-chip{display:flex;align-items:center;justify-content:center;width:100px;max-width:100%;height:40px;padding:6px 8px;background:#0a1b2c;border-radius:6px;margin:0;box-sizing:border-box}
+.person-brand-slot .person-logo-chip .person-logo{width:auto;max-width:100%;max-height:28px}
+.person-brand-slot .olons-logo-lockup{gap:6px;background:#101113;border-radius:6px;padding:6px}
+.person-brand-slot .olons-logo-lockup img{width:24px;height:24px;object-fit:contain;flex-shrink:0}
+.person-brand-slot .olons-logo-lockup span{font-size:12px;letter-spacing:1.5px}
 .person-card .person-bio{flex-grow:1}
