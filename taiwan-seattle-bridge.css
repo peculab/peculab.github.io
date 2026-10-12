@@ -68,3 +68,16 @@
 .person-brand-slot .olons-logo-lockup img{width:24px;height:24px;object-fit:contain;flex-shrink:0}
 .person-brand-slot .olons-logo-lockup span{font-size:12px;letter-spacing:1.5px}
 .person-card .person-bio{flex-grow:1}
+
+/* Winter-break pilot: a shared validation question and two scoped directions. */
+.bridge-pilot{background:#f7f2e9}
+.bridge-pilot-question{margin-top:28px;padding:clamp(24px,4vw,40px);background:#0a1b2c;border-radius:24px;color:#fff}
+.bridge-pilot-question .eyebrow{color:#b7d8ca}.bridge-pilot-question h3{margin:10px 0 18px;color:#fff;font-size:clamp(1.45rem,3vw,2.1rem);line-height:1.35}
+.bridge-pilot-question p:last-child{margin:0;color:#d7e6e2}
+.bridge-pilot-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:24px}
+.bridge-pilot-grid h4{margin:24px 0 8px}.bridge-pilot-grid .eyebrow{font-size:.75rem}
+.bridge-pilot .bridge-deliverables{margin-bottom:0}
+#pilot,#benjamin-huang{scroll-margin-top:100px}
+@media(max-width:760px){.bridge-pilot-grid{grid-template-columns:1fr}}
+#benjamin-huang .person-brand-slot{width:180px;height:64px}
+#benjamin-huang .person-brand-slot .person-logo{width:180px;max-height:64px}
