@@ -15,7 +15,7 @@ excerpt: "樹樹每天帶回來的數學練習，常常先有一段對一年級�
 
 這樣的數學教育，真的深得我心。
 
-![樹樹的 Books on the Shelf 練習單：圈出四和三、標記題目，畫出兩組圓圈，寫下 4 + 3 = 7。](assets/reading-to-math-stanley.jpg)
+![樹樹的 Books on the Shelf 練習單：圈出四和三、標記題目，畫出兩組圓圈，寫下 4 + 3 = 7。](/assets/reading-to-math-stanley.jpg)
 
 *這張練習單請孩子用圖畫、數字或文字呈現思考。樹樹留下了閱讀標記、兩組圓圈與算式，讓答案以外的想法也有了可以看見的痕跡。*
 
