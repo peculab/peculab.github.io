@@ -81,3 +81,9 @@
 @media(max-width:760px){.bridge-pilot-grid{grid-template-columns:1fr}}
 #benjamin-huang .person-brand-slot{width:180px;height:64px}
 #benjamin-huang .person-brand-slot .person-logo{width:180px;max-height:64px}
+
+#you-yi-jau .person-brand-slot,#miriam-teng .person-brand-slot{width:72px;height:72px}
+#you-yi-jau .person-logo-aws{width:72px;height:72px;padding:13px;background:#171e28;border-radius:0}
+#you-yi-jau .person-logo-aws .person-logo{width:46px;max-height:none;filter:brightness(0) invert(1)}
+
+#miriam-teng .person-brand-slot .person-logo{width:72px;height:72px;max-height:72px}
