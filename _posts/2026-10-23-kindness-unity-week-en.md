@@ -15,7 +15,7 @@ His school is holding Kindness & Unity Week. Each day has a different clothing t
 
 Outside the classroom, the children line up and chat about their outfits while waiting for the teacher to open the door. Standing nearby, watching Stanley talk with his classmates, I find this brief waiting time fascinating. His school day is already taking shape before he enters the classroom.
 
-![Juanita Elementary’s Kindness & Unity Week notice, showing stripes, pajamas, orange, athletic clothing, and jaguar print themes for October 19–23, 2026.](assets/kindness-unity-week.jpg)
+![Juanita Elementary’s Kindness & Unity Week notice, showing stripes, pajamas, orange, athletic clothing, and jaguar print themes for October 19–23, 2026.](../assets/kindness-unity-week.jpg)
 
 *The notice connects kindness and unity with a different clothing theme each day. Wednesday’s Unity Day explicitly names kindness, inclusion, and acceptance. The photo documents the activity schedule; the classroom-door scenes below come from my observations while walking Stanley to school.*
 
