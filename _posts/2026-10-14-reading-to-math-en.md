@@ -15,7 +15,7 @@ I love watching him read, find useful clues, and turn the events described in wo
 
 This approach to learning mathematics speaks deeply to me.
 
-![Stanley’s Books on the Shelf worksheet, with four and three circled, reading marks, two groups of circles, and the equation 4 + 3 = 7.](assets/reading-to-math-stanley.jpg)
+![Stanley’s Books on the Shelf worksheet, with four and three circled, reading marks, two groups of circles, and the equation 4 + 3 = 7.](/assets/reading-to-math-stanley.jpg)
 
 *The worksheet invites children to show their thinking through drawings, numbers, or words. Stanley’s reading marks, two groups of circles, and equation leave a visible record beyond the final answer.*
 
