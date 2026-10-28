@@ -173,3 +173,87 @@ document.addEventListener("DOMContentLoaded", () => {
     window.setInterval(showRandomFrame, 4500);
   });
 });
+
+// Open Challenge discovery path: homepage awareness → project context → a small GitHub task.
+(() => {
+  const path = location.pathname.replace(/\\/g, "/");
+  const isChinese = document.documentElement.lang === "zh-Hant";
+  const isHome = (/(?:^|\/)index\.html$/.test(path) || /\/(?:zh\/)?$/.test(path))
+    && !/workshop|field-notes|open-challenges/.test(path);
+  const isBridge = /\/taiwan-seattle-bridge\.html$/.test(path);
+  if (!isHome && !isBridge) return;
+
+  const css = document.createElement("link");
+  css.rel = "stylesheet";
+  css.href = `${isChinese ? "../" : ""}open-challenge.css?v=20261028`;
+  document.head.append(css);
+
+  const landing = isChinese
+    ? "open-challenges/ownership-code-pilot.html"
+    : "open-challenges/ownership-code-pilot.html";
+  const landingFromBridge = isChinese
+    ? "open-challenges/ownership-code-pilot.html"
+    : "open-challenges/ownership-code-pilot.html";
+  const goodFirstIssues = "https://github.com/peculab/ownership-code-pilot/issues?q=is%3Aissue%20state%3Aopen%20label%3A%22good%20first%20issue%22";
+  const repository = "https://github.com/peculab/ownership-code-pilot";
+
+  const nav = document.querySelector(".site-nav-links");
+  if (nav && !nav.querySelector("[data-open-challenge-nav]")) {
+    const navLink = document.createElement("a");
+    navLink.href = landing;
+    navLink.dataset.openChallengeNav = "";
+    navLink.textContent = isChinese ? "開源挑戰" : "Open Challenge";
+    nav.insertBefore(navLink, nav.querySelector(".language-switch") || null);
+  }
+
+  if (isHome && !document.querySelector(".oc-home-promo")) {
+    const hero = document.querySelector(".personal-hero");
+    const promo = document.createElement("section");
+    promo.className = "oc-home-promo";
+    promo.setAttribute("aria-labelledby", "open-challenge-home-title");
+    promo.innerHTML = isChinese ? `
+      <div class="container oc-home-grid"><div><p class="eyebrow">OPEN CHALLENGE · 邀請貢獻者</p><h2 id="open-challenge-home-title">AI 能準備有用的回答，也知道何時該交給真人嗎？</h2><p class="lead">一起建立有來源、可審閱的開源 AI 流程。真實情境由 Ownership Code 提出，通用成果開放所有人依授權取用。</p><div class="oc-badges"><span>Open Source</span><span>合成資料可用</span><span>BYOK</span><span>人工審閱</span></div></div><div><p>研究、UX、評量、工程與文件都有可以立即開始的小任務。不需要企業帳密或私人社群資料。</p><div class="bridge-actions"><a class="button button-primary" href="${landing}">60 秒了解題目</a><a class="button button-secondary" href="${goodFirstIssues}" target="_blank" rel="noopener">選一張入門任務 ↗</a><a class="text-link" href="${repository}" target="_blank" rel="noopener">查看 GitHub ↗</a></div></div></div>` : `
+      <div class="container oc-home-grid"><div><p class="eyebrow">OPEN CHALLENGE · CONTRIBUTORS WANTED</p><h2 id="open-challenge-home-title">Can AI prepare a useful answer—and know when a human should take over?</h2><p class="lead">Help build a source-grounded, human-reviewed open-source AI workflow. Ownership Code contributed the first real scenario; the reusable work stays open to everyone under its license.</p><div class="oc-badges"><span>Open source</span><span>Synthetic data ready</span><span>BYOK</span><span>Human review</span></div></div><div><p>Research, UX, evaluation, engineering, and documentation each have a small task that can begin without company credentials or private community data.</p><div class="bridge-actions"><a class="button button-primary" href="${landing}">Understand it in 60 seconds</a><a class="button button-secondary" href="${goodFirstIssues}" target="_blank" rel="noopener">Choose a starter task ↗</a><a class="text-link" href="${repository}" target="_blank" rel="noopener">View GitHub ↗</a></div></div></div>`;
+    hero?.after(promo);
+  }
+
+  if (isBridge) {
+    const pilot = document.querySelector("#pilot");
+    if (!pilot) return;
+    const eyebrow = pilot.querySelector(":scope > .container > .eyebrow");
+    const heading = pilot.querySelector(":scope > .container > h2");
+    const lead = pilot.querySelector(".bridge-pilot-header .lead");
+    const status = pilot.querySelector(".bridge-status");
+    if (eyebrow) eyebrow.textContent = isChinese ? "首期示範 · 開源專案已公開" : "FIRST PILOT · OPEN-SOURCE PROJECT";
+    if (heading) heading.textContent = isChinese ? "Open Challenge：人工審閱的 AI 客戶問題流程" : "Open Challenge: Human-Reviewed AI for Customer Questions";
+    if (lead) lead.textContent = isChinese
+      ? "Ownership Code 提供第一個真實企業情境；PecuLab 將它轉成公開的開源挑戰。企業可以取用成果，貢獻者與其他組織也能重用通用核心。"
+      : "Ownership Code contributed the first real business scenario; PecuLab reframed it as a public open-source challenge. The company may use the result, while contributors and other organizations can reuse the core.";
+    if (status) status.textContent = isChinese ? "Open source · 5 張公開任務可認領" : "Open source · 5 public tasks ready";
+
+    const brief = pilot.querySelector(".pilot-brief");
+    if (brief) brief.innerHTML = isChinese ? `
+      <div><dt>Challenge</dt><dd>AI 能否整理客戶問題、找到核准來源並準備草稿，同時知道何時應交給真人？</dd></div><div><dt>Open-source scope</dt><dd>通用流程、schema、mock、評量方法及合成案例採 Apache-2.0 開放。</dd></div><div><dt>Contributors needed</dt><dd>研究、UX、AI 評量、工程、安全與文件；可以先完成一項 1–4 小時的小任務。</dd></div><div><dt>Company contribution</dt><dd>Ownership Code 提供第一個情境與領域回饋，不獨占開源核心，也不取得貢獻者的聘僱或股權關係。</dd></div><div><dt>Evidence of success</dt><dd>相關性、來源支持、不確定性、安全接手、可重現性及 Token／成本都需留下紀錄。</dd></div><div><dt>Current status</dt><dd>題目、安全邊界、合成資料與 5 張公開 Issue 已發布；正在邀請第一批貢獻者。</dd></div>` : `
+      <div><dt>Challenge</dt><dd>Can AI organize customer questions, retrieve approved evidence, prepare a draft, and know when a person should take over?</dd></div><div><dt>Open-source scope</dt><dd>The reusable workflow, schemas, mock path, evaluation methods, and synthetic scenarios are available under Apache-2.0.</dd></div><div><dt>Contributors needed</dt><dd>Research, UX, AI evaluation, engineering, safety, and documentation. Begin with one focused 1–4 hour task.</dd></div><div><dt>Company contribution</dt><dd>Ownership Code contributed the first scenario and domain feedback; it does not exclusively own the core or create employment or equity rights.</dd></div><div><dt>Evidence of success</dt><dd>Record relevance, source support, uncertainty, safe handoff, reproducibility, and Token or cost assumptions.</dd></div><div><dt>Current status</dt><dd>The challenge, safety boundaries, synthetic data, and five public Issues are live. First contributors are invited.</dd></div>`;
+
+    const progress = pilot.querySelector(".pilot-progress");
+    if (progress) progress.innerHTML = isChinese
+      ? '<span class="is-complete">✓ 題目已界定</span><span class="is-complete">✓ Repository 已公開</span><span class="is-current">◉ 邀請貢獻者</span><span>○ Baseline 與公開評量</span>'
+      : '<span class="is-complete">✓ Challenge framed</span><span class="is-complete">✓ Repository open</span><span class="is-current">◉ Contributors wanted</span><span>○ Baseline & public evaluation</span>';
+
+    pilot.querySelector(".bridge-pilot-more")?.remove();
+    const actions = pilot.querySelector(":scope > .container > .bridge-actions");
+    if (actions) actions.innerHTML = isChinese
+      ? `<a class="button button-primary" href="${landingFromBridge}">完整了解題目 →</a><a class="button button-secondary" href="${goodFirstIssues}" target="_blank" rel="noopener">選一張入門任務 ↗</a><a class="text-link" href="${repository}" target="_blank" rel="noopener">追蹤 GitHub 進度 ↗</a>`
+      : `<a class="button button-primary" href="${landingFromBridge}">Explore the full challenge →</a><a class="button button-secondary" href="${goodFirstIssues}" target="_blank" rel="noopener">Choose a starter task ↗</a><a class="text-link" href="${repository}" target="_blank" rel="noopener">Follow progress on GitHub ↗</a>`;
+
+    if (!pilot.querySelector(".bridge-open-source-callout")) {
+      const callout = document.createElement("aside");
+      callout.className = "bridge-open-source-callout";
+      callout.innerHTML = isChinese
+        ? `<p class="eyebrow">為什麼值得參與</p><h3>不是替一家企業免費交付，而是共同建立任何組織都能重用的方法。</h3><p>所有人都能看到題目、做法、Pull Request、評量與限制。每個部署者自行提供模型帳號並負擔 Token；私人資料不進入公開 Repository。</p><div class="oc-badges"><span>公開署名</span><span>合成資料</span><span>人工審閱</span><span>不自動對外聯繫</span></div>`
+        : `<p class="eyebrow">WHY CONTRIBUTE</p><h3>This is not a free exclusive deliverable. It is a reusable method built in public.</h3><p>Anyone can inspect the challenge, Pull Requests, evaluation, and limitations. Each deployer supplies its own model account and Token budget; private data stays out of the public repository.</p><div class="oc-badges"><span>Public credit</span><span>Synthetic data</span><span>Human review</span><span>No automatic outreach</span></div>`;
+      actions?.before(callout);
+    }
+  }
+})();
