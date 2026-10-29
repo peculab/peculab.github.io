@@ -19,6 +19,11 @@ document.querySelectorAll('.site-navigation').forEach((menu) => {
     if (!menu.contains(event.target)) close();
   });
   menu.querySelectorAll('a').forEach((link) => {
+    if (/\/taiwan-seattle-bridge\.html$/.test(new URL(link.href, location.href).pathname)) {
+      link.textContent = document.documentElement.lang === 'zh-Hant'
+        ? 'AI 實作合作'
+        : 'AI Collaboration Bridge';
+    }
     link.addEventListener('click', () => close(true));
     if (new URL(link.href, location.href).pathname === location.pathname && !link.hash) {
       link.setAttribute('aria-current', 'page');

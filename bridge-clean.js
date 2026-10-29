@@ -9,6 +9,7 @@ function revealProfile() {
   if (!/bridge-network\.html$/.test(location.pathname) || !location.hash) return;
   const person = document.getElementById(location.hash.slice(1));
   if (!person) return;
+  if (person.tagName === 'DETAILS') person.open = true;
   for (let parent = person.parentElement; parent; parent = parent.parentElement) {
     if (parent.tagName === 'DETAILS') parent.open = true;
   }
