@@ -1,0 +1,6 @@
+
+# Local review scripts and research artifacts
+.local-artifacts/
+
+# Source materials gathered while writing people profiles (copies of third-party pages)
+.people-research/
