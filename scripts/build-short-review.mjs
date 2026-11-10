@@ -70,7 +70,7 @@ for (const topic of topics) {
     const url = `${prefix}/shorts/topics/${topic.id}.html`;
     const title = lang === 'en' ? topic.label_en : topic.label_zh;
     const description = lang === 'en' ? topic.intro_en : topic.intro_zh;
-    const source = `---\nlayout: short-topic\ntitle: ${JSON.stringify(title)}\nlang: ${lang}\ntopic: ${topic.id}\ndescription: ${JSON.stringify(description)}\n---\n`;
+    const source = `---\nlayout: short-topic\npermalink: ${url}\ntitle: ${JSON.stringify(title)}\nlang: ${lang}\ntopic: ${topic.id}\ndescription: ${JSON.stringify(description)}\n---\n`;
     await mkdir(path.dirname(path.join(root, url.slice(1))), { recursive: true });
     await writeFile(path.join(root, url.slice(1)), source);
     const page = { layout: 'short-topic', url, lang, topic: topic.id, title, description };
