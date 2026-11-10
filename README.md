@@ -29,6 +29,11 @@ Static company website for PecuLab LLC, the independent Seattle-based AI educati
 
 ## Public Profile Links
 
+- Short Notes: `/zh/shorts/index.html` and `/shorts/index.html`, with 20 approved stories in Chinese and full English translation (40 editions) in `_shorts/`.
+- Facebook migration instructions: [docs/facebook-import.md](docs/facebook-import.md). Import exports locally with `node scripts/import-facebook.mjs`; private staging stays in ignored `.facebook-import/`.
+- Short Notes support independent URLs, full HTML text, source attribution, RSS, and a generated sitemap. Search and AI inclusion depend on each service; the import is not an automatic Facebook connection.
+- The Pages workflow validates the built bilingual indexes, topic pages, article links, RSS, sitemap, and private-directory exclusion before deployment. Private exports and unselected drafts remain local.
+
 - LinkedIn: https://www.linkedin.com/in/pecutsai/
 - Google Scholar: https://scholar.google.com/citations?user=a2LHNL8AAAAJ&hl=zh-TW
 

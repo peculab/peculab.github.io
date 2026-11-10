@@ -35,6 +35,8 @@ jobs:
         with:
           source: ./
           destination: ./_site
+      - name: Validate bilingual Short Notes and private-data exclusion
+        run: node scripts/check-built-shorts.mjs _site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 

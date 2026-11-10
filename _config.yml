@@ -4,9 +4,24 @@ url: "https://peculab.github.io"
 baseurl: ""
 timezone: America/Los_Angeles
 
+collections:
+  shorts:
+    output: true
+    permalink: /shorts/:name.html
+
+plugins:
+  - jekyll-sitemap
+
 permalink: /field-notes/:year/:month/:day/:title.html
 
 defaults:
+  - scope:
+      path: ""
+      type: shorts
+    values:
+      layout: short
+      lang: zh-Hant
+      author: Yun-Cheng (Pecu) Tsai
   - scope:
       path: ""
       type: posts
@@ -20,5 +35,7 @@ kramdown:
   input: GFM
 
 exclude:
+  - .facebook-import
+  - docs
   - field-notes/local-preview
   - scripts

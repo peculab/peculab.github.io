@@ -1,0 +1,5 @@
+<nav class="topic-grid" aria-label="{% if is_zh %}依主題閱讀{% else %}Explore by topic{% endif %}">
+{% for topic in site.data.short_topics %}
+<a class="topic-card" href="{% if is_zh %}{{ '/zh/shorts/topics/' | append: topic.id | append: '.html' | relative_url }}{% else %}{{ '/shorts/topics/' | append: topic.id | append: '.html' | relative_url }}{% endif %}"><span class="eyebrow">{% if is_zh %}{{ topic.audience_zh }}{% else %}{{ topic.audience_en }}{% endif %}</span><strong>{% if is_zh %}{{ topic.label_zh }}{% else %}{{ topic.label_en }}{% endif %}</strong><span>{% if is_zh %}從問題開始閱讀{% else %}Start with a question{% endif %} →</span></a>
+{% endfor %}
+</nav>

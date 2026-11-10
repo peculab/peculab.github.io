@@ -1,0 +1,20 @@
+---
+layout: null
+lang: en
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
+<title>Pecu's Short Notes | PecuLab</title>
+<link>{{ '/shorts/index.html' | absolute_url | xml_escape }}</link>
+<description>Short notes by Yun-Cheng (Pecu) Tsai on AI, education, work, and everyday life.</description>
+<language>en</language>
+<atom:link href="{{ '/shorts/feed-en.xml' | absolute_url | xml_escape }}" rel="self" type="application/rss+xml"/>
+{% assign notes = site.shorts | where_exp: 'note', 'note.published != false' | sort: 'date' | reverse %}
+{% assign notes = notes | where: 'lang', 'en' %}
+{% for note in notes limit:50 %}<item>
+<title>{{ note.title | xml_escape }}</title><link>{{ note.url | absolute_url | xml_escape }}</link>
+<guid isPermaLink="true">{{ note.url | absolute_url | xml_escape }}</guid>
+<pubDate>{{ note.date | date_to_rfc822 }}</pubDate>
+<description>{{ note.content | xml_escape }}</description>
+</item>{% endfor %}
+</channel></rss>

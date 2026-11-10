@@ -1,0 +1,13 @@
+{% assign is_zh = false %}{% if page.lang == 'zh-Hant' or page.lang == 'zh' %}{% assign is_zh = true %}{% endif %}
+{% if site.review_mode %}<div class="review-banner" role="note">本機檢視稿 · 尚未公開 · Local review only</div>{% endif %}
+<header class="site-header"><div class="container header-inner">
+  <a class="brand" href="{% if is_zh %}{{ '/zh/index.html' | relative_url }}{% else %}{{ '/index.html' | relative_url }}{% endif %}"><img class="brand-logo" src="{{ '/assets/peculab-mark-clean.png' | relative_url }}" alt=""><span class="brand-copy"><strong>PECULAB</strong><small>{% if is_zh %}教育 · AI · 有目的的實作{% else %}Education · AI · Work with purpose{% endif %}</small></span></a>
+  <nav class="shorts-nav" aria-label="{% if is_zh %}主要導覽{% else %}Primary navigation{% endif %}">
+    <a href="{% if is_zh %}{{ '/zh/index.html' | relative_url }}{% else %}{{ '/index.html' | relative_url }}{% endif %}">{% if is_zh %}首頁{% else %}Home{% endif %}</a>
+    <a href="{% if is_zh %}{{ '/zh/field-notes/index.html' | relative_url }}{% else %}{{ '/field-notes/index.html' | relative_url }}{% endif %}">{% if is_zh %}文章札記{% else %}Field Notes{% endif %}</a>
+    <a href="{% if is_zh %}{{ '/zh/shorts/index.html' | relative_url }}{% else %}{{ '/shorts/index.html' | relative_url }}{% endif %}">{% if is_zh %}短文{% else %}Short Notes{% endif %}</a>
+    {% if page.layout == 'shorts-index' %}<a href="{% if is_zh %}{{ '/shorts/index.html' | relative_url }}{% else %}{{ '/zh/shorts/index.html' | relative_url }}{% endif %}" lang="{% if is_zh %}en{% else %}zh-Hant{% endif %}">{% if is_zh %}EN{% else %}中文{% endif %}</a>{% endif %}
+    {% if page.layout == 'short-topic' %}<a href="{% if is_zh %}{{ '/shorts/topics/' | append: page.topic | append: '.html' | relative_url }}{% else %}{{ '/zh/shorts/topics/' | append: page.topic | append: '.html' | relative_url }}{% endif %}" lang="{% if is_zh %}en{% else %}zh-Hant{% endif %}">{% if is_zh %}EN{% else %}中文{% endif %}</a>{% endif %}
+    {% if page.alternate_en and page.alternate_zh %}<a class="article-language-switch" href="{% if is_zh %}{{ page.alternate_en | relative_url }}{% else %}{{ page.alternate_zh | relative_url }}{% endif %}" lang="{% if is_zh %}en{% else %}zh-Hant{% endif %}">{% if is_zh %}English{% else %}中文原文{% endif %}</a>{% endif %}
+  </nav>
+</div></header>

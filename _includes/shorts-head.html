@@ -1,0 +1,28 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% if site.review_mode %}<meta name="robots" content="noindex, nofollow"><meta name="referrer" content="no-referrer">{% endif %}
+<title>{{ page.title | escape }} | PecuLab</title>
+<meta name="description" content="{{ page.description | default: page.excerpt | strip_html | normalize_whitespace | truncate: 155 | escape }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+{% if page.layout == 'shorts-index' %}
+<link rel="alternate" hreflang="zh-Hant" href="{{ '/zh/shorts/index.html' | absolute_url }}">
+<link rel="alternate" hreflang="en" href="{{ '/shorts/index.html' | absolute_url }}">
+{% elsif page.layout == 'short-topic' %}
+<link rel="alternate" hreflang="zh-Hant" href="{{ '/zh/shorts/topics/' | append: page.topic | append: '.html' | absolute_url }}">
+<link rel="alternate" hreflang="en" href="{{ '/shorts/topics/' | append: page.topic | append: '.html' | absolute_url }}">
+{% endif %}
+{% if page.alternate_en and page.alternate_zh %}
+<link rel="alternate" hreflang="zh-Hant" href="{{ page.alternate_zh | absolute_url }}">
+<link rel="alternate" hreflang="en" href="{{ page.alternate_en | absolute_url }}">
+{% endif %}
+<meta property="og:type" content="{% if page.layout == 'short' %}article{% else %}website{% endif %}">
+<meta property="og:title" content="{{ page.title | escape }}">
+<meta property="og:description" content="{{ page.description | default: page.excerpt | strip_html | normalize_whitespace | truncate: 155 | escape }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:image" content="{{ '/assets/peculab-mark.png' | absolute_url }}">
+<meta property="og:site_name" content="PecuLab">
+<meta name="twitter:card" content="summary">
+<link rel="alternate" type="application/rss+xml" title="{% if page.lang == 'en' %}Pecu's Short Notes{% else %}Pecu 的短文{% endif %}" href="{% if page.lang == 'en' %}{{ '/shorts/feed-en.xml' | relative_url }}{% else %}{{ '/shorts/feed.xml' | relative_url }}{% endif %}">
+<link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/site-navigation.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/shorts.css' | relative_url }}">

@@ -11,6 +11,7 @@ $items = @(
   @('case-studies.html', 'Applied Work', '實戰案例'),
   @('workshop/index.html', 'Events', '活動紀錄'),
   @('field-notes/index.html', 'Field Notes', '文章札記'),
+  @('shorts/index.html', 'Short Notes', '短文'),
   @('about.html', 'About Pecu', '關於 Pecu'),
   @('media.html', 'Media', '媒體報導'),
   @('resources.html', 'Resources', '資源'),
@@ -20,7 +21,7 @@ $items = @(
 $icon = '<span class="site-menu-icon" aria-hidden="true"><i></i><i></i><i></i></span>'
 $count = 0
 Get-ChildItem -LiteralPath $root -Filter '*.html' -Recurse | Where-Object {
-  $_.FullName.Substring($root.Length) -notmatch '[\\/](\.[^\\/]+|node_modules|_site)[\\/]'
+  $_.FullName.Substring($root.Length) -notmatch '[\\/](\.[^\\/]+|node_modules|_site|_includes)[\\/]'
 } | ForEach-Object {
   $file = $_
   $s = [IO.File]::ReadAllText($file.FullName)

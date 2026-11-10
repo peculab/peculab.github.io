@@ -1,0 +1,20 @@
+---
+layout: null
+lang: zh-Hant
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
+<title>Pecu 的短文 | PecuLab</title>
+<link>{{ '/zh/shorts/index.html' | absolute_url | xml_escape }}</link>
+<description>蔡芸琤的 AI、教育、工作與生活短文。</description>
+<language>zh-TW</language>
+<atom:link href="{{ '/shorts/feed.xml' | absolute_url | xml_escape }}" rel="self" type="application/rss+xml"/>
+{% assign notes = site.shorts | where_exp: 'note', 'note.published != false' | sort: 'date' | reverse %}
+{% assign notes = notes | where: 'lang', 'zh-Hant' %}
+{% for note in notes limit:50 %}<item>
+<title>{{ note.title | xml_escape }}</title><link>{{ note.url | absolute_url | xml_escape }}</link>
+<guid isPermaLink="true">{{ note.url | absolute_url | xml_escape }}</guid>
+<pubDate>{{ note.date | date_to_rfc822 }}</pubDate>
+<description>{{ note.content | xml_escape }}</description>
+</item>{% endfor %}
+</channel></rss>

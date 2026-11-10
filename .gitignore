@@ -4,3 +4,7 @@
 
 # Source materials gathered while writing people profiles (copies of third-party pages)
 .people-research/
+
+# Facebook exports and unpublished import review files stay local.
+.facebook-import/
+_site/

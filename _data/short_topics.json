@@ -1,0 +1,62 @@
+[
+  {
+    "id": "ai-teaching",
+    "label_zh": "AI 教學與專題評量",
+    "label_en": "AI Teaching & Project Assessment",
+    "audience_zh": "給教師、學校與課程設計者",
+    "audience_en": "For educators, schools, and curriculum designers",
+    "intro_zh": "學生可以使用 AI，老師如何看見真正的學習？從程式入門、資料探索到專題展示，這裡整理我在課堂中設計任務、陪伴學生與觀察學習成果的實作紀錄。",
+    "intro_en": "How do we recognize learning when students use AI? These original-language notes document my approach to programming tasks, data exploration, student projects, and evidence of learning.",
+    "questions": [
+      { "q_zh": "學生用 AI 寫程式，老師還能評量什麼？", "a_zh": "我的課堂紀錄把重點放在學生選了什麼問題、如何替換資料、修改程式，以及能否檢查和解釋結果。作品之外，也要看見過程中的選擇與修正。", "q_en": "What can teachers assess when students use AI to code?", "a_en": "My classroom notes focus on problem selection, adapting data and code, and checking and explaining results. The process of making and revising decisions matters alongside the finished work." },
+      { "q_zh": "完全沒有程式基礎，可以開始 AI 實作嗎？", "a_zh": "我曾以範例和生活問題帶學生入門，但也在教學中看見：願意投入時間、查錯和主動探索很重要。導論與實作可以互補，不能只用是否修過一門課來判斷。", "q_en": "Can a beginner start building with AI?", "a_en": "I have used examples and everyday problems as starting points. Curiosity, time to practice, and willingness to debug are important; introductory concepts and hands-on work can complement each other." },
+      { "q_zh": "想設計一門 AI 專題課，從哪裡開始？", "a_zh": "先選擇學生能理解的問題，拆成小任務，安排資料處理、實作與驗證，再讓學生整合成能展示的作品。下方文章保留不同課程的做法與限制，可作為討論課程設計的起點。", "q_en": "Where should an AI project course begin?", "a_en": "Start with a problem learners can understand, break it into tasks, and plan opportunities to process data, build, and verify before assembling a demonstrable project. The notes offer examples for discussing course design." }
+    ],
+    "cta_zh": "討論課程與教師工作坊",
+    "cta_en": "Discuss a course or educator workshop",
+    "service_zh": "/zh/programs.html",
+    "service_en": "/programs.html",
+    "service_label_zh": "查看課程方向",
+    "service_label_en": "Explore course formats"
+  },
+  {
+    "id": "family-learning",
+    "label_zh": "家庭、青少年與西雅圖學習",
+    "label_en": "Family, Youth & Seattle Learning",
+    "audience_zh": "給家長、青少年與台美家庭",
+    "audience_en": "For parents, young learners, and Taiwan–US families",
+    "intro_zh": "孩子的學習不只發生在課表裡。從農場故事時間、社區資源到動手做遊戲，我以家長與教育工作者的視角，記下探索、興趣與方向感如何在日常中累積。",
+    "intro_en": "Learning extends beyond a schedule. From farm story time and community resources to making games, these notes reflect my perspective as a parent and educator on curiosity, interests, and finding direction.",
+    "questions": [
+      { "q_zh": "孩子喜歡玩遊戲，可以怎麼連到科技學習？", "a_zh": "我記錄過以遊戲設計引導孩子動手創作的營隊經驗：從操作模組、設定角色行為到分享作品，把興趣變成可以嘗試和解釋的創作任務。這是一種教育實踐，並不代表每個孩子都適合同一種課程。", "q_en": "How can an interest in games connect to technology learning?", "a_en": "One note describes a camp using game design, character behavior, and sharing projects to turn an interest into a creative task. It is an example of educational practice, rather than a fit guarantee for every learner." },
+      { "q_zh": "除了上課，家庭還能怎麼支持學習？", "a_zh": "農場、圖書館與社區活動都能成為觀察與提問的機會。我關心的是孩子實際看見什麼、問了什麼，以及是否還有空間探索，而不只增加課程數量。", "q_en": "How can families support learning beyond classes?", "a_en": "Farms, libraries, and community activities can create opportunities to notice and ask questions. My notes focus on what children encounter and explore, rather than simply adding more lessons." },
+      { "q_zh": "怎麼判斷一個科技營隊是否適合孩子？", "a_zh": "可以先討論孩子的興趣、年齡、語言需求、實作方式與團隊合作經驗。這裡的舊營隊文章是當時的活動分享；目前的日期、名額、資格與報名資訊，應向活動主辦單位確認。", "q_en": "How can a family assess whether a technology camp is a fit?", "a_en": "Discuss interests, age, language needs, hands-on work, and teamwork. Historical camp posts describe activities at the time; confirm current dates, availability, eligibility, and registration with the organizer." }
+    ],
+    "cta_zh": "討論孩子的學習需求",
+    "cta_en": "Discuss your learner's needs",
+    "service_zh": "/zh/programs.html",
+    "service_en": "/programs.html",
+    "service_label_zh": "查看課程與營隊方向",
+    "service_label_en": "Explore courses and camps"
+  },
+  {
+    "id": "ai-projects",
+    "label_zh": "AI 專案、原型與企業應用",
+    "label_en": "AI Projects, Prototypes & Business Applications",
+    "audience_zh": "給企業主管、產品與專案團隊",
+    "audience_en": "For business leaders, product teams, and project owners",
+    "intro_zh": "一個 AI 想法，如何走到能被使用的原型？這裡整理我在資料、使用情境、跨角色協作與概念驗證之間反覆實作的紀錄，提供討論企業 AI 專案的具體起點。",
+    "intro_en": "How does an AI idea become a usable prototype? These notes describe my work across data, use cases, collaboration, and proof of concept, offering concrete starting points for a project discussion.",
+    "questions": [
+      { "q_zh": "有 AI 構想時，應該直接開發完整產品嗎？", "a_zh": "在我的專案紀錄中，我會先確認技術路徑並做概念驗證，再依使用需求與回饋討論最小可行產品。能做出展示，不等於已完成正式環境整合、維運或大規模部署。", "q_en": "Should an AI idea go straight into full product development?", "a_en": "My project notes describe establishing a technical path and proof of concept before defining a minimum viable product around user needs and feedback. A demonstration is distinct from production integration and operation." },
+      { "q_zh": "AI 專案為什麼要先談資料與使用情境？", "a_zh": "我在自然語言查詢與資料串接的實作中，反覆碰到資料基礎、問題定義與團隊協作的重要性。下方紀錄呈現當時的設計取捨，並非任何模型或架構都適用的保證。", "q_en": "Why start an AI project with data and a use case?", "a_en": "My work on natural-language queries and data integration repeatedly brought data foundations, problem definition, and collaboration into focus. The notes document design decisions at the time, not universal architecture guarantees." },
+      { "q_zh": "想找 PecuLab 討論企業 AI，先準備什麼？", "a_zh": "先說明一項實際工作流程、目前遇到的問題、可提供的資料樣本、團隊負責人，以及希望如何驗收。合作範圍與交付內容以目前企業 POC 服務頁及雙方確認的需求為準。", "q_en": "What should a team prepare for a PecuLab AI project discussion?", "a_en": "Bring one workflow, the problem it presents, available sample data, a project owner, and an idea of acceptance criteria. Scope and deliverables follow the current enterprise service page and the agreed requirements." }
+    ],
+    "cta_zh": "提出企業 AI 合作需求",
+    "cta_en": "Discuss an enterprise AI project",
+    "service_zh": "/zh/services-pricing.html",
+    "service_en": "/services-pricing.html",
+    "service_label_zh": "查看企業 POC 合作範圍",
+    "service_label_en": "Explore enterprise POC scope"
+  }
+]
