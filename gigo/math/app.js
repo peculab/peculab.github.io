@@ -66,6 +66,30 @@ $('share').onclick = async () => { if (!navigator.share) return $('copy').click(
 $('facebook').onclick = () => { window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(lang === 'en' ? url + '?lang=en' : url), '_blank', 'noopener,noreferrer'); $('share-status').textContent = lang === 'en' ? 'Facebook shares the game link. To include your score, copy and paste it into your post.' : 'Facebook 會分享測驗連結；若想附上分數，請先複製結果再貼到貼文中。'; };
 translate();
 
+// Use a distinct static page for each attainable score so social crawlers see it.
+function resultLink() {
+  const score = Number($('score').textContent);
+  if (!Number.isInteger(score) || score < 0 || score > 280 || score % 10 !== 0) return url;
+  return `${url}share/${score}/`;
+}
+function resultText() {
+  return lang === 'en' ? `I scored ${$('score').textContent} / 280 on Little Star Math Adventure! Come play! ✨` : `我在小星星數學探險得到 ${$('score').textContent} / 280 分！一起來玩吧 ✨`;
+}
+$('copy').onclick = async () => {
+  const text = `${resultText()}\n${resultLink()}`;
+  try { await navigator.clipboard.writeText(text); $('share-status').textContent = lang === 'en' ? 'Your score and result link are copied!' : '已複製分數與結果連結！'; }
+  catch { $('share-status').textContent = (lang === 'en' ? 'Please copy: ' : '請複製：') + text; }
+};
+$('share').onclick = async () => {
+  if (!navigator.share) return $('copy').click();
+  try { await navigator.share({title: lang === 'en' ? 'Little Star Math Adventure' : '小星星數學探險', text: resultText(), url: resultLink()}); }
+  catch (e) { if (e.name !== 'AbortError') $('share-status').textContent = lang === 'en' ? 'Sharing failed. Try copying the result.' : '分享沒有完成，請試試複製結果。'; }
+};
+$('facebook').onclick = () => {
+  window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(resultLink()), '_blank', 'noopener,noreferrer');
+  $('share-status').textContent = lang === 'en' ? 'Your result link includes a score preview. Check Facebook’s preview before posting.' : '結果連結包含分數預覽，發布前請確認 Facebook 顯示的預覽。';
+};
+
 // Speech is initiated by a tap, as required by many mobile browsers.
 const readButton = document.createElement('button');
 readButton.type = 'button';
