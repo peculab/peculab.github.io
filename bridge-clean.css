@@ -23,3 +23,28 @@
 .ownership-challenge-logo{width:min(240px,100%);height:auto;max-height:80px;object-position:left center}
 .event-organization{scroll-margin-top:24px}.event-organizer-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:28px}.event-organizer-grid article{border:1px solid #d3dfce;border-radius:14px;padding:26px}.organizer-role{font-size:12px;font-weight:800;letter-spacing:.08em;color:#617d71;margin:0 0 20px}.event-organizer-grid img{display:block;width:80px;height:80px;object-fit:contain;object-position:left center}.event-organizer-grid img.organizer-natea-logo{width:min(280px,100%);height:80px}.event-organizer-grid article>p:last-child,.event-chapter-reach p{font-size:14px;line-height:1.8;color:#496057}.event-chapter-reach{background:#f0f5ed;border-radius:14px;padding:24px;margin-top:24px}.event-chapter-reach .clean-link{display:inline-block;font-size:14px;margin:8px 24px 0 0}
 @media(max-width:620px){.event-organizer-grid{grid-template-columns:1fr}.event-organizer-grid article{padding:22px}}
+
+/* Summer 2027 */
+.bridge-home-nav{flex-wrap:wrap;justify-content:flex-end;padding-block:12px}
+.bridge-clean .summer-hero{display:block}
+.summer-host{margin-top:6px;color:#426057}
+.summer-program{box-sizing:border-box;padding:clamp(20px,4vw,48px);background:#f2f6f0;border:1px solid #dbe5d7;border-radius:24px}
+.summer-format{font-weight:700}
+.summer-facts,.summer-agenda{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.summer-facts>div,.summer-day{background:#fff;border:1px solid #dbe5d7;border-radius:16px;padding:18px}
+.summer-facts{margin-block:24px}
+.summer-facts dt,.summer-day dt{font-weight:700}
+.summer-facts dd,.summer-day dd{margin:4px 0 0}
+.summer-agenda-title{margin:28px 0 16px}
+.summer-day h4{font-size:1.2rem;margin:8px 0 16px}
+.summer-day dl{display:grid;gap:12px;margin:0}
+.summer-day-note{border-top:1px solid #dbe5d7;margin:16px 0 0;padding-top:16px}
+.summer-day-note h5{font-size:1rem;margin:0}
+.summer-day-note p{margin:6px 0 0}
+@media(max-width:800px){
+  .summer-agenda{grid-template-columns:1fr}
+  .summer-facts{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:480px){
+  .summer-facts{grid-template-columns:1fr}
+}
