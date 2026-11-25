@@ -94,7 +94,7 @@
     link(node, (member ? claim : open) ? config.urls.eventRegistration : null);
     node.target = "_blank";
     node.rel = "noopener noreferrer";
-    node.dataset.track = member ? "member_ticket_click" : "general_ticket_click";
+    node.dataset.track = `${node.dataset.ticket}_ticket_click`;
   });
 
   const annualNote = annualBenefit

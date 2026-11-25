@@ -82,7 +82,7 @@ p { margin: 0 0 1rem; }
 .org img { height: 40px; width: 56px; object-fit: contain; border-radius: .2rem; background: white; }
 .org p { font-size: .9rem; margin: 0; color: var(--muted); }
 .org [data-description] { margin-top: .75rem; }
-.price-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-block: 1.5rem; }
+.price-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-block: 1.5rem; }
 .general-card { grid-area: 1 / 1; }
 .member-card { grid-area: 1 / 2; }
 .card { padding: clamp(1.15rem, 3vw, 2rem); border: 1px solid var(--border); border-radius: .75rem; background: white; }
