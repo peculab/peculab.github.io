@@ -34,7 +34,7 @@ const EVENT_CONFIG = {
     "startDate": "2027-01-01",
     "endDate": "2027-12-31",
     "annualMemberComplimentaryAdmission": true,
-    "studentMemberComplimentaryAdmission": null,
+    "studentMemberComplimentaryAdmission": true,
     "lifetimeMemberComplimentaryAdmission": null,
     "existingMemberComplimentaryAdmission": null,
     "separateEventTicketRequired": true

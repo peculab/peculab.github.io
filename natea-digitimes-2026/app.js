@@ -70,6 +70,7 @@
   ].some((policy) => policy === true);
   const claim = open && config.memberTicketVerified && eligible;
   const annualBenefit = claim && membership.annualMemberComplimentaryAdmission === true;
+  const studentBenefit = claim && membership.studentMemberComplimentaryAdmission === true;
   const pending = "Complimentary event admission arrangements are being finalized.";
   const terminal = ["sold-out", "closed", "completed", "cancelled"].includes(status);
   const statusLabel = open ? statuses.open : status === "open" ? statuses["coming-soon"] : statuses[status];
@@ -102,11 +103,11 @@
     : terminal ? statusLabel + ". Membership enrollment does not guarantee admission."
     : membership.annualMemberComplimentaryAdmission === false ? "Annual membership is available separately from forum admission."
     : pending;
-  show("[data-benefit]", annualBenefit);
-  show(".claim [data-claim]", !annualBenefit);
+  show("[data-benefit]", annualBenefit || studentBenefit);
+  show(".claim [data-claim]", !(annualBenefit || studentBenefit));
   write("[data-annual-note]", annualNote);
   write("[data-claim]", claim
-    ? "Request a code on your membership form. The organizer verifies your payment and emails your code. Use it at Zeffy event checkout."
+    ? "Request a code on your membership form. The organizer confirms your membership and emails your code. Use it at Zeffy event checkout."
     : terminal ? statusLabel + ". Complimentary tickets are unavailable."
     : "Complimentary member ticket registration will open once the registration arrangements are finalized.");
   if (status === "completed" && config.recap) {
