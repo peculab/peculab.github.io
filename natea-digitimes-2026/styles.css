@@ -98,7 +98,7 @@ summary { cursor: pointer; min-height: 44px; padding: .7rem .25rem; font-weight:
 .timeline { list-style: none; padding: 0 0 0 1.1rem; margin: 0; border-left: 1px solid #9baec4; }
 .timeline li { position: relative; padding: .5rem 0 .85rem .3rem; font-weight: 675; }
 .timeline li::before { content: ""; position: absolute; width: .7rem; height: .7rem; top: .95rem; left: -1.48rem; background: var(--gold); border: 1px solid #785a24; border-radius: 50%; }
-.timeline time { display: block; color: var(--muted); font-size: .875rem; }
+.timeline .agenda-time { display: block; color: var(--muted); font-size: .875rem; }
 .feedback { min-height: 1.6em; }
 .site-footer { background: #eef2f7; padding-block: 2.1rem; }
 .footer-meta { font-size: .92rem; }

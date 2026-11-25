@@ -145,13 +145,14 @@
   }
   one("[data-agenda]").replaceChildren(...AGENDA.map((item) => {
     const row = document.createElement("li");
-    row.append(item.title);
-    if (item.confirmed && item.startTime) {
-      const start = document.createElement("time");
-      start.dateTime = item.startTime;
-      start.textContent = displayTime(item.startTime) + " " + zone;
-      row.prepend(start);
-    }
+    const range = document.createElement("span");
+    range.className = "agenda-time";
+    const start = document.createElement("time");
+    start.dateTime = start.textContent = item.startTime;
+    const end = document.createElement("time");
+    end.dateTime = end.textContent = item.endTime;
+    range.append(start, "\u2013", end, " PST");
+    row.append(range, item.title + " (" + item.duration + " min)");
     return row;
   }));
 

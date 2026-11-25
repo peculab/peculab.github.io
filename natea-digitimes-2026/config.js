@@ -143,18 +143,33 @@ const ORGANIZATIONS = [
 
 const AGENDA = [
   {
-    "title": "60-minute keynote by Colley Hwang",
-    "startTime": null,
-    "confirmed": true
+    "title": "Opening and Guest Introductions",
+    "startTime": "10:00",
+    "endTime": "10:05",
+    "duration": 5
   },
   {
-    "title": "20 minutes of open networking",
-    "startTime": null,
-    "confirmed": true
+    "title": "Keynote by Colley Hwang",
+    "startTime": "10:05",
+    "endTime": "10:55",
+    "duration": 50
   },
   {
-    "title": "40-minute interview with Colley Hwang",
-    "startTime": null,
-    "confirmed": true
+    "title": "Moderated Q&A / Fireside Chat",
+    "startTime": "10:55",
+    "endTime": "11:15",
+    "duration": 20
+  },
+  {
+    "title": "Networking & Direct Interaction",
+    "startTime": "11:15",
+    "endTime": "11:55",
+    "duration": 40
+  },
+  {
+    "title": "Closing Remarks and Time Buffer",
+    "startTime": "11:55",
+    "endTime": "12:00",
+    "duration": 5
   }
 ];
