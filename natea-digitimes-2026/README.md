@@ -1,6 +1,6 @@
 # Seattle Technology & Industry Forum 2026
 
-The English event page for **AI, Semiconductors & Global Supply Chains: A Conversation with Colley Hwang**, scheduled for December 12, 2026 in Greater Seattle. NATEA Seattle organizes the event. NSF A3D3 Institute co-organizes it, DIGITIMES is the featured speaker organization, and PecuLab provides website hosting and digital infrastructure.
+The English event page for **AI, Semiconductors & Global Supply Chains: A Conversation with Colley Hwang**, scheduled for December 12, 2026 in Greater Seattle. NATEA Seattle organizes the event. NSF A3D3 Institute co-organizes it, DIGITIMES is the featured speaker organization, and PecuLab is an event partner.
 
 ## Files and local preview
 
@@ -136,7 +136,7 @@ Join us on December 12, 2026, for a special technology and industry forum explor
 Organized by NATEA Seattle.<br>
 Co-organized by NSF A3D3 Institute.<br>
 Featuring Colley Hwang from DIGITIMES.<br>
-Website Hosting & Digital Infrastructure by PecuLab.
+PecuLab is an event partner.
 
 General Admission: $20<br>
 2027 NATEA Annual Membership: $30, including complimentary admission to this special event for eligible members who claim a separate ticket.
@@ -154,7 +154,7 @@ Greater Seattle Area
 
 Explore event details and registration options: https://peculab.github.io/natea-digitimes-2026/
 
-Digital Infrastructure by PecuLab.
+PecuLab is an event partner.
 
 ## Review verification
 

@@ -57,7 +57,7 @@ const EVENT_CONFIG = {
   "accessibilityContact": null,
   "discussionThemesConfirmed": false,
   "recap": null,
-  "shareDescription": "Join NATEA Seattle and NSF A3D3 Institute on December 12, 2026, for a conversation with Colley Hwang from DIGITIMES on AI, semiconductors, global supply chains, and Taiwan–U.S. technology collaboration. Website Hosting & Digital Infrastructure by PecuLab.",
+  "shareDescription": "Join NATEA Seattle and NSF A3D3 Institute on December 12, 2026, for a conversation with Colley Hwang from DIGITIMES on AI, semiconductors, global supply chains, and Taiwan–U.S. technology collaboration. PecuLab is an event partner.",
   "analytics": {
     "enabled": false,
     "provider": null,
@@ -131,9 +131,9 @@ const ORGANIZATIONS = [
   {
     "id": "peculab",
     "name": "PecuLab",
-    "role": "Website Hosting & Digital Infrastructure",
+    "role": "Event Partner",
     "website": "https://peculab.github.io/",
-    "description": "Supporting the forum through website development, digital infrastructure, registration workflow design, and online community engagement.",
+    "description": "Supporting the forum as an event partner.",
     "confirmed": true,
     "logoApproved": true,
     "logo": "../assets/peculab-mark-clean.png",
